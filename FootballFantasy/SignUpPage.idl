@@ -1,0 +1,9 @@
+namespace FootballFantasy
+{
+    [default_interface]
+    runtimeclass SignUpPage : Microsoft.UI.Xaml.Controls.Page
+    {
+        SignUpPage();
+        Int32 MyProperty;
+    }
+}

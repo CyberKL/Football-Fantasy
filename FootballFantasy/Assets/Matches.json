@@ -1,0 +1,900 @@
+[{
+  "_id": 0,
+  "gw": 1,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 3,
+  "awayTeamId": 2
+},
+{
+  "_id": 1,
+  "gw": 1,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 4,
+  "awayTeamId": 0
+},
+{
+  "_id": 2,
+  "gw": 1,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 1,
+  "awayTeamId": 5
+},
+{
+  "_id": 3,
+  "gw": 2,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 0,
+  "awayTeamId": 3
+},
+{
+  "_id": 4,
+  "gw": 2,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 5,
+  "awayTeamId": 2
+},
+{
+  "_id": 5,
+  "gw": 2,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 1,
+  "awayTeamId": 4
+},
+{
+  "_id": 6,
+  "gw": 3,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 3,
+  "awayTeamId": 5
+},
+{
+  "_id": 7,
+  "gw": 3,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 0,
+  "awayTeamId": 1
+},
+{
+  "_id": 8,
+  "gw": 3,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 2,
+  "awayTeamId": 4
+},
+{
+  "_id": 9,
+  "gw": 4,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 1,
+  "awayTeamId": 3
+},
+{
+  "_id": 10,
+  "gw": 4,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 4,
+  "awayTeamId": 5
+},
+{
+  "_id": 11,
+  "gw": 4,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 2,
+  "awayTeamId": 0
+},
+{
+  "_id": 12,
+  "gw": 5,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 3,
+  "awayTeamId": 4
+},
+{
+  "_id": 13,
+  "gw": 5,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 1,
+  "awayTeamId": 2
+},
+{
+  "_id": 14,
+  "gw": 5,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 5,
+  "awayTeamId": 0
+},
+{
+  "_id": 15,
+  "gw": 6,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 2,
+  "awayTeamId": 3
+},
+{
+  "_id": 16,
+  "gw": 6,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 0,
+  "awayTeamId": 4
+},
+{
+  "_id": 17,
+  "gw": 6,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 5,
+  "awayTeamId": 1
+},
+{
+  "_id": 18,
+  "gw": 7,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 3,
+  "awayTeamId": 0
+},
+{
+  "_id": 19,
+  "gw": 7,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 2,
+  "awayTeamId": 5
+},
+{
+  "_id": 20,
+  "gw": 7,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 4,
+  "awayTeamId": 1
+},
+{
+  "_id": 21,
+  "gw": 8,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 5,
+  "awayTeamId": 3
+},
+{
+  "_id": 22,
+  "gw": 8,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 1,
+  "awayTeamId": 0
+},
+{
+  "_id": 23,
+  "gw": 8,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 4,
+  "awayTeamId": 2
+},
+{
+  "_id": 24,
+  "gw": 9,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 3,
+  "awayTeamId": 1
+},
+{
+  "_id": 25,
+  "gw": 9,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 5,
+  "awayTeamId": 4
+},
+{
+  "_id": 26,
+  "gw": 9,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 0,
+  "awayTeamId": 2
+},
+{
+  "_id": 27,
+  "gw": 10,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 4,
+  "awayTeamId": 3
+},
+{
+  "_id": 28,
+  "gw": 10,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 2,
+  "awayTeamId": 1
+},
+{
+  "_id": 29,
+  "gw": 10,
+  "league": "La Liga",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 0,
+  "awayTeamId": 5
+},
+{
+  "_id": 30,
+  "gw": 1,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 7,
+  "awayTeamId": 10
+},
+{
+  "_id": 31,
+  "gw": 1,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 6,
+  "awayTeamId": 11
+},
+{
+  "_id": 32,
+  "gw": 1,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 9,
+  "awayTeamId": 8
+},
+{
+  "_id": 33,
+  "gw": 2,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 11,
+  "awayTeamId": 7
+},
+{
+  "_id": 34,
+  "gw": 2,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 8,
+  "awayTeamId": 10
+},
+{
+  "_id": 35,
+  "gw": 2,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 9,
+  "awayTeamId": 6
+},
+{
+  "_id": 36,
+  "gw": 3,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 7,
+  "awayTeamId": 8
+},
+{
+  "_id": 37,
+  "gw": 3,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 11,
+  "awayTeamId": 9
+},
+{
+  "_id": 38,
+  "gw": 3,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 10,
+  "awayTeamId": 6
+},
+{
+  "_id": 39,
+  "gw": 4,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 9,
+  "awayTeamId": 7
+},
+{
+  "_id": 40,
+  "gw": 4,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 6,
+  "awayTeamId": 8
+},
+{
+  "_id": 41,
+  "gw": 4,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 10,
+  "awayTeamId": 11
+},
+{
+  "_id": 42,
+  "gw": 5,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 7,
+  "awayTeamId": 6
+},
+{
+  "_id": 43,
+  "gw": 5,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 9,
+  "awayTeamId": 10
+},
+{
+  "_id": 44,
+  "gw": 5,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 8,
+  "awayTeamId": 11
+},
+{
+  "_id": 45,
+  "gw": 6,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 10,
+  "awayTeamId": 7
+},
+{
+  "_id": 46,
+  "gw": 6,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 11,
+  "awayTeamId": 6
+},
+{
+  "_id": 47,
+  "gw": 6,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 8,
+  "awayTeamId": 9
+},
+{
+  "_id": 48,
+  "gw": 7,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 7,
+  "awayTeamId": 11
+},
+{
+  "_id": 49,
+  "gw": 7,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 10,
+  "awayTeamId": 8
+},
+{
+  "_id": 50,
+  "gw": 7,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 6,
+  "awayTeamId": 9
+},
+{
+  "_id": 51,
+  "gw": 8,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 8,
+  "awayTeamId": 7
+},
+{
+  "_id": 52,
+  "gw": 8,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 9,
+  "awayTeamId": 11
+},
+{
+  "_id": 53,
+  "gw": 8,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 6,
+  "awayTeamId": 10
+},
+{
+  "_id": 54,
+  "gw": 9,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 7,
+  "awayTeamId": 9
+},
+{
+  "_id": 55,
+  "gw": 9,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 8,
+  "awayTeamId": 6
+},
+{
+  "_id": 56,
+  "gw": 9,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 11,
+  "awayTeamId": 10
+},
+{
+  "_id": 57,
+  "gw": 10,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 6,
+  "awayTeamId": 7
+},
+{
+  "_id": 58,
+  "gw": 10,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 10,
+  "awayTeamId": 9
+},
+{
+  "_id": 59,
+  "gw": 10,
+  "league": "Premier League",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 11,
+  "awayTeamId": 8
+},
+{
+  "_id": 60,
+  "gw": 1,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 17,
+  "awayTeamId": 15
+},
+{
+  "_id": 61,
+  "gw": 1,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 12,
+  "awayTeamId": 16
+},
+{
+  "_id": 62,
+  "gw": 1,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 13,
+  "awayTeamId": 14
+},
+{
+  "_id": 63,
+  "gw": 2,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 16,
+  "awayTeamId": 17
+},
+{
+  "_id": 64,
+  "gw": 2,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 14,
+  "awayTeamId": 15
+},
+{
+  "_id": 65,
+  "gw": 2,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 13,
+  "awayTeamId": 12
+},
+{
+  "_id": 66,
+  "gw": 3,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 17,
+  "awayTeamId": 14
+},
+{
+  "_id": 67,
+  "gw": 3,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 16,
+  "awayTeamId": 13
+},
+{
+  "_id": 68,
+  "gw": 3,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 15,
+  "awayTeamId": 12
+},
+{
+  "_id": 69,
+  "gw": 4,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 13,
+  "awayTeamId": 17
+},
+{
+  "_id": 70,
+  "gw": 4,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 12,
+  "awayTeamId": 14
+},
+{
+  "_id": 71,
+  "gw": 4,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 15,
+  "awayTeamId": 16
+},
+{
+  "_id": 72,
+  "gw": 5,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 17,
+  "awayTeamId": 12
+},
+{
+  "_id": 73,
+  "gw": 5,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 13,
+  "awayTeamId": 15
+},
+{
+  "_id": 74,
+  "gw": 5,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 14,
+  "awayTeamId": 16
+},
+{
+  "_id": 75,
+  "gw": 6,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 15,
+  "awayTeamId": 17
+},
+{
+  "_id": 76,
+  "gw": 6,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 16,
+  "awayTeamId": 12
+},
+{
+  "_id": 77,
+  "gw": 6,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 14,
+  "awayTeamId": 13
+},
+{
+  "_id": 78,
+  "gw": 7,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 17,
+  "awayTeamId": 16
+},
+{
+  "_id": 79,
+  "gw": 7,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 15,
+  "awayTeamId": 14
+},
+{
+  "_id": 80,
+  "gw": 7,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 12,
+  "awayTeamId": 13
+},
+{
+  "_id": 81,
+  "gw": 8,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 14,
+  "awayTeamId": 17
+},
+{
+  "_id": 82,
+  "gw": 8,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 13,
+  "awayTeamId": 16
+},
+{
+  "_id": 83,
+  "gw": 8,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 12,
+  "awayTeamId": 15
+},
+{
+  "_id": 84,
+  "gw": 9,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 17,
+  "awayTeamId": 13
+},
+{
+  "_id": 85,
+  "gw": 9,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 14,
+  "awayTeamId": 12
+},
+{
+  "_id": 86,
+  "gw": 9,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 16,
+  "awayTeamId": 15
+},
+{
+  "_id": 87,
+  "gw": 10,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 12,
+  "awayTeamId": 17
+},
+{
+  "_id": 88,
+  "gw": 10,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 15,
+  "awayTeamId": 13
+},
+{
+  "_id": 89,
+  "gw": 10,
+  "league": "Serie A",
+  "score": "",
+  "scorers": [],
+  "played": false,
+  "homeTeamId": 16,
+  "awayTeamId": 14
+}]

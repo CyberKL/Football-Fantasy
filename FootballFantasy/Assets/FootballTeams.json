@@ -1,0 +1,108 @@
+[{
+  "_id": 0,
+  "name": "Real Madrid",
+  "points": 0,
+  "league": "La Liga"
+},
+{
+  "_id": 1,
+  "name": "Barcelona",
+  "points": 0,
+  "league": "La Liga"
+},
+{
+  "_id": 2,
+  "name": "Atlético Madrid",
+  "points": 0,
+  "league": "La Liga"
+},
+{
+  "_id": 3,
+  "name": "Girona",
+  "points": 0,
+  "league": "La Liga"
+},
+{
+  "_id": 4,
+  "name": "Athletic Bilbao",
+  "points": 0,
+  "league": "La Liga"
+},
+{
+  "_id": 5,
+  "name": "Real Sociedad",
+  "points": 0,
+  "league": "La Liga"
+},
+{
+  "_id": 6,
+  "name": "Manchester United",
+  "points": 0,
+  "league": "Premier League"
+},
+{
+  "_id": 7,
+  "name": "Manchester City",
+  "points": 0,
+  "league": "Premier League"
+},
+{
+  "_id": 8,
+  "name": "Arsenal",
+  "points": 0,
+  "league": "Premier League"
+},
+{
+  "_id": 9,
+  "name": "Tottenham Hotspur",
+  "points": 0,
+  "league": "Premier League"
+},
+{
+  "_id": 10,
+  "name": "Liverpool",
+  "points": 0,
+  "league": "Premier League"
+},
+{
+  "_id": 11,
+  "name": "Chelsea",
+  "points": 0,
+  "league": "Premier League"
+},
+{
+  "_id": 12,
+  "name": "AC Milan",
+  "points": 0,
+  "league": "Seria A"
+},
+{
+  "_id": 13,
+  "name": "Inter Milan",
+  "points": 0,
+  "league": "Seria A"
+},
+{
+  "_id": 14,
+  "name": "Napoli",
+  "points": 0,
+  "league": "Seria A"
+},
+{
+  "_id": 15,
+  "name": "Juventus",
+  "points": 0,
+  "league": "Seria A"
+},
+{
+  "_id": 16,
+  "name": "Roma",
+  "points": 0,
+  "league": "Seria A"
+},
+{
+  "_id": 17,
+  "name": "Lazio",
+  "points": 0,
+  "league": "Seria A"
+}]

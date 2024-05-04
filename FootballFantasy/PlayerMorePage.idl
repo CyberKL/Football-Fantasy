@@ -1,0 +1,9 @@
+namespace FootballFantasy
+{
+    [default_interface]
+    runtimeclass PlayerMorePage : Microsoft.UI.Xaml.Controls.Page
+    {
+        PlayerMorePage();
+        Int32 MyProperty;
+    }
+}

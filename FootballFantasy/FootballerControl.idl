@@ -1,0 +1,13 @@
+namespace FootballFantasy
+{
+    [default_interface]
+    runtimeclass FootballerControl : Microsoft.UI.Xaml.Controls.UserControl
+    {
+        FootballerControl();
+        Int32 MyProperty;
+        static Microsoft.UI.Xaml.DependencyProperty PlayerNameProperty{ get; };
+        String PlayerName;
+        static Microsoft.UI.Xaml.DependencyProperty PlayerInfoProperty{ get; };
+        String PlayerInfo;
+    }
+}

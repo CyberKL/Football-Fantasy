@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="FootballFantasy.PlayerRankingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FootballFantasy"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid HorizontalAlignment="Center" ColumnSpacing="200">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="4*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.ColumnSpan="2" Text="Rankings" Style="{StaticResource HeaderStyle}" TextAlignment="Center"  />
+        <Grid Grid.Row="1" Background="{ThemeResource NeutralColor}" VerticalAlignment="Top" ColumnSpacing="20" CornerRadius="20" Padding="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock Text="Pos." FontWeight="Bold" />
+            <TextBlock Grid.Column="1" Text="Player" FontWeight="Bold" />
+            <TextBlock Grid.Column="2" Text="Points" FontWeight="Bold" />
+            <ScrollViewer VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.ColumnSpan="3">
+                <Grid x:Name="GwRankingsGrid" ColumnSpacing="20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="1" />
+                    <TextBlock Grid.Column="1" Text="Khaled" TextAlignment="Center" />
+                    <TextBlock Grid.Column="2" Text="100" />
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+        <Grid Grid.Column="1"  Grid.Row="1" Background="{ThemeResource NeutralColor}" VerticalAlignment="Top" ColumnSpacing="20" CornerRadius="20" Padding="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock Text="Pos." FontWeight="Bold" />
+            <TextBlock Grid.Column="1" Text="Player" FontWeight="Bold" />
+            <TextBlock Grid.Column="2" Text="Points" FontWeight="Bold" />
+            <ScrollViewer VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.ColumnSpan="3">
+                <Grid x:Name="TotalRankingsGrid" ColumnSpacing="20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="1" />
+                    <TextBlock Grid.Column="1" Text="Khaled" TextAlignment="Center" />
+                    <TextBlock Grid.Column="2" Text="100" />
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>

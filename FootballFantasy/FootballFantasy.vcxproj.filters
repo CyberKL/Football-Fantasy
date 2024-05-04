@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainWindow.xaml" />
+    <Page Include="LoginPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="PlayerCreateTeamPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="PlayerHomePage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="PlayerMorePage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="PlayerPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="PlayerRankingsPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="PlayerSettingsPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="PlayerTeamPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="PlayerTeamPickTeamPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="SignUpPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="FootballerControl.xaml">
+      <Filter>Views\Controls</Filter>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="MainWindow.idl" />
+    <Midl Include="LoginPage.idl">
+      <Filter>Views</Filter>
+    </Midl>
+    <Midl Include="PlayerCreateTeamPage.idl">
+      <Filter>Views</Filter>
+    </Midl>
+    <Midl Include="PlayerHomePage.idl">
+      <Filter>Views</Filter>
+    </Midl>
+    <Midl Include="PlayerMorePage.idl">
+      <Filter>Views</Filter>
+    </Midl>
+    <Midl Include="PlayerPage.idl">
+      <Filter>Views</Filter>
+    </Midl>
+    <Midl Include="PlayerRankingsPage.idl">
+      <Filter>Views</Filter>
+    </Midl>
+    <Midl Include="PlayerSettingsPage.idl">
+      <Filter>Views</Filter>
+    </Midl>
+    <Midl Include="PlayerTeamPage.idl">
+      <Filter>Views</Filter>
+    </Midl>
+    <Midl Include="PlayerTeamPickTeamPage.idl">
+      <Filter>Views</Filter>
+    </Midl>
+    <Midl Include="SignUpPage.idl">
+      <Filter>Views</Filter>
+    </Midl>
+    <Midl Include="FootballerControl.idl">
+      <Filter>Views\Controls</Filter>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
+    <ClCompile Include="Admin.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Footballer.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="FootballTeam.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="League.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Match.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerTeam.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Presenter.cpp">
+      <Filter>Presenters</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Admin.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Footballer.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="FootballTeam.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="League.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Match.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerTeam.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Presenter.h">
+      <Filter>Presenters</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\gradient4.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\more.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{d79e3ae5-2695-4b5c-be63-97a8009dce43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Models">
+      <UniqueIdentifier>{39e38eae-e688-4ba8-ad26-c27c97e0ed84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Views">
+      <UniqueIdentifier>{b2557267-196e-49cc-ab59-f177501b621b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Views\Controls">
+      <UniqueIdentifier>{c95579e1-62b5-44bd-ac1b-83bb4df0ca9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Presenters">
+      <UniqueIdentifier>{28985ccd-042f-412d-8703-bc047badec3d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="readme.txt" />
+    <Text Include="Assets\counts.txt">
+      <Filter>Assets</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Assets\Footballers.json">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\FootballTeams.json">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\Matches.json">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\Players.json">
+      <Filter>Assets</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
+  </ItemGroup>
+</Project>
