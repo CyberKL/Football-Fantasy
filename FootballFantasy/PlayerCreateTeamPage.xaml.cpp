@@ -190,6 +190,8 @@ void winrt::FootballFantasy::implementation::PlayerCreateTeamPage::Page_Loaded(w
 void winrt::FootballFantasy::implementation::PlayerCreateTeamPage::SubmitBtn_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
     Presenter::getInstance()->createPlayerTeam(tempTeam, budget);
+    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerTeamPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom};
+    Frame().Navigate(page);
 }
 
 
