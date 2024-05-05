@@ -59,6 +59,12 @@
                 <Setter Property="CharacterSpacing" Value="-20" />
                 <Setter Property="Foreground" Value="#061A23" />
             </Style>
+
+            <Style x:Name="AddFootballerBtnStyle" TargetType="Button">
+                <Setter Property="Background" Value="{ThemeResource ColoredGlassBackground}" />
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="CornerRadius" Value="10" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

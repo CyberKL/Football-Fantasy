@@ -13,38 +13,31 @@ class Footballer;
 class PlayerTeam
 {
 private:
-	static int count;
-
-	int id;
 	unordered_map<int, pair<Footballer*, bool>> squad;
 	Footballer* captain;
 	Footballer* viceCaptain;
 	stack<pair<Footballer*, int>> transferStack;
-	float budget;
+	int budget;
 	map<int, int> points;
 
 public:
 	// Constructor
 	PlayerTeam();
-	PlayerTeam(unordered_map<int, pair<Footballer*, bool>>, Footballer*, Footballer*);
-	PlayerTeam(int, unordered_map<int, pair<Footballer*, bool>>, Footballer*, Footballer*, float, map<int, int>);
+	PlayerTeam(unordered_map<int, pair<Footballer*, bool>>, Footballer*, Footballer*, int);
 
 	// Getters
-	static int getCount();
 	unordered_map<int, pair<Footballer*, bool>> getSquad() const;
 	const Footballer* getCaptain() const;
 	const Footballer* getViceCaptain() const;
-	int getId() const;
-	float getBudget() const;
+	int getBudget() const;
 	const stack<pair<Footballer*, int>> getTransferStack() const;
 	map<int, int> getPoints() const;
 
 	// Setters
-	static void setCount(int);
 	void setSquad(const unordered_map<int, pair<Footballer*, bool>>& squad);
 	void setCaptain(Footballer*);
 	void setViceCaptain(Footballer*);
-	void setBudget(float);
+	void setBudget(int);
 	void setPoints(map<int, int>);
 
 	// Handles file serialization to and from JSON

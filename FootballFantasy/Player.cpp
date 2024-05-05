@@ -56,6 +56,11 @@ void Player::setTotalPoints(int newTotalPoints) {
     totalPoints = newTotalPoints;
 }
 
+void Player::setTeam(PlayerTeam* team)
+{
+    this->team = team;
+}
+
 
 json Player::toJson() {
     json j;
