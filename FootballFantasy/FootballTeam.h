@@ -19,6 +19,8 @@ private:
 public:
 	// Constructors
 	FootballTeam(); // Default constructor
+	FootballTeam(string, string); //parameterized constructor
+
 
 	// Getters
 	static int getCount();

@@ -39,6 +39,8 @@ public:
 
 	// Setters
 	void setTeam(FootballTeam&);
+	void setLeagueName(string league);
+
 
 	//functions
 	void updatePoints(int goals);

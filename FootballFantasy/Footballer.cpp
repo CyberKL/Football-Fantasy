@@ -61,6 +61,11 @@ void Footballer::setTeam(FootballTeam& team)
 	this->team = &team;
 }
 
+void Footballer::setLeagueName(string league)
+{
+	leagueName = league;
+}
+
 
 // update points of footballer
 void Footballer:: updatePoints(int goals)

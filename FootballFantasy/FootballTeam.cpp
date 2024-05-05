@@ -5,7 +5,8 @@ int FootballTeam::count = Manager::getInstance()->getCounts()["FootballTeam"];
 
 // Constructors
 FootballTeam::FootballTeam() {}
-
+FootballTeam::FootballTeam(string name, string league)
+	:name(name), league(league) {}
 // Getters
 int FootballTeam::getCount()
 {
