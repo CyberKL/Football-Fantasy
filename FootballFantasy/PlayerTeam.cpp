@@ -1,30 +1,15 @@
 #include "pch.h"
 #include "PlayerTeam.h"
 
-int PlayerTeam::count = Manager::getInstance()->getCounts()["PlayerTeam"];
-
 // Constructor
 PlayerTeam::PlayerTeam()
-	: id(0), captain(nullptr), viceCaptain(nullptr), budget(0.0) {}
+	: captain(nullptr), viceCaptain(nullptr), budget(0.0) { }
 
-PlayerTeam::PlayerTeam(unordered_map<int, pair<Footballer*, bool>> squad, Footballer* captain, Footballer* viceCaptain)
-	: squad(squad), captain(captain), viceCaptain(viceCaptain), id(count), budget(100000.00), points() {
-	count++;
-}
-
-PlayerTeam::PlayerTeam(int id, unordered_map<int, pair<Footballer*, bool>> squad, Footballer* captain, Footballer* viceCaptain, float budget, map<int, int> points)
-	: squad(squad), captain(captain), viceCaptain(viceCaptain), id(id), budget(budget), points(points) {}
+PlayerTeam::PlayerTeam(unordered_map<int, pair<Footballer*, bool>> squad, Footballer* captain, Footballer* viceCaptain, int budget)
+	: squad(squad), captain(captain), viceCaptain(viceCaptain), budget(budget) { }
 
 
 // Getters
-int PlayerTeam::getCount() {
-	return count;
-}
-
-int PlayerTeam::getId() const {
-	return id;
-}
-
 unordered_map<int, pair<Footballer*, bool>> PlayerTeam::getSquad() const {
 	return squad;
 }
@@ -37,7 +22,7 @@ const Footballer* PlayerTeam::getViceCaptain() const {
 	return viceCaptain;
 }
 
-float PlayerTeam::getBudget() const {
+int PlayerTeam::getBudget() const {
 	return budget;
 }
 
@@ -51,10 +36,6 @@ map<int, int> PlayerTeam::getPoints() const {
 
 
 // Setters
-void PlayerTeam::setCount(int count) {
-	PlayerTeam::count;
-}
-
 void PlayerTeam::setSquad(const unordered_map<int, pair<Footballer*, bool>>& squad) {
 	this->squad = squad;
 }
@@ -67,7 +48,7 @@ void PlayerTeam::setViceCaptain(Footballer* viceCaptain) {
 	this->viceCaptain = viceCaptain;
 }
 
-void PlayerTeam::setBudget(float budget) {
+void PlayerTeam::setBudget(int budget) {
 	this->budget = budget;
 }
 
@@ -77,8 +58,7 @@ void PlayerTeam::setPoints(map<int, int> points) {
 
 json PlayerTeam::toJson() {
 	json j;
-	j["_id"] = id;
-	
+
 	for (unordered_map<int, pair<Footballer*, bool>>::iterator it = squad.begin(); it != squad.end(); it++) {
 		int key = it->first;
 		bool value = it->second.second;
@@ -97,7 +77,6 @@ json PlayerTeam::toJson() {
 }
 
 void PlayerTeam::fromJson(json& j) {
-	id = j["_id"];
 
 	// Load the Squad map
 	for (json::iterator it = j["squad"].begin(); it != j["squad"].end(); it++) {

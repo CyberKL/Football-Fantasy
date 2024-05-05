@@ -41,9 +41,8 @@ bool Presenter::login(const string& username, const string& password)
 
 }
 
-string Presenter::getLoggedInPlayerBudget()
+string Presenter::budgetToString(int budget)
 {
-    int budget = loggedInPlayer->getTeam()->getBudget();
     ostringstream oss;
     oss << fixed << setprecision(1) << ((float)budget / 1000);
     string budgetString = oss.str() + 'K';
@@ -69,12 +68,64 @@ string Presenter::getFootballerNextMatch(int id)
     return nextMatchTeam;
 }
 
-void Presenter::createPlayerTeam(unordered_set<int> footballersIds)
+void Presenter::createPlayerTeam(unordered_set<int> footballersIds, int budget)
 {
+    unordered_map<int, pair<Footballer*, bool>>  squad;
+    Footballer* captain = nullptr;
+    Footballer* viceCaptain = nullptr;
+    int gkCount = 0;
+    int defCount = 0;
+    int midCount = 0;
+    int fwdCount = 0;
     for (const auto& id : footballersIds)
     {
         Footballer* footballer = Manager::getInstance()->getFootballers()[id];
+        string position = footballer->getPosition();
+        if (position == "Goalkeeper")
+        {
+            if (gkCount >= 1)
+                squad.insert(make_pair(footballer->getId(), make_pair(footballer, false)));
+            else
+            {
+                squad.insert(make_pair(footballer->getId(), make_pair(footballer, true)));
+                captain = footballer;
+                gkCount++;
+            }
+        }
+        else if (position == "Defender")
+        {
+            if (defCount >= 4)
+                squad.insert(make_pair(footballer->getId(), make_pair(footballer, false)));
+            else
+            {
+                squad.insert(make_pair(footballer->getId(), make_pair(footballer, true)));
+                defCount == 0 ? viceCaptain = footballer : 0;
+                defCount++;
+            }
+        }
+        else if (position == "Midfielder")
+        {
+            if (midCount >= 3)
+                squad.insert(make_pair(footballer->getId(), make_pair(footballer, false)));
+            else
+            {
+                squad.insert(make_pair(footballer->getId(), make_pair(footballer, true)));
+                midCount++;
+            }
+        }
+        else if (position == "Forward")
+        {
+            if (fwdCount >= 3)
+                squad.insert(make_pair(footballer->getId(), make_pair(footballer, false)));
+            else
+            {
+                squad.insert(make_pair(footballer->getId(), make_pair(footballer, true)));
+                fwdCount++;
+            }
+        }
     }
+    PlayerTeam* team = new PlayerTeam(squad, captain, viceCaptain, budget);
+    loggedInPlayer->setTeam(team);
 }
 
 vector<Footballer> Presenter::searchFootballersByPosition(string position)

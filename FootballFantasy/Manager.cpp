@@ -134,7 +134,6 @@ void Manager::save()
 
 	// Saving the counts to the counts file
 	counts["Player"] = Player::getCount();
-	counts["PlayerTeam"] = PlayerTeam::getCount();
 	counts["Footballer"] = Footballer::getCount();
 	counts["FootballTeam"] = FootballTeam::getCount();
 	counts["Match"] = Match::getCount();

@@ -26,7 +26,6 @@ namespace winrt::FootballFantasy::implementation
             winrt::Windows::UI::Xaml::Interop::TypeName{ L"FootballFantasy.FootballerControl" },
             winrt::Microsoft::UI::Xaml::PropertyMetadata{ nullptr });
 
-
     int32_t FootballerControl::MyProperty()
     {
         throw hresult_not_implemented();

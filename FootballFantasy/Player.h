@@ -39,6 +39,7 @@ public:
     void setUsername(const string& newUsername);
     void setPassword(const string& newPassword);
     void setTotalPoints(int newTotalPoints);
+    void setTeam(PlayerTeam* team);
 
     // Handles file serialization to and from JSON
     json toJson();

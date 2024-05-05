@@ -28,11 +28,11 @@ public:
 	bool isUsernameDuplicate(const string&);
 	void signUp(const string&, const string&);
 	bool login(const string&, const string&);
-	string getLoggedInPlayerBudget();
+	string budgetToString(int);
 	PlayerTeam* getPlayerTeam();
 	Footballer getFootballer(int);
 	string getFootballerNextMatch(int);
-	void createPlayerTeam(unordered_set<int>);
+	void createPlayerTeam(unordered_set<int>, int);
 	vector<Footballer> searchFootballersByPosition(string);
 	vector<struct UiFootballer> loadPickTeamPage();
 	void loadData();
