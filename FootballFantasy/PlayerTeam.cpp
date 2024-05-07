@@ -129,17 +129,25 @@ bool PlayerTeam::removeFootballer(const int& footballerId) {
 	return true;
 }
 
-bool PlayerTeam::swapFootballers(const int& starterId, const int& benchedId) {
-	unordered_map<int, pair<Footballer*, bool>>::iterator starterIt = findFootballer(starterId);
-	unordered_map<int, pair<Footballer*, bool>>::iterator benchedIt = findFootballer(benchedId);
-	
-	// Chcek if the first footballers is starting and the second footballer is benched
-	if (starterIt != squad.end() && benchedIt != squad.end() && starterIt->second.second == true && benchedIt->second.second == false) {
-		starterIt->second.second = false;
-		benchedIt->second.second = true;
-		return true; // Swapped successfully
+void PlayerTeam::swapFootballers(const int& subbedOut, const int& subbedIn) {
+	unordered_map<int, pair<Footballer*, bool>>::iterator subbedOutIt = findFootballer(subbedOut);
+	unordered_map<int, pair<Footballer*, bool>>::iterator subbedInIt = findFootballer(subbedIn);
+
+	if (subbedOutIt->second.second) // subbed out was in the starting lineup
+	{
+		subbedOutIt->second.second = false;
+		subbedInIt->second.second = true;
 	}
-	return false; // Both footballers were either both starting or both benched, or at least one wasn't in the squad (a player shouldn't be able to cause this)
+	else // subbed out was on the bench
+	{
+		if (subbedInIt->second.second) // subbed in was in the starting lineup
+		{
+			subbedOutIt->second.second = true;
+			subbedInIt->second.second = false;
+		}
+		// else 2 were on the bench , so nothing changed
+	}
+	// there is no scenario where both were starting
 }
 
 void PlayerTeam::transfer(const int& out, Footballer* in)

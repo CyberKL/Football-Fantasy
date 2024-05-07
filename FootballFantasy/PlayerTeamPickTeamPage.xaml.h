@@ -1,6 +1,7 @@
 #pragma once
 
 #include "PlayerTeamPickTeamPage.g.h"
+#include "Footballer.h"
 
 namespace winrt::FootballFantasy::implementation
 {
@@ -15,6 +16,9 @@ namespace winrt::FootballFantasy::implementation
         int32_t MyProperty();
         void MyProperty(int32_t value);
         void Page_Loaded(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e);
+        void FootballerControl_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e);
+        Microsoft::UI::Xaml::Controls::Grid CreateGrid(Footballer, char);
+        void dialogButtonClickHandler(winrt::Windows::Foundation::IInspectable const& dialog, winrt::Microsoft::UI::Xaml::Controls::ContentDialogButtonClickEventArgs const& args);
     };
 }
 

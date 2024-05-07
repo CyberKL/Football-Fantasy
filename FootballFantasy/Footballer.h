@@ -46,6 +46,8 @@ public:
 	void updatePoints(int goals);
 	void updatePrice();
 	string priceToString() const;
+	string positionAbbrv() const;
+	string positionUpperAbbrv() const;
 
 	// Handles file serialization to and from JSON
 	json toJson();

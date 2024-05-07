@@ -9,6 +9,8 @@
 #include <unordered_set>
 #include <sstream>
 #include <iomanip>
+#include <winrt/Windows.UI.Text.h>
+#include <winrt/Windows.UI.h>
 
 using namespace std;
 using namespace winrt;
@@ -86,6 +88,7 @@ void winrt::FootballFantasy::implementation::PlayerCreateTeamPage::AddFootballer
             Controls::StackPanel sTeam;
             Controls::TextBlock hTeam;
             hTeam.Text(L"Team");
+            hTeam.FontWeight(Windows::UI::Text::FontWeights::Bold());
             Controls::TextBlock team;
             team.Text(to_hstring(footballer.getTeam()->getName()));
             sTeam.Children().Append(hTeam);
@@ -96,7 +99,7 @@ void winrt::FootballFantasy::implementation::PlayerCreateTeamPage::AddFootballer
             Controls::StackPanel sLeague;
             Controls::TextBlock hLeague;
             hLeague.Text(L"League");
-            //hLeague.FontWeight(Windows::UI::Text::FontWeights::Bold());
+            hLeague.FontWeight(Windows::UI::Text::FontWeights::Bold());
             Controls::TextBlock league;
             league.Text(to_hstring(footballer.getLeagueName()));
             sLeague.Children().Append(hLeague);
@@ -108,7 +111,7 @@ void winrt::FootballFantasy::implementation::PlayerCreateTeamPage::AddFootballer
             Controls::StackPanel sPoints;
             Controls::TextBlock hPoints;
             hPoints.Text(L"Points");
-            //hPoints.FontWeight(Windows::UI::Text::FontWeights::Bold());
+            hPoints.FontWeight(Windows::UI::Text::FontWeights::Bold());
             Controls::TextBlock points;
             points.Text(to_hstring(footballer.getTotalPoints()));
             sPoints.Children().Append(hPoints);
@@ -119,7 +122,7 @@ void winrt::FootballFantasy::implementation::PlayerCreateTeamPage::AddFootballer
             Controls::StackPanel sPrice;
             Controls::TextBlock hPrice;
             hPrice.Text(L"Price");
-            //hPrice.FontWeight(Windows::UI::Text::FontWeights::Bold());
+            hPrice.FontWeight(Windows::UI::Text::FontWeights::Bold());
             Controls::TextBlock price;
             price.Text(to_hstring(footballer.priceToString()));
             sPrice.Children().Append(hPrice);

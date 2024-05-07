@@ -1,0 +1,9 @@
+namespace FootballFantasy
+{
+    [default_interface]
+    runtimeclass SubstitutePlayerPage : Microsoft.UI.Xaml.Controls.Page
+    {
+        SubstitutePlayerPage();
+        Int32 MyProperty;
+    }
+}
