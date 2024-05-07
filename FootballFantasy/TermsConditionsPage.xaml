@@ -7,7 +7,18 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Grid >
 
-    <Image Source="Assets/TermsConditions.png" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
+        <Button Grid.Row="0" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Return">
+            <SymbolIcon Symbol="Back"/>
+        </Button>
+        <Grid Grid.Row="1" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Image Source="Assets/TermsConditions.png" />
+        </Grid>
+    </Grid>
 </Page>

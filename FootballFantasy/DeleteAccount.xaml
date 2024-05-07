@@ -9,30 +9,43 @@
     mc:Ignorable="d">
 
 
-    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" RequestedTheme="Light">
+    <Grid >
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="1" Text="Username" Margin="10"/>
-        <TextBox x:Name="UsernameBox" Grid.Row="2" Margin="10" />
+        <Button Grid.Row="0" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Return">
+            <SymbolIcon Symbol="Back"/>
+        </Button>
+        
+        <Grid Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" RequestedTheme="Light">
 
-        <TextBlock Grid.Row="3" Text="Password:" Margin="10"/>
-        <PasswordBox x:Name="PasswordBox" Grid.Row="4" Margin="10" />
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="1" Text="Username" Margin="10"/>
+            <TextBox x:Name="UsernameBox" Grid.Row="2" Margin="10" />
+
+            <TextBlock Grid.Row="3" Text="Password:" Margin="10"/>
+            <PasswordBox x:Name="PasswordBox" Grid.Row="4" Margin="10" />
 
 
-        <Button Grid.Row="8" Content="Delete Account" Margin="90" Click="Button_Click_1"/>
+            <Button Grid.Row="8" Content="Delete Account" Margin="90" Click="Button_Click"/>
 
+            <TextBlock x:Name="Matching"  Grid.Row="6" Margin="10" HorizontalAlignment="Center" Foreground="Red" />
+
+        </Grid>
     </Grid>
-
 
 
 </Page>

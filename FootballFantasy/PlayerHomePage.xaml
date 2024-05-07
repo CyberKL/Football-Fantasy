@@ -15,14 +15,7 @@
             <RowDefinition Height="6*"/>
         </Grid.RowDefinitions>
 
-        <Grid.Background>
-            <ImageBrush ImageSource="Assets/Soccer.png" Stretch="UniformToFill" />
-            <!-- Adjust ImageSource to your image file path -->
-        </Grid.Background>
 
-        
-        
-        
         <StackPanel Grid.Row="1" Orientation="Vertical" VerticalAlignment="Center">
 
             <!-- dropdown list -->

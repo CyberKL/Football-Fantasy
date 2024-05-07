@@ -218,3 +218,27 @@ void Presenter::loadData()
 {
     Manager::getInstance()->load();
 }
+string Presenter:: getLoggedInPlayerPassword()
+{
+    return loggedInPlayer->getPassword();
+}
+
+void Presenter::changePassword(string password)
+{
+    Manager::getInstance()->changePassword(loggedInPlayer->getId(), password);
+}
+
+string Presenter::getLoggedInPlayerUsername()
+{
+    return loggedInPlayer->getUsername();
+}
+
+int Presenter::getLoggedInPlayerID()
+{
+    return loggedInPlayer->getId();
+}
+
+void Presenter::deleteAccount(int accountId)
+{
+    Manager::getInstance()->deleteAccount(accountId);
+}

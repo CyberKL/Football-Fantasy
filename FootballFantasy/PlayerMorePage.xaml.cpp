@@ -21,4 +21,9 @@ namespace winrt::FootballFantasy::implementation
     {
         throw hresult_not_implemented();
     }
+    void winrt::FootballFantasy::implementation::PlayerMorePage::Return(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+    {
+        Frame().GoBack();
+    }
+
 }
