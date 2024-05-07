@@ -8,7 +8,104 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <TextBlock Text="Settings" Style="{StaticResource HeaderStyle}" />
-    </StackPanel>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.Column="0" Canvas.ZIndex="-1"/>
+
+        <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="70" Background="{StaticResource NeutralColor}" CornerRadius="20" Padding="100">
+            <StackPanel Spacing="10">
+
+                <Button x:Name="Terms_Conditions" Width="500" Click="Terms_Conditions_Click">
+                    <Button.Background>
+                        <SolidColorBrush Color="DarkBlue" Opacity="0.8"/>
+                    </Button.Background>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text=" Terms and Conditions" HorizontalAlignment="Left" Foreground="White"/>
+                        <!-- Add a transparent rectangle to create space -->
+                        <Rectangle Width="280" Fill="Transparent"/>
+                        <FontIcon Glyph="&#xEBE7;" FontSize="16" HorizontalAlignment="Right" Foreground="White"/>
+                    </StackPanel>
+                </Button>
+
+
+
+                <Button x:Name="RateApp" Width="500" Click="RateApp_Click">
+                    <Button.Background>
+                        <SolidColorBrush Color="DarkBlue" Opacity="0.8"/>
+                    </Button.Background>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text=" Rate App" HorizontalAlignment="Left" Foreground="White"/>
+                        <!-- Add a transparent rectangle to create space -->
+                        <Rectangle Width="380" Fill="Transparent"/>
+                        <FontIcon Glyph="&#xEBE7;" FontSize="16" HorizontalAlignment="Right" Foreground="White"/>
+                    </StackPanel>
+                </Button>
+
+
+
+                <Button x:Name="ShareApp" Width="500" Click="ShareApp_Click">
+                    <Button.Background>
+                    <SolidColorBrush Color="DarkBlue" Opacity="0.8"/>
+                    </Button.Background>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text=" Share App" HorizontalAlignment="Left" Foreground="White"/>
+                        <!-- Add a transparent rectangle to create space -->
+                        <Rectangle Width="370" Fill="Transparent"/>
+                        <FontIcon Glyph="&#xEBE7;" FontSize="16" HorizontalAlignment="Right" Foreground="White"/>
+                    </StackPanel>
+                </Button>
+
+
+
+                <Button x:Name="ChangePassword" Width="500" Click="ChangePassword_Click">
+                    <Button.Background>
+                    <SolidColorBrush Color="DarkBlue" Opacity="0.8"/>
+                    </Button.Background>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Change Password" HorizontalAlignment="Left" Foreground="White"/>
+                        <!-- Add margin for space -->
+                        <Rectangle Width="315" Fill="Transparent"/>
+                        <FontIcon Glyph="&#xEBE7;" FontSize="16" Foreground="White"/>
+                    </StackPanel>
+                </Button>
+
+                
+                <Button x:Name="Logout" Width="500" Click="Logout_Click">
+                    <Button.Background>
+                    <SolidColorBrush Color="DarkBlue" Opacity="0.8"/>
+                    </Button.Background>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Logout" HorizontalAlignment="Left" Foreground="White"/>
+                        <!-- Add a transparent rectangle to create space -->
+                        <Rectangle Width="400" Fill="Transparent"/>
+                        <FontIcon Glyph="&#xF3B1;" FontSize="16" HorizontalAlignment="Right" Foreground="White"/>
+                    </StackPanel>
+                </Button>
+
+                
+                <Button x:Name="DeleteAccount" Width="500" Click="DeleteAccount_Click">
+                    <Button.Background>
+                    <SolidColorBrush Color="DarkBlue" Opacity="0.8"/>
+                    </Button.Background>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Delete Account" HorizontalAlignment="Left" Foreground="White"/>
+                        <!-- Add margin for space -->
+                        <Rectangle Width="335" Fill="Transparent"/>
+                        <FontIcon Glyph="&#xE74D;" FontSize="16" Foreground="White"/>
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+    
+
 </Page>

@@ -38,6 +38,15 @@
     <Page Include="FootballerControl.xaml">
       <Filter>Views\Controls</Filter>
     </Page>
+    <Page Include="TermsConditionsPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="DeleteAccount.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="ChangePassword.xaml">
+      <Filter>Views</Filter>
+    </Page>
     <Page Include="SubstitutePlayerPage.xaml">
       <Filter>Views</Filter>
     </Page>
@@ -165,6 +174,15 @@
       <Filter>Assets</Filter>
     </Image>
     <Image Include="Assets\more.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="..\..\TermsConditions.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="..\..\shape.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="..\..\Soccer.png">
       <Filter>Assets</Filter>
     </Image>
   </ItemGroup>

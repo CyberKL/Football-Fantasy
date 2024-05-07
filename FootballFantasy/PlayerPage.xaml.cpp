@@ -38,7 +38,7 @@ namespace winrt::FootballFantasy::implementation
 
 void winrt::FootballFantasy::implementation::PlayerPage::Page_Loaded(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
-    Navigate(L"FootballFantasy.PlayerHomePage"); // PlayerHomePage
+    Navigate(L"FootballFantasy.PlayerSettingsPage"); // PlayerHomePage
 }
 
 

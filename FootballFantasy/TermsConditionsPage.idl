@@ -1,0 +1,9 @@
+namespace FootballFantasy
+{
+    [default_interface]
+    runtimeclass TermsConditionsPage : Microsoft.UI.Xaml.Controls.Page
+    {
+        TermsConditionsPage();
+        Int32 MyProperty;
+    }
+}

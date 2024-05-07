@@ -10,7 +10,7 @@
 
     <Button Background="Transparent" BorderBrush="Transparent" Padding="0" Foreground="Black">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10">
-            <FontIcon Glyph="&#xE776;" FontSize="50" />
+            <FontIcon Glyph="&#xE77B;;" FontSize="50" />
             <StackPanel Background="{ThemeResource ColoredGlassBackground}" CornerRadius="3,3,7,7" Padding="20,0">
                 <TextBlock Text="{x:Bind PlayerName}" TextAlignment="Center" FontSize="14" />
                 <TextBlock Text="{x:Bind PlayerInfo}" TextAlignment="Center" FontSize="14" />

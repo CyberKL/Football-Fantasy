@@ -52,7 +52,8 @@ void Player::setPassword(const std::string& newPassword) {
     password = newPassword;
 }
 
-void Player::setTotalPoints(int newTotalPoints) {
+void Player::setTotalPoints(int newTotalPoints) 
+{
     totalPoints = newTotalPoints;
 }
 
