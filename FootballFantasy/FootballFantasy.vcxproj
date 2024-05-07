@@ -165,11 +165,9 @@
     <ClInclude Include="SignUpPage.xaml.h">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
     </ClInclude>
-
     <ClInclude Include="TermsConditionsPage.xaml.h">
       <DependentUpon>TermsConditionsPage.xaml</DependentUpon>
     </ClInclude>
-    
     <ClInclude Include="SubstitutePlayerPage.xaml.h">
       <DependentUpon>SubstitutePlayerPage.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -197,9 +195,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </Page>
     <Page Include="SignUpPage.xaml" />
-
     <Page Include="TermsConditionsPage.xaml" />
-    
     <Page Include="SubstitutePlayerPage.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -315,17 +311,17 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\shape.png" />
-    <Image Include="..\..\Soccer.png" />
-    <Image Include="..\..\TermsConditions.png" />
     <Image Include="Assets\gradient4.jpg" />
     <Image Include="Assets\LockScreenLogo.scale-200.png" />
     <Image Include="Assets\more.png" />
+    <Image Include="Assets\shape.png" />
+    <Image Include="Assets\Soccer.png" />
     <Image Include="Assets\SplashScreen.scale-200.png" />
     <Image Include="Assets\Square150x150Logo.scale-200.png" />
     <Image Include="Assets\Square44x44Logo.scale-200.png" />
     <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Image Include="Assets\StoreLogo.png" />
+    <Image Include="Assets\TermsConditions.png" />
     <Image Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <!--
