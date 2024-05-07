@@ -79,9 +79,9 @@ void Footballer:: updatePoints(int goals)
 
 	else if (position == "Forward")
 		gwPoints[gw] += 4 * goals;
+		
 }
 
-//update price of footballer
 void Footballer:: updatePrice()
 {
 	int gw = Manager::getInstance()->getCurrentGw();

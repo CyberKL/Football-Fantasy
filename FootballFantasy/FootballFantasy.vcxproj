@@ -108,6 +108,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Admin.h" />
+    <ClInclude Include="ChangePassword.xaml.h">
+      <DependentUpon>ChangePassword.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="DeleteAccount.xaml.h">
+      <DependentUpon>DeleteAccount.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
     <ClInclude Include="Footballer.h" />
     <ClInclude Include="FootballerControl.xaml.h">
       <DependentUpon>FootballerControl.xaml</DependentUpon>
@@ -156,9 +164,19 @@
     <ClInclude Include="SignUpPage.xaml.h">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
     </ClInclude>
+    <ClInclude Include="TermsConditionsPage.xaml.h">
+      <DependentUpon>TermsConditionsPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml" />
+    <Page Include="ChangePassword.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DeleteAccount.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="FootballerControl.xaml" />
     <Page Include="LoginPage.xaml" />
     <Page Include="MainWindow.xaml" />
@@ -171,9 +189,20 @@
     <Page Include="PlayerTeamPage.xaml" />
     <Page Include="PlayerTeamPickTeamPage.xaml" />
     <Page Include="SignUpPage.xaml" />
+    <Page Include="TermsConditionsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Admin.cpp" />
+    <ClCompile Include="ChangePassword.xaml.cpp">
+      <DependentUpon>ChangePassword.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="DeleteAccount.xaml.cpp">
+      <DependentUpon>DeleteAccount.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
     <ClCompile Include="Footballer.cpp" />
     <ClCompile Include="FootballerControl.xaml.cpp">
       <DependentUpon>FootballerControl.xaml</DependentUpon>
@@ -225,8 +254,20 @@
     <ClCompile Include="SignUpPage.xaml.cpp">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
     </ClCompile>
+    <ClCompile Include="TermsConditionsPage.xaml.cpp">
+      <DependentUpon>TermsConditionsPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <Midl Include="ChangePassword.idl">
+      <DependentUpon>ChangePassword.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Midl>
+    <Midl Include="DeleteAccount.idl">
+      <DependentUpon>DeleteAccount.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Midl>
     <Midl Include="FootballerControl.idl" />
     <Midl Include="LoginPage.idl" />
     <Midl Include="MainWindow.idl">
@@ -242,6 +283,10 @@
     <Midl Include="PlayerTeamPage.idl" />
     <Midl Include="PlayerTeamPickTeamPage.idl" />
     <Midl Include="SignUpPage.idl" />
+    <Midl Include="TermsConditionsPage.idl">
+      <DependentUpon>TermsConditionsPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Midl>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Assets\counts.txt" />
@@ -250,6 +295,9 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\..\shape.png" />
+    <Image Include="..\..\Soccer.png" />
+    <Image Include="..\..\TermsConditions.png" />
     <Image Include="Assets\gradient4.jpg" />
     <Image Include="Assets\LockScreenLogo.scale-200.png" />
     <Image Include="Assets\more.png" />

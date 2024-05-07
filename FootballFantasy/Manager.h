@@ -38,6 +38,8 @@ private:
 	Manager& operator=(const Manager&) = delete;
 	
 public:
+	int totalRate;
+	int Rate;
 	// Destructor
 	~Manager();
 
@@ -76,5 +78,12 @@ public:
 	//TotalPoints ranking function
 	void totalPointsRanking();
 
+	//delete account 
+	void deleteAccount(int accountId);
+	
+
+	void changePassword(int playerID, string newPassword);
+
+	void Rating(int playerRate);
 };
 

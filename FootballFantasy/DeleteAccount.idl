@@ -1,0 +1,9 @@
+namespace FootballFantasy
+{
+    [default_interface]
+    runtimeclass DeleteAccount : Microsoft.UI.Xaml.Controls.Page
+    {
+        DeleteAccount();
+        Int32 MyProperty;
+    }
+}

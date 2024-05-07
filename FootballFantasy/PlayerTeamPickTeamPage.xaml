@@ -25,19 +25,19 @@
         </Grid.RowDefinitions>
         
         <!-- Football field items -->
-        <Rectangle Fill="ForestGreen" Canvas.ZIndex="-1" />
-        <Rectangle Grid.Row="1" Fill="MediumSeaGreen"  Canvas.ZIndex="-1" />
-        <Rectangle Grid.Row="2" Fill="ForestGreen" Canvas.ZIndex="-1" />
-        <Rectangle Grid.Row="3" Fill="MediumSeaGreen" Canvas.ZIndex="-1" />
-        <Rectangle Grid.Row="4" Fill="ForestGreen" Canvas.ZIndex="-1" />
-        <Rectangle Grid.Row="5" Fill="MediumSeaGreen" Canvas.ZIndex="-1" />
-        <Rectangle Grid.Row="6" Fill="ForestGreen" Canvas.ZIndex="-1" />
-        <Rectangle Grid.Row="7" Fill="MediumSeaGreen" Canvas.ZIndex="-1" />
-        <Rectangle Grid.Row="8" Fill="ForestGreen" Canvas.ZIndex="-1" />
-        <Rectangle Grid.Row="9" Fill="MediumSeaGreen" Canvas.ZIndex="-1" />
-        <Ellipse Grid.Row="7" Fill="Transparent" Stroke="White" Width="100" Height="100" Grid.RowSpan="2"/>
-        <Ellipse Grid.Row="7" Grid.RowSpan="2" Fill="White" Width="10" Height="10" />
-        <Rectangle Grid.Row="8" Fill="White" Canvas.ZIndex="1" Height="2" VerticalAlignment="Top" />
+        <Rectangle Fill="#f4f4f4" Canvas.ZIndex="-1" />
+        <Rectangle Grid.Row="1" Fill="#fefefa"  Canvas.ZIndex="-1" />
+        <Rectangle Grid.Row="2" Fill="#f4f4f4" Canvas.ZIndex="-1" />
+        <Rectangle Grid.Row="3" Fill="#fefefa" Canvas.ZIndex="-1" />
+        <Rectangle Grid.Row="4" Fill="#f4f4f4" Canvas.ZIndex="-1" />
+        <Rectangle Grid.Row="5" Fill="#fefefa" Canvas.ZIndex="-1" />
+        <Rectangle Grid.Row="6" Fill="#f4f4f4" Canvas.ZIndex="-1" />
+        <Rectangle Grid.Row="7" Fill="#fefefa" Canvas.ZIndex="-1" />
+        <Rectangle Grid.Row="8" Fill="#f4f4f4" Canvas.ZIndex="-1" />
+        <Rectangle Grid.Row="9" Fill="#fefefa" Canvas.ZIndex="-1" />
+        <Ellipse Grid.Row="7" Fill="Transparent" Stroke="#118b77" Width="100" Height="100" Grid.RowSpan="2" Canvas.ZIndex="1"/>
+        <Ellipse Grid.Row="7" Grid.RowSpan="2" Fill="#118b77" Width="10" Height="10" Canvas.ZIndex="1" />
+        <Rectangle Grid.Row="8" Fill="#118b77" Canvas.ZIndex="1" Height="2" VerticalAlignment="Top" />
         
         <!-- Footballers items -->
         <StackPanel x:Name="GkPanel" Grid.RowSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
