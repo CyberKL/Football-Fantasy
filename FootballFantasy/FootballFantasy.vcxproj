@@ -151,10 +151,15 @@
     </ClInclude>
     <ClInclude Include="PlayerTeamPickTeamPage.xaml.h">
       <DependentUpon>PlayerTeamPickTeamPage.xaml</DependentUpon>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Presenter.h" />
     <ClInclude Include="SignUpPage.xaml.h">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="SubstitutePlayerPage.xaml.h">
+      <DependentUpon>SubstitutePlayerPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -169,8 +174,13 @@
     <Page Include="PlayerRankingsPage.xaml" />
     <Page Include="PlayerSettingsPage.xaml" />
     <Page Include="PlayerTeamPage.xaml" />
-    <Page Include="PlayerTeamPickTeamPage.xaml" />
+    <Page Include="PlayerTeamPickTeamPage.xaml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </Page>
     <Page Include="SignUpPage.xaml" />
+    <Page Include="SubstitutePlayerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Admin.cpp" />
@@ -220,10 +230,15 @@
     </ClCompile>
     <ClCompile Include="PlayerTeamPickTeamPage.xaml.cpp">
       <DependentUpon>PlayerTeamPickTeamPage.xaml</DependentUpon>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Presenter.cpp" />
     <ClCompile Include="SignUpPage.xaml.cpp">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="SubstitutePlayerPage.xaml.cpp">
+      <DependentUpon>SubstitutePlayerPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -240,8 +255,14 @@
     <Midl Include="PlayerRankingsPage.idl" />
     <Midl Include="PlayerSettingsPage.idl" />
     <Midl Include="PlayerTeamPage.idl" />
-    <Midl Include="PlayerTeamPickTeamPage.idl" />
+    <Midl Include="PlayerTeamPickTeamPage.idl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </Midl>
     <Midl Include="SignUpPage.idl" />
+    <Midl Include="SubstitutePlayerPage.idl">
+      <DependentUpon>SubstitutePlayerPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Midl>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Assets\counts.txt" />

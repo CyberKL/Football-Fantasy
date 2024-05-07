@@ -3,6 +3,7 @@
 #include "Manager.h"
 
 struct UiFootballer {
+	int id;
 	string name;
 	string info;
 	bool isStarting;
@@ -15,6 +16,7 @@ private:
 	static Presenter* instance;
 
 	Player* loggedInPlayer;
+	int pressedFootballerControlId;
 
 	Presenter(); // Private constructor to prevent instantiation
 
@@ -25,6 +27,12 @@ private:
 public:
 	static Presenter* getInstance();
 
+	// Getters
+	int getPressedFootballerControlId();
+
+	// Setters
+	void setPressedFootballerControlId(int);
+
 	bool isUsernameDuplicate(const string&);
 	void signUp(const string&, const string&);
 	bool login(const string&, const string&);
@@ -34,7 +42,8 @@ public:
 	string getFootballerNextMatch(int);
 	void createPlayerTeam(unordered_set<int>, int);
 	vector<Footballer> searchFootballersByPosition(string);
-	vector<struct UiFootballer> loadPickTeamPage();
+	unordered_map<int, struct UiFootballer> loadPickTeamPage();
+	void swapFootballersInPlayerTeam(int, int);
 	void loadData();
 };
 

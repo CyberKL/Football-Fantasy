@@ -38,6 +38,9 @@
     <Page Include="FootballerControl.xaml">
       <Filter>Views\Controls</Filter>
     </Page>
+    <Page Include="SubstitutePlayerPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Midl Include="MainWindow.idl" />

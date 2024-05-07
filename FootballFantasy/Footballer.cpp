@@ -97,6 +97,30 @@ string Footballer::priceToString() const
 	return priceString;
 }
 
+string Footballer::positionAbbrv() const
+{
+	if (position == "Goalkeeper")
+		return "Gk";
+	else if (position == "Defender")
+		return "Def";
+	else if (position == "Midfielder")
+		return "Mid";
+	else if (position == "Forward")
+		return "Fwd";
+}
+
+string Footballer::positionUpperAbbrv() const
+{
+	if (position == "Goalkeeper")
+		return "GK";
+	else if (position == "Defender")
+		return "DEF";
+	else if (position == "Midfielder")
+		return "MID";
+	else if (position == "Forward")
+		return "FWD";
+}
+
 // Saving and loading
 json Footballer::toJson()
 {
