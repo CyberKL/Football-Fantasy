@@ -27,13 +27,38 @@ namespace winrt::FootballFantasy::implementation
         throw hresult_not_implemented();
     }
     unordered_map<int, FootballerControl> footballerControls;
+    void SubstitutePlayerPage::updateTempSquad()
+    {
+        unordered_map<int, bool> tempSquad;
+
+        for (auto element : GkPanel().Children())
+            tempSquad[stoi(to_string(element.as<FootballerControl>().Name()))] = true;
+        for (auto element : DefPanel().Children())
+            tempSquad[stoi(to_string(element.as<FootballerControl>().Name()))] = true;
+        for (auto element : MidPanel().Children())
+            tempSquad[stoi(to_string(element.as<FootballerControl>().Name()))] = true;
+        for (auto element : FwdPanel().Children())
+            tempSquad[stoi(to_string(element.as<FootballerControl>().Name()))] = true;
+        for (int column = 0; column < SubsGrid().ColumnDefinitions().Size(); ++column)
+            tempSquad[stoi(to_string(SubsGrid().Children().GetAt(column * 2 + 1).as<FootballerControl>().Name()))] = false;
+        
+        Presenter::getInstance()->setTempSquad(tempSquad);
+        Presenter::getInstance()->setSquadEdited(true);
+    }
 }
 
 
 void winrt::FootballFantasy::implementation::SubstitutePlayerPage::Page_Loaded(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
+
     int pressedFootballerControlId = Presenter::getInstance()->getPressedFootballerControlId();
-    unordered_map<int, struct UiFootballer> footballers = Presenter::getInstance()->loadPickTeamPage();
+
+    unordered_map<int, struct UiFootballer> footballers;
+    if (Presenter::getInstance()->getSquadEdited())
+        footballers = Presenter::getInstance()->loadTempSquad();
+    else
+        footballers = Presenter::getInstance()->loadPickTeamPage();
+
     unordered_map<int, struct UiFootballer>::iterator it;
     UiFootballer pressedFootballer = footballers[pressedFootballerControlId];
     int subsCount = 0;
@@ -374,13 +399,15 @@ void winrt::FootballFantasy::implementation::SubstitutePlayerPage::Page_Loaded(w
             footballerControls[footballer.id] = footballerControl;
         }
     }
-
 }
 
 void winrt::FootballFantasy::implementation::SubstitutePlayerPage::SwapFootballer(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
     FootballerControl pressedPlayer = footballerControls[Presenter::getInstance()->getPressedFootballerControlId()];
     FootballerControl substitutePlayer = sender.as<Controls::Button>().Parent().as<FootballerControl>();
+
+    int pressedPlayerId = stoi(to_string(pressedPlayer.Name()));
+    int substitutePlayerId = stoi(to_string(substitutePlayer.Name()));
 
     auto pressedPlayerParent = pressedPlayer.Parent();
     auto substitutePlayerParent = substitutePlayer.Parent();
@@ -479,335 +506,21 @@ void winrt::FootballFantasy::implementation::SubstitutePlayerPage::SwapFootballe
             pressedPlayer.HorizontalAlignment(HorizontalAlignment::Center);
         }
     }
-
+    updateTempSquad();
+    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerTeamPickTeamPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+    Frame().Navigate(page);
 }
 
 void winrt::FootballFantasy::implementation::SubstitutePlayerPage::CancelChanges(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
-    Frame().GoBack();
+    Presenter::getInstance()->setSquadEdited(false);
+    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerTeamPickTeamPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+    Frame().Navigate(page);
 }
 
-//void winrt::FootballFantasy::implementation::PlayerTeamPickTeamPage::dialogButtonClickHandler(winrt::Windows::Foundation::IInspectable const& dialog, winrt::Microsoft::UI::Xaml::Controls::ContentDialogButtonClickEventArgs const& args)
-//{
-//    auto senderDialog = dialog.as<Controls::ContentDialog>();
-//    int footballerId = stoi(to_string(senderDialog.Name()));
-//    Footballer footballer = Presenter::getInstance()->getFootballer(footballerId);
-//    senderDialog.Hide();
-//    PlayerTeam playerTeam = *Presenter::getInstance()->getPlayerTeam();
-//
-//    unordered_map<int, pair<Footballer*, bool>>::iterator it;
-//    unordered_map<int, pair<Footballer*, bool>> squad = playerTeam.getSquad();
-//    int defCount = 0;
-//    int midCount = 0;
-//    int fwdCount = 0;
-//    for (it = squad.begin(); it != squad.end(); it++)
-//    {
-//        if (it->second.first->getPosition() == "Defender")
-//            defCount++;
-//        else if (it->second.first->getPosition() == "Midfielder")
-//            midCount++;
-//        else if (it->second.first->getPosition() == "Forward")
-//            fwdCount++;
-//    }
-//
-//    if (playerTeam.getSquad()[footballerId].second) // Footballer in the starting lineup
-//    {
-//        //// Disable all starting players except the pressed player
-//        //for (auto element : GkPanel().Children())
-//        //{
-//        //    FootballerControl footballerControl = element.as<FootballerControl>();
-//        //    if (footballerControl.Name() != senderDialog.Name()) // not the pressed footballer, disable
-//        //        element.as<FootballerControl>().Content().as<Controls::Button>().IsEnabled(false);
-//        //    else // change pressed footballer to red
-//        //    {
-//        //        element.as<FootballerControl>().Content().as<Controls::Button>().BorderThickness(ThicknessHelper::FromLengths(2, 2, 2, 2));
-//        //        element.as<FootballerControl>().Content().as<Controls::Button>().BorderBrush(Media::SolidColorBrush(Windows::UI::Colors::Red()));
-//        //    }
-//        //}
-//        //for (auto element : DefPanel().Children())
-//        //{
-//        //    FootballerControl footballerControl = element.as<FootballerControl>();
-//        //    if (footballerControl.Name() != senderDialog.Name()) // not the pressed footballer, disable
-//        //        element.as<FootballerControl>().Content().as<Controls::Button>().IsEnabled(false);
-//        //    else // change pressed footballer to red
-//        //    {
-//        //        element.as<FootballerControl>().Content().as<Controls::Button>().BorderThickness(ThicknessHelper::FromLengths(2, 2, 2, 2));
-//        //        element.as<FootballerControl>().Content().as<Controls::Button>().BorderBrush(Media::SolidColorBrush(Windows::UI::Colors::Red()));
-//        //    }
-//        //}
-//        //for (auto element : MidPanel().Children())
-//        //{
-//        //    FootballerControl footballerControl = element.as<FootballerControl>();
-//        //    if (footballerControl.Name() != senderDialog.Name()) // not the pressed footballer, disable
-//        //        element.as<FootballerControl>().Content().as<Controls::Button>().IsEnabled(false);
-//        //    else // change pressed footballer to red
-//        //    {
-//        //        element.as<FootballerControl>().Content().as<Controls::Button>().BorderThickness(ThicknessHelper::FromLengths(2, 2, 2, 2));
-//        //        element.as<FootballerControl>().Content().as<Controls::Button>().BorderBrush(Media::SolidColorBrush(Windows::UI::Colors::Red()));
-//        //    }
-//        //}
-//        //for (auto element : FwdPanel().Children())
-//        //{
-//        //    FootballerControl footballerControl = element.as<FootballerControl>();
-//        //    if (footballerControl.Name() != senderDialog.Name()) // not the pressed footballer, disable
-//        //        element.as<FootballerControl>().Content().as<Controls::Button>().IsEnabled(false);
-//        //    else // change pressed footballer to red
-//        //    {
-//        //        element.as<FootballerControl>().Content().as<Controls::Button>().BorderThickness(ThicknessHelper::FromLengths(2, 2, 2, 2));
-//        //        element.as<FootballerControl>().Content().as<Controls::Button>().BorderBrush(Media::SolidColorBrush(Windows::UI::Colors::Red()));
-//        //    }
-//        //}
-//
-//        string footballerPosition = footballer.getPosition();
-//        if (footballerPosition == "Goalkeeper")
-//        {
-//            for (int column = 0; column < SubsGrid().ColumnDefinitions().Size(); ++column)
-//            {
-//                for (int row = 0; row < SubsGrid().RowDefinitions().Size(); row += 2)
-//                {
-//                    // Get the first and second child elements in the current column
-//                    auto text = SubsGrid().Children().GetAt(column * 2).as<Controls::TextBlock>();
-//                    auto footballerControl = SubsGrid().Children().GetAt(column * 2 + 1).as<FootballerControl>();
-//                    if (to_string(text.Text()) == footballer.positionUpperAbbrv())
-//                    {
-//                        footballerControl.Content().as<Controls::Button>().Click(nullptr);
-//                        footballerControl.Content().as<Controls::Button>().Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-//                            {
-//                                swapFootballerControls(pressedFootballerControl, footballerControl);
-//                            });
-//                        footballerControl.Content().as<Controls::Button>().BorderThickness(ThicknessHelper::FromLengths(2, 2, 2, 2));
-//                        footballerControl.Content().as<Controls::Button>().BorderBrush(Media::SolidColorBrush(Windows::UI::Colors::Green()));
-//                    }
-//                    else
-//                        footballerControl.Content().as<Controls::Button>().IsEnabled(false);
-//                }
-//            }
-//        }
-//        else if (footballerPosition == "Defender")
-//        {
-//            if (defCount == 3) // Sub with defenders only
-//            {
-//                for (int column = 0; column < SubsGrid().ColumnDefinitions().Size(); ++column)
-//                {
-//                    for (int row = 0; row < SubsGrid().RowDefinitions().Size(); row += 2)
-//                    {
-//                        // Get the first and second child elements in the current column
-//                        auto text = SubsGrid().Children().GetAt(column * 2).as<Controls::TextBlock>();
-//                        auto footballerControl = SubsGrid().Children().GetAt(column * 2 + 1).as<FootballerControl>();
-//                        if (to_string(text.Text()) == footballer.positionUpperAbbrv())
-//                        {
-//                            footballerControl.Content().as<Controls::Button>().Click(nullptr);
-//                            footballerControl.Content().as<Controls::Button>().Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-//                                {
-//                                    swapFootballerControls(pressedFootballerControl, footballerControl);
-//                                });
-//                            footballerControl.Content().as<Controls::Button>().BorderThickness(ThicknessHelper::FromLengths(2, 2, 2, 2));
-//                            footballerControl.Content().as<Controls::Button>().BorderBrush(Media::SolidColorBrush(Windows::UI::Colors::Green()));
-//                        }
-//                        else
-//                            footballerControl.Content().as<Controls::Button>().IsEnabled(false);
-//                    }
-//                }
-//            }
-//            else // Sub with all except goalkeeper
-//            {
-//                for (int column = 0; column < SubsGrid().ColumnDefinitions().Size(); ++column)
-//                {
-//                    for (int row = 0; row < SubsGrid().RowDefinitions().Size(); row += 2)
-//                    {
-//                        // Get the first and second child elements in the current column
-//                        auto text = SubsGrid().Children().GetAt(column * 2).as<Controls::TextBlock>();
-//                        auto footballerControl = SubsGrid().Children().GetAt(column * 2 + 1).as<FootballerControl>();
-//                        if (to_string(text.Text()) != "GK")
-//                        {
-//                            footballerControl.Content().as<Controls::Button>().Click(nullptr);
-//                            footballerControl.Content().as<Controls::Button>().Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-//                                {
-//                                    swapFootballerControls(pressedFootballerControl, footballerControl);
-//                                });
-//                            footballerControl.Content().as<Controls::Button>().BorderThickness(ThicknessHelper::FromLengths(2, 2, 2, 2));
-//                            footballerControl.Content().as<Controls::Button>().BorderBrush(Media::SolidColorBrush(Windows::UI::Colors::Green()));
-//                        }
-//                        else
-//                            footballerControl.Content().as<Controls::Button>().IsEnabled(false);
-//                    }
-//                }
-//            }
-//        }
-//        else if (footballerPosition == "Midfielder") // Sub with all except goalkeeper
-//        {
-//            for (int column = 0; column < SubsGrid().ColumnDefinitions().Size(); ++column)
-//            {
-//                for (int row = 0; row < SubsGrid().RowDefinitions().Size(); row += 2)
-//                {
-//                    // Get the first and second child elements in the current column
-//                    auto text = SubsGrid().Children().GetAt(column * 2).as<Controls::TextBlock>();
-//                    auto footballerControl = SubsGrid().Children().GetAt(column * 2 + 1).as<FootballerControl>();
-//                    if (to_string(text.Text()) != "GK")
-//                    {
-//                        footballerControl.Content().as<Controls::Button>().Click(nullptr);
-//                        footballerControl.Content().as<Controls::Button>().Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-//                            {
-//                                swapFootballerControls(pressedFootballerControl, footballerControl);
-//                            });
-//                        footballerControl.Content().as<Controls::Button>().BorderThickness(ThicknessHelper::FromLengths(2, 2, 2, 2));
-//                        footballerControl.Content().as<Controls::Button>().BorderBrush(Media::SolidColorBrush(Windows::UI::Colors::Green()));
-//                    }
-//                    else
-//                        footballerControl.Content().as<Controls::Button>().IsEnabled(false);
-//                }
-//            }
-//        }
-//        else if (footballerPosition == "Forward")
-//        {
-//            if (fwdCount == 1) // Sub with forwards only
-//            {
-//                for (int column = 0; column < SubsGrid().ColumnDefinitions().Size(); ++column)
-//                {
-//                    for (int row = 0; row < SubsGrid().RowDefinitions().Size(); row += 2)
-//                    {
-//                        // Get the first and second child elements in the current column
-//                        auto text = SubsGrid().Children().GetAt(column * 2).as<Controls::TextBlock>();
-//                        auto footballerControl = SubsGrid().Children().GetAt(column * 2 + 1).as<FootballerControl>();
-//                        if (to_string(text.Text()) == footballer.positionUpperAbbrv())
-//                        {
-//                            footballerControl.Content().as<Controls::Button>().Click(nullptr);
-//                            footballerControl.Content().as<Controls::Button>().Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-//                                {
-//                                    swapFootballerControls(pressedFootballerControl, footballerControl);
-//                                });
-//                            footballerControl.Content().as<Controls::Button>().BorderThickness(ThicknessHelper::FromLengths(2, 2, 2, 2));
-//                            footballerControl.Content().as<Controls::Button>().BorderBrush(Media::SolidColorBrush(Windows::UI::Colors::Green()));
-//                        }
-//                        else
-//                            footballerControl.Content().as<Controls::Button>().IsEnabled(false);
-//                    }
-//                }
-//            }
-//            else // Sub with all except goalkeeper
-//            {
-//                for (int column = 0; column < SubsGrid().ColumnDefinitions().Size(); ++column)
-//                {
-//                    for (int row = 0; row < SubsGrid().RowDefinitions().Size(); row += 2)
-//                    {
-//                        // Get the first and second child elements in the current column
-//                        auto text = SubsGrid().Children().GetAt(column * 2).as<Controls::TextBlock>();
-//                        auto footballerControl = SubsGrid().Children().GetAt(column * 2 + 1).as<FootballerControl>();
-//                        if (to_string(text.Text()) != "GK")
-//                        {
-//                            footballerControl.Content().as<Controls::Button>().Click(nullptr);
-//                            footballerControl.Content().as<Controls::Button>().Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-//                                {
-//                                    swapFootballerControls(pressedFootballerControl, footballerControl);
-//                                });
-//                            footballerControl.Content().as<Controls::Button>().BorderThickness(ThicknessHelper::FromLengths(2, 2, 2, 2));
-//                            footballerControl.Content().as<Controls::Button>().BorderBrush(Media::SolidColorBrush(Windows::UI::Colors::Green()));
-//                        }
-//                        else
-//                            footballerControl.Content().as<Controls::Button>().IsEnabled(false);
-//                    }
-//                }
-//            }
-//        }
-//    }
-//    else // Footballer on the bench
-//    {
-//        string footballerPosition = footballer.getPosition();
-//        if (footballerPosition == "Goalkeeper")
-//        {
-//            for (auto element : SubsGrid().Children())
-//                if (element.as<FootballerControl>().Name() == senderDialog.Name())
-//                {
-//                    element.as<FootballerControl>().Content().as<Controls::Button>().BorderThickness(ThicknessHelper::FromLengths(2, 2, 2, 2));
-//                    element.as<FootballerControl>().Content().as<Controls::Button>().BorderBrush(Media::SolidColorBrush(Windows::UI::Colors::Green()));
-//                    break;
-//                }
-//            GkPanel().Children().GetAt(0).as<FootballerControl>().Content().as<Controls::Button>().Click(nullptr);
-//            GkPanel().Children().GetAt(0).as<FootballerControl>().Content().as<Controls::Button>().Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-//                {
-//                    swapFootballerControls(pressedFootballerControl, GkPanel().Children().GetAt(0).as<FootballerControl>());
-//                });
-//            GkPanel().Children().GetAt(0).as<FootballerControl>().Content().as<Controls::Button>().BorderThickness(ThicknessHelper::FromLengths(2, 2, 2, 2));
-//            GkPanel().Children().GetAt(0).as<FootballerControl>().Content().as<Controls::Button>().BorderBrush(Media::SolidColorBrush(Windows::UI::Colors::Red()));
-//            for (auto element : DefPanel().Children())
-//                element.as<FootballerControl>().Content().as<Controls::Button>().IsEnabled(false);
-//            for (auto element : MidPanel().Children())
-//                element.as<FootballerControl>().Content().as<Controls::Button>().IsEnabled(false);
-//            for (auto element : FwdPanel().Children())
-//                element.as<FootballerControl>().Content().as<Controls::Button>().IsEnabled(false);
-//        }
-//        else
-//        {
-//            GkPanel().Children().GetAt(0).as<FootballerControl>().Content().as<Controls::Button>().IsEnabled(false);
-//            for (auto element : DefPanel().Children())
-//            {
-//                if (defCount > 3)
-//                {
-//                    element.as<FootballerControl>().Content().as<Controls::Button>().Click(nullptr);
-//                    element.as<FootballerControl>().Content().as<Controls::Button>().Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-//                        {
-//                            swapFootballerControls(pressedFootballerControl, element.as<FootballerControl>());
-//                        });
-//                    element.as<FootballerControl>().Content().as<Controls::Button>().BorderThickness(ThicknessHelper::FromLengths(2, 2, 2, 2));
-//                    element.as<FootballerControl>().Content().as<Controls::Button>().BorderBrush(Media::SolidColorBrush(Windows::UI::Colors::Red()));
-//                }
-//            }
-//            for (auto element : MidPanel().Children())
-//            {
-//                if (midCount > 2)
-//                {
-//                    element.as<FootballerControl>().Content().as<Controls::Button>().Click(nullptr);
-//                    element.as<FootballerControl>().Content().as<Controls::Button>().Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-//                        {
-//                            swapFootballerControls(pressedFootballerControl, element.as<FootballerControl>());
-//                        });
-//                    element.as<FootballerControl>().Content().as<Controls::Button>().BorderThickness(ThicknessHelper::FromLengths(2, 2, 2, 2));
-//                    element.as<FootballerControl>().Content().as<Controls::Button>().BorderBrush(Media::SolidColorBrush(Windows::UI::Colors::Red()));
-//                }
-//            }
-//            for (auto element : FwdPanel().Children())
-//            {
-//                if (fwdCount > 1)
-//                {
-//                    element.as<FootballerControl>().Content().as<Controls::Button>().Click(nullptr);
-//                    element.as<FootballerControl>().Content().as<Controls::Button>().Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-//                        {
-//                            swapFootballerControls(pressedFootballerControl, element.as<FootballerControl>());
-//                        });
-//                    element.as<FootballerControl>().Content().as<Controls::Button>().BorderThickness(ThicknessHelper::FromLengths(2, 2, 2, 2));
-//                    element.as<FootballerControl>().Content().as<Controls::Button>().BorderBrush(Media::SolidColorBrush(Windows::UI::Colors::Red()));
-//                }
-//            }
-//            for (int column = 0; column < SubsGrid().ColumnDefinitions().Size(); ++column)
-//            {
-//                for (int row = 0; row < SubsGrid().RowDefinitions().Size(); row += 2)
-//                {
-//                    // Get the first and second child elements in the current column
-//                    auto text = SubsGrid().Children().GetAt(column * 2).as<Controls::TextBlock>();
-//                    auto footballerControl = SubsGrid().Children().GetAt(column * 2 + 1).as<FootballerControl>();
-//                    if (to_string(text.Text()) != "GK")
-//                    {
-//                        footballerControl.Content().as<Controls::Button>().BorderThickness(ThicknessHelper::FromLengths(2, 2, 2, 2));
-//                        footballerControl.Content().as<Controls::Button>().BorderBrush(Media::SolidColorBrush(Windows::UI::Colors::Green()));
-//                        if (pressedFootballerControl == footballerControl)
-//                        {
-//
-//                        }
-//                        else
-//                        {
-//                            footballerControl.Content().as<Controls::Button>().Click(nullptr);
-//                            footballerControl.Content().as<Controls::Button>().Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-//                                {
-//                                    swapFootballerControls(pressedFootballerControl, footballerControl);
-//                                });
-//                        }
-//                    }
-//                    else
-//                        footballerControl.Content().as<Controls::Button>().IsEnabled(false);
-//                }
-//            }
-//
-//        }
-//    }
-//
-//}
+void winrt::FootballFantasy::implementation::SubstitutePlayerPage::ConfirmChanges(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+{
+    Presenter::getInstance()->confirmChangesInPickTeam();
+    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerTeamPickTeamPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+    Frame().Navigate(page);
+}

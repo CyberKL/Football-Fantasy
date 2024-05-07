@@ -116,7 +116,31 @@ namespace winrt::FootballFantasy::implementation
 
 void winrt::FootballFantasy::implementation::PlayerTeamPickTeamPage::Page_Loaded(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
-    unordered_map<int, struct UiFootballer> footballers = Presenter::getInstance()->loadPickTeamPage();
+    unordered_map<int, struct UiFootballer> footballers;
+    if (Presenter::getInstance()->getSquadEdited())
+    {
+        footballers = Presenter::getInstance()->loadTempSquad();
+        Controls::Button CancelBtn;
+        CancelBtn.Content(winrt::box_value(L"Cancel"));
+        CancelBtn.HorizontalAlignment(HorizontalAlignment::Left);
+        CancelBtn.Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+            {
+                CancelChanges(sender, e);
+            });
+        FootballFieldGrid().Children().Append(CancelBtn);
+
+        Controls::Button ConfirmBtn;
+        ConfirmBtn.Content(winrt::box_value(L"Confirm"));
+        ConfirmBtn.HorizontalAlignment(HorizontalAlignment::Right);
+        ConfirmBtn.Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+            {
+                ConfirmChanges(sender, e);
+            });
+        FootballFieldGrid().Children().Append(ConfirmBtn);
+    }
+    else
+        footballers = Presenter::getInstance()->loadPickTeamPage();
+
     unordered_map<int, struct UiFootballer>::iterator it;
     int subsCount = 0;
     for (it = footballers.begin(); it != footballers.end(); it++)
@@ -202,4 +226,19 @@ void winrt::FootballFantasy::implementation::PlayerTeamPickTeamPage::FootballerC
         });
     dialog.CloseButtonText(L"Cancel");
     dialog.ShowAsync();
+}
+
+
+void winrt::FootballFantasy::implementation::PlayerTeamPickTeamPage::CancelChanges(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+{
+    Presenter::getInstance()->setSquadEdited(false);
+    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerTeamPickTeamPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+    Frame().Navigate(page);
+}
+
+void winrt::FootballFantasy::implementation::PlayerTeamPickTeamPage::ConfirmChanges(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+{
+    Presenter::getInstance()->confirmChangesInPickTeam();
+    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerTeamPickTeamPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+    Frame().Navigate(page);
 }
