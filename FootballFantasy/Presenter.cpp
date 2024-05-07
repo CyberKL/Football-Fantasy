@@ -25,9 +25,25 @@ int Presenter::getPressedFootballerControlId()
 }
 
 
+bool Presenter::getSquadEdited()
+{
+    return squadEdited;
+}
+
+
 void Presenter::setPressedFootballerControlId(int pressedFootballerControlId)
 {
     this->pressedFootballerControlId = pressedFootballerControlId;
+}
+
+void Presenter::setTempSquad(unordered_map<int, bool> tempSquad)
+{
+    this->tempSquad = tempSquad;
+}
+
+void Presenter::setSquadEdited(bool squadEdited)
+{
+    this->squadEdited = squadEdited;
 }
 
 bool Presenter::isUsernameDuplicate(const string& username)
@@ -148,7 +164,6 @@ unordered_map<int, struct UiFootballer> Presenter::loadPickTeamPage()
 {
     unordered_map<int, pair<Footballer*, bool>> squad = loggedInPlayer->getTeam()->getSquad();
     unordered_map<int, pair<Footballer*, bool>>::iterator it;
-    //vector<struct UiFootballer> footballers;
     unordered_map<int, struct UiFootballer> footballers;
     for (it = squad.begin(); it != squad.end(); it++)
     {
@@ -166,9 +181,37 @@ unordered_map<int, struct UiFootballer> Presenter::loadPickTeamPage()
     return footballers;
 }
 
-void Presenter::swapFootballersInPlayerTeam(int subbedOutId, int subbedInId)
+unordered_map<int, struct UiFootballer> Presenter::loadTempSquad()
 {
-    loggedInPlayer->getTeam()->swapFootballers(subbedOutId, subbedInId);
+    unordered_map<int, pair<Footballer*, bool>> squad = loggedInPlayer->getTeam()->getSquad();
+    unordered_map<int, bool>::iterator it;
+    unordered_map<int, struct UiFootballer> footballers;
+    for (it = tempSquad.begin(); it != tempSquad.end(); it++)
+    {
+        Footballer footballer = *squad[it->first].first;
+        struct UiFootballer uiFootballer;
+        uiFootballer.id = footballer.getId();
+        uiFootballer.name = footballer.getName();
+        uiFootballer.isStarting = it->second;
+        uiFootballer.position = footballer.getPosition();
+        FootballTeam* footballerTeam = footballer.getTeam();
+        Match nextMatch = Manager::getInstance()->findNextMatch(footballerTeam);
+        nextMatch.getHomeTeam() == footballerTeam ? uiFootballer.info = nextMatch.getAwayTeam()->getName() : uiFootballer.info = nextMatch.getHomeTeam()->getName();
+        footballers[uiFootballer.id] = uiFootballer;
+    }
+    return footballers;
+}
+
+void Presenter::confirmChangesInPickTeam()
+{
+    unordered_map<int, pair<Footballer*, bool>> squad;
+    unordered_map<int, bool>::iterator it;
+
+    for (it = tempSquad.begin(); it != tempSquad.end(); it++)
+        squad[it->first] = make_pair(Manager::getInstance()->getFootballers()[it->first], it->second);
+
+    loggedInPlayer->getTeam()->setSquad(squad);
+    squadEdited = false;
 }
 
 void Presenter::loadData()

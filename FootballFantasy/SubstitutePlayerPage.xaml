@@ -39,6 +39,10 @@
         <Ellipse Grid.Row="7" Grid.RowSpan="2" Fill="#118b77" Width="10" Height="10" />
         <Rectangle Grid.Row="8" Fill="#118b77" Canvas.ZIndex="1" Height="2" VerticalAlignment="Top" />
         
+        
+        <!-- Options -->
+        <Button x:Name="CancelBtn" HorizontalAlignment="Left" Content="Cancel" Click="CancelChanges" />
+        <Button x:Name="Confirm" HorizontalAlignment="Right" Content="Confirm" Click="ConfirmChanges" />
 
         <!-- Footballers items -->
         <StackPanel x:Name="GkPanel" Grid.RowSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">

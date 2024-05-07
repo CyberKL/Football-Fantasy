@@ -8,6 +8,6 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Image Source="TermsConditions.png" />
+    <Image Source="Assets/TermsConditions.png" />
 
 </Page>
