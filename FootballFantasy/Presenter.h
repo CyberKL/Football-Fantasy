@@ -45,5 +45,12 @@ public:
 	unordered_map<int, struct UiFootballer> loadPickTeamPage();
 	void swapFootballersInPlayerTeam(int, int);
 	void loadData();
+	string getLoggedInPlayerPassword();
+	string getLoggedInPlayerUsername();
+	void changePassword(string password);
+	void deleteAccount(int accountId);
+	int getLoggedInPlayerID();
+
+
 };
 

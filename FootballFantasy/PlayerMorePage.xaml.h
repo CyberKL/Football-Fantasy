@@ -13,6 +13,7 @@ namespace winrt::FootballFantasy::implementation
         }
 
         int32_t MyProperty();
+        void Return(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e);
         void MyProperty(int32_t value);
     };
 }
