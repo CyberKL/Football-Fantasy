@@ -8,11 +8,18 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <NavigationView x:Name="NavView" Background="{StaticResource GradientImageBackground}" IsBackButtonVisible="Collapsed" IsTitleBarAutoPaddingEnabled="False" SelectionChanged="NavView_SelectionChanged" RequestedTheme="Dark">
+    <NavigationView x:Name="NavView" Background="{StaticResource GradientImageBackground}" IsBackButtonVisible="Visible" IsBackEnabled="True" BackRequested="NavView_BackRequested" IsSettingsVisible="False" IsTitleBarAutoPaddingEnabled="False" SelectionChanged="NavView_SelectionChanged" RequestedTheme="Dark">
         <NavigationView.MenuItems>
             <NavigationViewItem Content="Matches" Icon="Add"  Tag="Matches" IsSelected="True"/>
             <NavigationViewItem Content="Data" Icon="Edit" Tag="Data"/>
         </NavigationView.MenuItems>
+        <NavigationView.FooterMenuItems>
+            <NavigationViewItem Content="Logout" Tag="Logout">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xF3B1;" />
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+        </NavigationView.FooterMenuItems>
         <Frame x:Name="AdminFrame" Background="{ThemeResource NeutralColor}" />
     </NavigationView>
 

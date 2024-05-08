@@ -8,7 +8,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     
-    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkBlue" Opacity="0.8" CornerRadius="10">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Background="DarkBlue" Opacity="0.8" CornerRadius="10" ColumnSpacing="50">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
@@ -24,17 +24,17 @@
 
         <StackPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
 
-            <TextBlock Text="...." Margin="5"/>
-            <TextBlock Text="...." Margin="5"/>
+            <TextBlock Text="Team1Name" Margin="5"/>
+            <TextBox PlaceholderText="score" Margin="5"/>
 
         </StackPanel>
 
 
         <StackPanel Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
          
-                <TextBlock Text="....." Margin="5"/>
-                <TextBlock Text="....." Margin="5"/>
-           
+          <TextBlock Text="Team2Name" Margin="5"/>
+          <TextBox PlaceholderText="score" Margin="5"/>
+
         </StackPanel>
 
         <Grid Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">

@@ -44,12 +44,22 @@ namespace winrt::FootballFantasy::implementation
                     Navigate(L"FootballFantasy.AdminMatchesPage");
                 else if (tag == L"Data")
                     Navigate(L"FootballFantasy.AdminDataPage");
-                else if (tag == L"Settings")
-                    Navigate(L"FootballFantasy.LoginPage");
+                else if (tag == L"Logout")
+                {
+                    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.SignUpPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+                    Frame().Navigate(page);
+                }
             }
         }
     }
+    
 }
 
 
   
+
+
+void winrt::FootballFantasy::implementation::AdminPanelPage::NavView_BackRequested(winrt::Microsoft::UI::Xaml::Controls::NavigationView const& sender, winrt::Microsoft::UI::Xaml::Controls::NavigationViewBackRequestedEventArgs const& args)
+{
+
+}
