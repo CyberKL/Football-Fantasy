@@ -3,6 +3,7 @@
 #if __has_include("PlayerHomePage.g.cpp")
 #include "PlayerHomePage.g.cpp"
 #endif
+#include "Presenter.h"
 
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
@@ -21,4 +22,79 @@ namespace winrt::FootballFantasy::implementation
     {
         throw hresult_not_implemented();
     }
+}
+
+
+void winrt::FootballFantasy::implementation::PlayerHomePage::Page_Loaded(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+{
+    int numOfGw = Presenter::getInstance()->getMatches().size();
+    for (int i = 0; i < numOfGw; i++)
+    {
+        GwBox().Items().Append(winrt::box_value(to_hstring(i + 1)));
+    }
+    for (auto&& item : GwBox().Items())
+    {
+        if (item && item.as<hstring>() == to_hstring(Presenter::getInstance()->getCurrentGw()))
+        {
+            GwBox().SelectedItem(item);
+            break;
+        }
+    }
+}
+
+
+void winrt::FootballFantasy::implementation::PlayerHomePage::PreviousBtn_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+{
+    int selectedIndex = GwBox().SelectedIndex();
+    if (selectedIndex > 0)
+    {
+        GwBox().SelectedIndex(selectedIndex - 1);
+    }
+}
+
+
+void winrt::FootballFantasy::implementation::PlayerHomePage::NextBtn_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+{
+    int selectedIndex = GwBox().SelectedIndex();
+    if (selectedIndex < GwBox().Items().Size() - 1)
+    {
+        GwBox().SelectedIndex(selectedIndex + 1);
+    }
+}
+
+
+void winrt::FootballFantasy::implementation::PlayerHomePage::GwBox_SelectionChanged(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::Controls::SelectionChangedEventArgs const& e)
+{
+    MatchesGrid().Children().Clear();
+    MatchesGrid().RowDefinitions().Clear();
+    int gw = stoi(to_string(sender.as<winrt::Microsoft::UI::Xaml::Controls::ComboBox>().SelectedItem().as<winrt::hstring>()));
+    unordered_map<int, Match> matches = Presenter::getInstance()->getMatches()[gw];
+
+    unordered_map<int, Match>::iterator it;
+    int count = 0;
+    for (it = matches.begin(); it != matches.end(); it++)
+    {
+        MatchesGrid().RowDefinitions().Append(Controls::RowDefinition());
+        Controls::TextBlock homeTeamTextBlock;
+        Controls::TextBlock infoTextBlock;
+        Controls::TextBlock awayTeamTextBlock;
+
+        homeTeamTextBlock.Text(to_hstring(it->second.getHomeTeam()->getName()));
+        it->second.getPlayed() ? infoTextBlock.Text(to_hstring(it->second.getScore())) : infoTextBlock.Text(L"VS");
+        awayTeamTextBlock.Text(to_hstring(it->second.getAwayTeam()->getName()));
+
+        Controls::Grid::SetRow(homeTeamTextBlock, count);
+        Controls::Grid::SetRow(infoTextBlock, count);
+        Controls::Grid::SetRow(awayTeamTextBlock, count);
+        Controls::Grid::SetColumn(infoTextBlock, 1);
+        Controls::Grid::SetColumn(awayTeamTextBlock, 2);
+        infoTextBlock.HorizontalAlignment(HorizontalAlignment::Center);
+        awayTeamTextBlock.HorizontalAlignment(HorizontalAlignment::Right);
+
+        MatchesGrid().Children().Append(homeTeamTextBlock);
+        MatchesGrid().Children().Append(infoTextBlock);
+        MatchesGrid().Children().Append(awayTeamTextBlock);
+        count++;
+    }
+
 }

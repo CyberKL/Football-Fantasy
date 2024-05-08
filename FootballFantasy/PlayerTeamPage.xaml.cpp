@@ -35,7 +35,8 @@ void winrt::FootballFantasy::implementation::PlayerTeamPage::PickTeamBtn_Click(w
 
 void winrt::FootballFantasy::implementation::PlayerTeamPage::TransfersBtn_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
-
+    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerTransfersPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+    Frame().Navigate(page);
 }
 
 
@@ -48,4 +49,11 @@ void winrt::FootballFantasy::implementation::PlayerTeamPage::Page_Loaded(winrt::
         winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerCreateTeamPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
         Frame().Navigate(page);
     }
+}
+
+
+void winrt::FootballFantasy::implementation::PlayerTeamPage::PlayerPointsBtn_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+{
+    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerPointsPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+    Frame().Navigate(page);
 }

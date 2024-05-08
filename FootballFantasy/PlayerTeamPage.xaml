@@ -30,7 +30,7 @@
                 <TextBlock Text="55" TextAlignment="Center" />
             </StackPanel>
             <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="Points" />
+                <Button x:Name="PlayerPointsBtn" Content="Points" Click="PlayerPointsBtn_Click" />
                 <TextBlock Text="55" TextAlignment="Center" />
             </StackPanel>
             <StackPanel Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">

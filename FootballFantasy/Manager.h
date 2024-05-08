@@ -29,7 +29,11 @@ private:
 	unordered_map<int, FootballTeam*> footballTeams;
 	map<int, unordered_map<int, Match>> matches;
 	map<string, int> counts;
-	int currentGw;
+	int currentGw = 1; // should not be intialized here
+	unordered_map<int, map<int, vector<string>>> gwOrderedPlayers;
+	map<int, vector<string>> orderedPlayers;
+	double totalRate;
+	double rate;
 
 	Manager(); //Private constructor to prevent instantiation
 
@@ -38,8 +42,6 @@ private:
 	Manager& operator=(const Manager&) = delete;
 	
 public:
-	int totalRate;
-	int Rate;
 	// Destructor
 	~Manager();
 
@@ -54,6 +56,8 @@ public:
 	map<int, unordered_map<int, Match>> getMatches();
 	map<string, int> getCounts();
 	int getCurrentGw();
+	unordered_map<int, map<int, vector<string>>> getGwOrderedPlayers();
+	map<int, vector<string>> getOrderedPlayers();
 
 	// Setters
 	void setPlayers(const unordered_map<int, Player>&);
@@ -84,6 +88,6 @@ public:
 
 	void changePassword(int playerID, string newPassword);
 
-	void Rating(int playerRate);
+	void rating(double playerRate);
 };
 

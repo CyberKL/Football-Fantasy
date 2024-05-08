@@ -44,11 +44,8 @@ void winrt::FootballFantasy::implementation::ChangePassword::Button_Click(winrt:
     }
     MatchingPass().Text(L"");
     Presenter::getInstance()->changePassword(inputNewPass);
-    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.LoginPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
-    Frame().Navigate(page);
-}
 
-void winrt::FootballFantasy::implementation::ChangePassword::Return(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-{
-    Frame().GoBack();
+    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.LoginPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+    Presenter::getInstance()->logOut();
+    Frame().Parent().as<Controls::NavigationView>().Parent().as<Controls::Page>().Frame().Navigate(page);
 }

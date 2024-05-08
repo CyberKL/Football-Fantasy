@@ -3,6 +3,9 @@
 #if __has_include("PlayerSettingsPage.g.cpp")
 #include "PlayerSettingsPage.g.cpp"
 #endif
+#include <winrt/Windows.ApplicationModel.DataTransfer.h>
+#include <winrt/Windows.UI.h>
+#include "Presenter.h"
 
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
@@ -38,29 +41,17 @@ void winrt::FootballFantasy::implementation::PlayerSettingsPage::RateApp_Click(w
     Controls::ContentDialog dialog;
     dialog.XamlRoot(this->XamlRoot());
 
-    // Create a StackPanel to hold the stars
-    Controls::StackPanel panel;
-    panel.Orientation(Controls::Orientation::Horizontal);
-    panel.HorizontalAlignment(HorizontalAlignment::Center); // Center-align the stars
-
-
-    // Create five Buttons representing the stars
-    for (int i = 0; i < 5; ++i)
-    {
-        Controls::Button starButton;
-        starButton.Content(winrt::box_value(L"\u2606")); // Unicode for a blank star
-        starButton.Click([this, i](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e) {
-            // Handle star click event, e.g., set the rating
-           // SetRating(i + 1); // Assuming SetRating is a method to handle the rating
-           // dialog.Hide(); // Hide the dialog after rating
-            });
-        panel.Children().Append(starButton);
-    }
+    Controls::RatingControl rating;
 
     // Add the panel to the dialog
-    dialog.Content(panel);
+    dialog.Content(rating);
 
     // Set dialog properties
+    dialog.PrimaryButtonText(L"Submit");
+    dialog.PrimaryButtonClick([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::Controls::ContentDialogButtonClickEventArgs const& e)
+        {
+            Presenter::getInstance()->updateRate(rating.Value());
+        });
     dialog.CloseButtonText(L"Cancel"); // Optionally, add a cancel button
     dialog.ShowAsync();
 }
@@ -70,8 +61,31 @@ void winrt::FootballFantasy::implementation::PlayerSettingsPage::ShareApp_Click(
 {
     Controls::ContentDialog dialog;
     dialog.XamlRoot(this->XamlRoot());
-    Controls::Button shareButton;
-    shareButton.Content(winrt::box_value(L"https://github.com/CyberKL/Football-Fantasy"));
+
+    Controls::StackPanel s;
+    s.Orientation(Controls::Orientation::Horizontal);
+    Controls::TextBox link;
+    link.Text(to_hstring(L"https://github.com/CyberKL/Football-Fantasy"));
+    link.IsReadOnly(true);
+    s.Children().Append(link);
+    Controls::Button copyBtn;
+    copyBtn.Background(Media::SolidColorBrush(Windows::UI::Colors::White()));
+    copyBtn.RequestedTheme(ElementTheme::Light);
+    Controls::FontIcon f;
+    f.Glyph(L"\uE8C8");
+    copyBtn.Content(f);
+    copyBtn.Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+        {
+            Windows::ApplicationModel::DataTransfer::DataPackage dataPackage;
+            dataPackage.SetText(link.Text());
+
+            Windows::ApplicationModel::DataTransfer::Clipboard::SetContent(dataPackage);
+            f.Glyph(L"\uE73E");
+        });
+    s.Children().Append(copyBtn);
+    s.Spacing(10);
+
+    dialog.Content(s);
     dialog.CloseButtonText(L"Done");
     dialog.ShowAsync();
 }
@@ -86,8 +100,9 @@ void winrt::FootballFantasy::implementation::PlayerSettingsPage::ChangePassword_
 
 void winrt::FootballFantasy::implementation::PlayerSettingsPage::Logout_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
+    Presenter::getInstance()->logOut();
     winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.SignUpPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
-    Frame().Navigate(page);
+    Frame().Parent().as<Controls::NavigationView>().Parent().as<Controls::Page>().Frame().Navigate(page);
 }
 
 

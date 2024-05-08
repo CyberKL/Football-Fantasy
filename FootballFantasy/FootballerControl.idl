@@ -9,5 +9,7 @@ namespace FootballFantasy
         String PlayerName;
         static Microsoft.UI.Xaml.DependencyProperty PlayerInfoProperty{ get; };
         String PlayerInfo;
+        static Microsoft.UI.Xaml.DependencyProperty CaptaincyIconProperty{ get; };
+        String CaptaincyIcon;
     }
 }

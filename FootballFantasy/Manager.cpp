@@ -54,6 +54,17 @@ int Manager::getCurrentGw()
 	return currentGw;
 }
 
+unordered_map<int, map<int, vector<string>>> Manager::getGwOrderedPlayers()
+{
+	return gwOrderedPlayers;
+}
+
+map<int, vector<string>> Manager::getOrderedPlayers()
+{
+	return orderedPlayers;
+}
+
+
 // Setters
 void Manager::setPlayers(const unordered_map<int, Player>& players)
 {
@@ -150,7 +161,7 @@ void Manager::load()
 	// Loading from the json files
 
 	// Loading football teams
-	ifstream footballTeamsFile("C:\\Users\\marya\\OneDrive\\Desktop\\cs\\year 2\\2nd semester\\Data Structures\\ProjectFinal\\Football-Fantasy\\FootballFantasy\\Assets\\FootballTeams.json");
+	ifstream footballTeamsFile("D:\\Uni\\Year 2\\2nd Semester\\Data Structure\\ProjectFinal\\FootballFantasy\\FootballFantasy\\Assets\\FootballTeams.json");
 	json jsonFootballTeams;
 	footballTeamsFile >> jsonFootballTeams;
 	for (json j : jsonFootballTeams) 
@@ -161,7 +172,7 @@ void Manager::load()
 	}
 
 	// loading footballers
-	ifstream footballersFile("C:\\Users\\marya\\OneDrive\\Desktop\\cs\\year 2\\2nd semester\\Data Structures\\ProjectFinal\\Football-Fantasy\\FootballFantasy\\Assets\\Footballers.json");
+	ifstream footballersFile("D:\\Uni\\Year 2\\2nd Semester\\Data Structure\\ProjectFinal\\FootballFantasy\\FootballFantasy\\Assets\\Footballers.json");
 	json jsonFootballers;
 	footballersFile >> jsonFootballers;
 	for (json j : jsonFootballers)
@@ -173,7 +184,7 @@ void Manager::load()
 
 
 	// loading matches
-	ifstream matchesFile("C:\\Users\\marya\\OneDrive\\Desktop\\cs\\year 2\\2nd semester\\Data Structures\\ProjectFinal\\Football-Fantasy\\FootballFantasy\\Assets\\Matches.json");
+	ifstream matchesFile("D:\\Uni\\Year 2\\2nd Semester\\Data Structure\\ProjectFinal\\FootballFantasy\\FootballFantasy\\Assets\\Matches.json");
 	json jsonMatches;
 	matchesFile >> jsonMatches;
 	for (json j : jsonMatches)
@@ -184,7 +195,7 @@ void Manager::load()
 	}
 
 	// loading players
-	ifstream playersFile("C:\\Users\\marya\\OneDrive\\Desktop\\cs\\year 2\\2nd semester\\Data Structures\\ProjectFinal\\Football-Fantasy\\FootballFantasy\\Assets\\Players.json");
+	ifstream playersFile("D:\\Uni\\Year 2\\2nd Semester\\Data Structure\\ProjectFinal\\FootballFantasy\\FootballFantasy\\Assets\\Players.json");
 	json jsonPlayers;
 	playersFile >> jsonPlayers;
 	for (json j : jsonPlayers)
@@ -215,23 +226,18 @@ void Manager::load()
 //GameWeekPoints ranking function
 void Manager::gwPointsRanking()
 {
-	map<int,  vector<string>> orderedPlayers;
 	unordered_map<int, Player>::iterator it;
 	for (it = players.begin(); it != players.end(); it++)
-	{
-		orderedPlayers[it->second.getTeam()->getPoints()[currentGw]].push_back(it->second.getUsername());
-	}
+		gwOrderedPlayers[currentGw][it->second.getTeam()->getPoints()[currentGw]].push_back(it->second.getUsername());
 }
 
 //TotalPoints ranking function
 void Manager::totalPointsRanking()
 {
-	map<int, vector<string>> orderedPlayers;
+	orderedPlayers.clear();
 	unordered_map<int, Player>::iterator it;
 	for (it = players.begin(); it != players.end(); it++)
-	{
 		orderedPlayers[it->second.getTotalPoints()].push_back(it->second.getUsername());
-	}
 }
 
 void Manager::deleteAccount(int accountId)
@@ -245,8 +251,8 @@ void Manager:: changePassword(int playerID, string newPassword)
 }
 
 
-void Manager::Rating(int playerRate)
+void Manager::rating(double playerRate)
 {
 	totalRate = +playerRate;
-	Rate = totalRate / players.size();
+	rate = totalRate / players.size();
 }

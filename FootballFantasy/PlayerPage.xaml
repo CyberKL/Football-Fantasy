@@ -9,7 +9,7 @@
     mc:Ignorable="d"
     Loaded="Page_Loaded">
 
-    <NavigationView x:Name="NavView" Background="{StaticResource GradientImageBackground}" IsBackButtonVisible="Collapsed" IsTitleBarAutoPaddingEnabled="False" SelectionChanged="NavView_SelectionChanged" RequestedTheme="Dark">
+    <NavigationView x:Name="NavView" Background="{StaticResource GradientImageBackground}" IsBackButtonVisible="Visible" IsBackEnabled="true" BackRequested="NavView_BackRequested" IsTitleBarAutoPaddingEnabled="False" SelectionChanged="NavView_SelectionChanged" RequestedTheme="Dark">
         <NavigationView.MenuItems>
             <NavigationViewItem Content="Home" Icon="Home" Tag="HomePage" IsSelected="True"/>
             <NavigationViewItem Content="Team" Tag="TeamPage">

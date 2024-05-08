@@ -25,6 +25,12 @@ namespace winrt::FootballFantasy::implementation
             winrt::Windows::UI::Xaml::Interop::TypeName{ L"winrt.hstring" },
             winrt::Windows::UI::Xaml::Interop::TypeName{ L"FootballFantasy.FootballerControl" },
             winrt::Microsoft::UI::Xaml::PropertyMetadata{ nullptr });
+    winrt::Microsoft::UI::Xaml::DependencyProperty FootballerControl::s_CaptaincyIconProperty =
+        winrt::Microsoft::UI::Xaml::DependencyProperty::Register(
+            L"CaptaincyIcon",
+            winrt::Windows::UI::Xaml::Interop::TypeName{ L"winrt.hstring" },
+            winrt::Windows::UI::Xaml::Interop::TypeName{ L"FootballFantasy.FootballerControl" },
+            winrt::Microsoft::UI::Xaml::PropertyMetadata{ nullptr });
 
     int32_t FootballerControl::MyProperty()
     {

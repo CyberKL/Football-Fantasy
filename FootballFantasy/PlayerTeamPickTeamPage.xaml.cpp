@@ -27,7 +27,8 @@ namespace winrt::FootballFantasy::implementation
         throw hresult_not_implemented();
     }
 
-    Controls::Grid PlayerTeamPickTeamPage::CreateGrid(Footballer footballer, char captaincy)
+    string captaincySelection;
+    Controls::Grid PlayerTeamPickTeamPage::CreateGrid(Footballer footballer, char captaincy, bool isStarting)
     {
         Controls::Grid flyoutGrid;
         flyoutGrid.ColumnDefinitions().Append(Controls::ColumnDefinition());
@@ -92,6 +93,8 @@ namespace winrt::FootballFantasy::implementation
         flyoutGrid.Children().Append(sPrice);
 
         Controls::RadioButtons captainOptions;
+        captainOptions.MaxColumns(2);
+        captainOptions.SelectionChanged({ this, &PlayerTeamPickTeamPage::CaptaincySelectionChanged });
         flyoutGrid.SetColumnSpan(captainOptions, 2);
         flyoutGrid.SetRow(captainOptions, 3);
         flyoutGrid.Children().Append(captainOptions);
@@ -103,10 +106,18 @@ namespace winrt::FootballFantasy::implementation
         viceCaptain.Content(winrt::box_value(L"Vice Captain"));
         captain.RequestedTheme(ElementTheme::Light);
         viceCaptain.RequestedTheme(ElementTheme::Light);
-        if (captaincy == 'c')
-            captain.IsChecked(true);
-        else if (captaincy == 'v')
-            viceCaptain.IsChecked(true);
+        if (isStarting) 
+        {
+            if (captaincy == 'c')
+                captain.IsChecked(true);
+            else if (captaincy == 'v')
+                viceCaptain.IsChecked(true);
+        }
+        else
+        {
+            captain.IsEnabled(false);
+            viceCaptain.IsEnabled(false);
+        }
 
         return flyoutGrid;
     }
@@ -117,9 +128,11 @@ namespace winrt::FootballFantasy::implementation
 void winrt::FootballFantasy::implementation::PlayerTeamPickTeamPage::Page_Loaded(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
     unordered_map<int, struct UiFootballer> footballers;
-    if (Presenter::getInstance()->getSquadEdited())
+    int captainId;
+    int viceCaptainId;
+
+    if (Presenter::getInstance()->getSquadEdited() || Presenter::getInstance()->getCaptaincyEdited())
     {
-        footballers = Presenter::getInstance()->loadTempSquad();
         Controls::Button CancelBtn;
         CancelBtn.Content(winrt::box_value(L"Cancel"));
         CancelBtn.HorizontalAlignment(HorizontalAlignment::Left);
@@ -137,9 +150,25 @@ void winrt::FootballFantasy::implementation::PlayerTeamPickTeamPage::Page_Loaded
                 ConfirmChanges(sender, e);
             });
         FootballFieldGrid().Children().Append(ConfirmBtn);
+
+        for (auto item : Frame().Parent().as<Controls::NavigationView>().MenuItems())
+            item.as<Controls::NavigationViewItem>().IsEnabled(false);
+        Frame().Parent().as<Controls::NavigationView>().IsBackEnabled(false);
+        Frame().Parent().as<Controls::NavigationView>().SettingsItem().as<Controls::NavigationViewItem>().IsEnabled(false);
     }
+
+    if (Presenter::getInstance()->getSquadEdited())
+        footballers = Presenter::getInstance()->loadTempSquad();
     else
         footballers = Presenter::getInstance()->loadPickTeamPage();
+
+    if (Presenter::getInstance()->getCaptaincyEdited())
+    {
+        captainId = Presenter::getInstance()->getTempCaptainId();
+        viceCaptainId = Presenter::getInstance()->getTempViceCaptainId();
+    }
+    else
+        Presenter::getInstance()->getCaptainsIds(captainId, viceCaptainId);
 
     unordered_map<int, struct UiFootballer>::iterator it;
     int subsCount = 0;
@@ -156,6 +185,13 @@ void winrt::FootballFantasy::implementation::PlayerTeamPickTeamPage::Page_Loaded
             });
         if (footballer.isStarting)
         {
+            if (footballer.id == captainId)
+                footballerControl.CaptaincyIcon(L"\uE735");
+            else if (footballer.id == viceCaptainId)
+                footballerControl.CaptaincyIcon(L"\uE7C6");
+            else
+                footballerControl.CaptaincyIcon(L"");
+
             if (footballer.position == "Goalkeeper")
                 GkPanel().Children().Append(footballerControl);
             else if (footballer.position == "Defender")
@@ -167,6 +203,7 @@ void winrt::FootballFantasy::implementation::PlayerTeamPickTeamPage::Page_Loaded
         }
         else
         {
+            footballerControl.CaptaincyIcon(L"");
             Controls::TextBlock pos;
             if (footballer.position == "Goalkeeper")
                 pos.Text(L"GK");
@@ -191,6 +228,60 @@ void winrt::FootballFantasy::implementation::PlayerTeamPickTeamPage::Page_Loaded
 
 void winrt::FootballFantasy::implementation::PlayerTeamPickTeamPage::dialogButtonClickHandler(winrt::Windows::Foundation::IInspectable const& dialog, winrt::Microsoft::UI::Xaml::Controls::ContentDialogButtonClickEventArgs const& args)
 {
+    int captainId;
+    int viceCaptainId;
+
+    int pressedFootballerId = stoi(to_string(dialog.as<Controls::ContentDialog>().Name()));
+
+    if (Presenter::getInstance()->getCaptaincyEdited())
+    {
+        captainId = Presenter::getInstance()->getTempCaptainId();
+        viceCaptainId = Presenter::getInstance()->getTempViceCaptainId();
+    }
+    else
+        Presenter::getInstance()->getCaptainsIds(captainId, viceCaptainId);
+
+    if (captaincySelection == "Captain")
+    {
+        if (pressedFootballerId != captainId)
+        {
+            if (pressedFootballerId == viceCaptainId)
+            {
+                Presenter::getInstance()->setTempCaptainId(pressedFootballerId);
+                Presenter::getInstance()->setTempViceCaptainId(captainId);
+            }
+            else
+            {
+                Presenter::getInstance()->setTempCaptainId(pressedFootballerId);
+                Presenter::getInstance()->setTempViceCaptainId(viceCaptainId);
+            }
+            captaincySelection = "";
+            Presenter::getInstance()->setCaptaincyEdited(true);
+            winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerTeamPickTeamPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+            Frame().Navigate(page);
+        }
+    }
+    else if (captaincySelection == "Vice Captain")
+    {
+        if (pressedFootballerId != viceCaptainId)
+        {
+            if (pressedFootballerId == captainId)
+            {
+                Presenter::getInstance()->setTempCaptainId(viceCaptainId);
+                Presenter::getInstance()->setTempViceCaptainId(pressedFootballerId);
+            }
+            else
+            {
+                Presenter::getInstance()->setTempCaptainId(captainId);
+                Presenter::getInstance()->setTempViceCaptainId(pressedFootballerId);
+            }
+            captaincySelection = "";
+            Presenter::getInstance()->setCaptaincyEdited(true);
+            winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerTeamPickTeamPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+            Frame().Navigate(page);
+        }
+    }
+
     dialog.as<Controls::ContentDialog>().Hide();
     int footballerId = stoi(to_string(dialog.as<Controls::ContentDialog>().Name()));
     Presenter::getInstance()->setPressedFootballerControlId(footballerId);
@@ -206,15 +297,28 @@ void winrt::FootballFantasy::implementation::PlayerTeamPickTeamPage::FootballerC
     int footballerId = stoi(to_string(footballerControl.Name()));
     Footballer footballer = Presenter::getInstance()->getFootballer(footballerId);
     PlayerTeam playerTeam = *Presenter::getInstance()->getPlayerTeam();
+    bool isStarting = playerTeam.getSquad()[footballer.getId()].second;
+
+    int captainId;
+    int viceCaptainId;
+    if (Presenter::getInstance()->getCaptaincyEdited())
+    {
+        captainId = Presenter::getInstance()->getTempCaptainId();
+        viceCaptainId = Presenter::getInstance()->getTempViceCaptainId();
+    }
+    else
+        Presenter::getInstance()->getCaptainsIds(captainId, viceCaptainId);
+
     char captaincy;
-    if (playerTeam.getCaptain()->getId() == footballer.getId())
+    if (captainId == footballer.getId())
         captaincy = 'c';
-    else if (playerTeam.getViceCaptain()->getId() == footballer.getId())
+    else if (viceCaptainId == footballer.getId())
         captaincy = 'v';
     else
-        captaincy = 'n';
+        captaincy = NULL;
+
     Controls::ContentDialog dialog;
-    Controls::Grid contentGrid = CreateGrid(footballer, captaincy);
+    Controls::Grid contentGrid = CreateGrid(footballer, captaincy, isStarting);
 
     dialog.XamlRoot(this->XamlRoot());
     dialog.Content(contentGrid);
@@ -224,7 +328,11 @@ void winrt::FootballFantasy::implementation::PlayerTeamPickTeamPage::FootballerC
         {
             dialogButtonClickHandler(senderDialog, args);
         });
-    dialog.CloseButtonText(L"Cancel");
+    dialog.CloseButtonText(L"Back");
+    dialog.CloseButtonClick([=](winrt::Windows::Foundation::IInspectable const& senderDialog, winrt::Microsoft::UI::Xaml::Controls::ContentDialogButtonClickEventArgs const& args)
+        {
+            dialogCloseButtonClickHandler(senderDialog, args);
+        });
     dialog.ShowAsync();
 }
 
@@ -232,13 +340,86 @@ void winrt::FootballFantasy::implementation::PlayerTeamPickTeamPage::FootballerC
 void winrt::FootballFantasy::implementation::PlayerTeamPickTeamPage::CancelChanges(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
     Presenter::getInstance()->setSquadEdited(false);
+    Presenter::getInstance()->setCaptaincyEdited(false);
+    for (auto item : Frame().Parent().as<Controls::NavigationView>().MenuItems())
+        item.as<Controls::NavigationViewItem>().IsEnabled(true);
+    Frame().Parent().as<Controls::NavigationView>().IsBackEnabled(true);
+    Frame().Parent().as<Controls::NavigationView>().SettingsItem().as<Controls::NavigationViewItem>().IsEnabled(true);
+
     winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerTeamPickTeamPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
     Frame().Navigate(page);
 }
 
 void winrt::FootballFantasy::implementation::PlayerTeamPickTeamPage::ConfirmChanges(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
+    for (auto item : Frame().Parent().as<Controls::NavigationView>().MenuItems())
+        item.as<Controls::NavigationViewItem>().IsEnabled(true);
+    Frame().Parent().as<Controls::NavigationView>().IsBackEnabled(true);
+    Frame().Parent().as<Controls::NavigationView>().SettingsItem().as<Controls::NavigationViewItem>().IsEnabled(true);
+
     Presenter::getInstance()->confirmChangesInPickTeam();
     winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerTeamPickTeamPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
     Frame().Navigate(page);
+}
+
+void winrt::FootballFantasy::implementation::PlayerTeamPickTeamPage::dialogCloseButtonClickHandler(winrt::Windows::Foundation::IInspectable const& dialog, winrt::Microsoft::UI::Xaml::Controls::ContentDialogButtonClickEventArgs const& args)
+{
+    int captainId;
+    int viceCaptainId;
+
+    int pressedFootballerId = stoi(to_string(dialog.as<Controls::ContentDialog>().Name()));
+
+    if (Presenter::getInstance()->getCaptaincyEdited())
+    {
+        captainId = Presenter::getInstance()->getTempCaptainId();
+        viceCaptainId = Presenter::getInstance()->getTempViceCaptainId();
+    }
+    else
+        Presenter::getInstance()->getCaptainsIds(captainId, viceCaptainId);
+
+    if (captaincySelection == "Captain")
+    {
+        if (pressedFootballerId != captainId)
+        {
+            if (pressedFootballerId == viceCaptainId)
+            {
+                Presenter::getInstance()->setTempCaptainId(pressedFootballerId);
+                Presenter::getInstance()->setTempViceCaptainId(captainId);
+            }
+            else
+            {
+                Presenter::getInstance()->setTempCaptainId(pressedFootballerId);
+                Presenter::getInstance()->setTempViceCaptainId(viceCaptainId);
+            }
+            captaincySelection = "";
+            Presenter::getInstance()->setCaptaincyEdited(true);
+            winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerTeamPickTeamPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+            Frame().Navigate(page);
+        }
+    }
+    else if (captaincySelection == "Vice Captain")
+    {
+        if (pressedFootballerId != viceCaptainId)
+        {
+            if (pressedFootballerId == captainId)
+            {
+                Presenter::getInstance()->setTempCaptainId(viceCaptainId);
+                Presenter::getInstance()->setTempViceCaptainId(pressedFootballerId);
+            }
+            else
+            {
+                Presenter::getInstance()->setTempCaptainId(captainId);
+                Presenter::getInstance()->setTempViceCaptainId(pressedFootballerId);
+            }
+            captaincySelection = "";
+            Presenter::getInstance()->setCaptaincyEdited(true);
+            winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerTeamPickTeamPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+            Frame().Navigate(page);
+        }
+    }
+}
+
+void winrt::FootballFantasy::implementation::PlayerTeamPickTeamPage::CaptaincySelectionChanged(Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::Controls::SelectionChangedEventArgs const& e)
+{
+    captaincySelection = to_string(sender.as<Controls::RadioButtons>().SelectedItem().as<Controls::RadioButton>().Content().as<winrt::hstring>());
 }

@@ -24,12 +24,6 @@ namespace winrt::FootballFantasy::implementation
     {
         throw hresult_not_implemented();
     }
-    void winrt::FootballFantasy::implementation::DeleteAccount::Return(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-    {
-        Frame().GoBack();
-    }
-
-   
 }
 
 
@@ -50,4 +44,8 @@ void winrt::FootballFantasy::implementation::DeleteAccount::Button_Click(winrt::
     }
     Matching().Text(L"");
     Presenter::getInstance()->deleteAccount(ID);
+
+    Presenter::getInstance()->logOut();
+    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.SignUpPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+    Frame().Parent().as<Controls::NavigationView>().Parent().as<Controls::Page>().Frame().Navigate(page);
 }

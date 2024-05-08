@@ -9,12 +9,19 @@
     mc:Ignorable="d">
 
     <Button Background="Transparent" BorderBrush="Transparent" Padding="0" Foreground="Black">
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10">
-            <FontIcon Glyph="&#xE77B;" FontSize="50" />
-            <StackPanel Background="{ThemeResource ColoredGlassBackground}" CornerRadius="3,3,7,7" Padding="20,0">
-                <TextBlock Text="{x:Bind PlayerName}" TextAlignment="Center" FontSize="14" />
-                <TextBlock Text="{x:Bind PlayerInfo}" TextAlignment="Center" FontSize="14" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <FontIcon Glyph="{x:Bind CaptaincyIcon}" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="16" />
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10">
+                <FontIcon Glyph="&#xE77B;" FontSize="50" />
+                <StackPanel Background="{ThemeResource ColoredGlassBackground}" CornerRadius="3,3,7,7" Padding="20,0">
+                    <TextBlock Text="{x:Bind PlayerName}" TextAlignment="Center" FontSize="14" />
+                    <TextBlock Text="{x:Bind PlayerInfo}" TextAlignment="Center" FontSize="14" />
+                </StackPanel>
             </StackPanel>
-        </StackPanel>
+        </Grid>
     </Button>
 </UserControl>

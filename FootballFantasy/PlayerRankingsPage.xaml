@@ -6,7 +6,8 @@
     xmlns:local="using:FootballFantasy"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Loaded="Page_Loaded">
 
     <Grid HorizontalAlignment="Center" ColumnSpacing="200">
         <Grid.RowDefinitions>
@@ -18,6 +19,8 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <TextBlock Grid.ColumnSpan="2" Text="Rankings" Style="{StaticResource HeaderStyle}" TextAlignment="Center"  />
+        
+        <!-- Gw Rankings -->
         <Grid Grid.Row="1" Background="{ThemeResource NeutralColor}" VerticalAlignment="Top" ColumnSpacing="20" CornerRadius="20" Padding="20">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -40,12 +43,11 @@
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                     </Grid.RowDefinitions>
-                    <TextBlock Text="1" />
-                    <TextBlock Grid.Column="1" Text="Khaled" TextAlignment="Center" />
-                    <TextBlock Grid.Column="2" Text="100" />
                 </Grid>
             </ScrollViewer>
         </Grid>
+        
+        <!-- Total Rankings -->
         <Grid Grid.Column="1"  Grid.Row="1" Background="{ThemeResource NeutralColor}" VerticalAlignment="Top" ColumnSpacing="20" CornerRadius="20" Padding="20">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -68,9 +70,6 @@
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                     </Grid.RowDefinitions>
-                    <TextBlock Text="1" />
-                    <TextBlock Grid.Column="1" Text="Khaled" TextAlignment="Center" />
-                    <TextBlock Grid.Column="2" Text="100" />
                 </Grid>
             </ScrollViewer>
         </Grid>
