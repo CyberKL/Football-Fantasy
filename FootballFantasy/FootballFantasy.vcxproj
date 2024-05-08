@@ -108,6 +108,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Admin.h" />
+    <ClInclude Include="AdminDataPage.xaml.h">
+      <DependentUpon>AdminDataPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="AdminEditMatchesPage.xaml.h">
+      <DependentUpon>AdminEditMatchesPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="AdminMatchesPage.xaml.h">
+      <DependentUpon>AdminMatchesPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="AdminPanelPage.xaml.h">
+      <DependentUpon>AdminPanelPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
     <ClInclude Include="ChangePassword.xaml.h">
       <DependentUpon>ChangePassword.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -175,6 +191,18 @@
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml" />
+    <Page Include="AdminDataPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AdminEditMatchesPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AdminMatchesPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AdminPanelPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="ChangePassword.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -202,6 +230,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Admin.cpp" />
+    <ClCompile Include="AdminDataPage.xaml.cpp">
+      <DependentUpon>AdminDataPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="AdminEditMatchesPage.xaml.cpp">
+      <DependentUpon>AdminEditMatchesPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="AdminMatchesPage.xaml.cpp">
+      <DependentUpon>AdminMatchesPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="AdminPanelPage.xaml.cpp">
+      <DependentUpon>AdminPanelPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
     <ClCompile Include="ChangePassword.xaml.cpp">
       <DependentUpon>ChangePassword.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -271,6 +315,22 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <Midl Include="AdminDataPage.idl">
+      <DependentUpon>AdminDataPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Midl>
+    <Midl Include="AdminEditMatchesPage.idl">
+      <DependentUpon>AdminEditMatchesPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Midl>
+    <Midl Include="AdminMatchesPage.idl">
+      <DependentUpon>AdminMatchesPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Midl>
+    <Midl Include="AdminPanelPage.idl">
+      <DependentUpon>AdminPanelPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Midl>
     <Midl Include="ChangePassword.idl">
       <DependentUpon>ChangePassword.xaml</DependentUpon>
       <SubType>Code</SubType>
