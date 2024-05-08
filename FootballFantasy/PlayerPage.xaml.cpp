@@ -63,3 +63,9 @@ void winrt::FootballFantasy::implementation::PlayerPage::NavView_SelectionChange
         }
     }
 }
+
+void winrt::FootballFantasy::implementation::PlayerPage::NavView_BackRequested(winrt::Microsoft::UI::Xaml::Controls::NavigationView const& sender, winrt::Microsoft::UI::Xaml::Controls::NavigationViewBackRequestedEventArgs const& args)
+{
+    if(PlayerFrame().CanGoBack())
+        PlayerFrame().GoBack();
+}

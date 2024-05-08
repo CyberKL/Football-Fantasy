@@ -39,8 +39,9 @@ namespace winrt::FootballFantasy::implementation
             tempSquad[stoi(to_string(element.as<FootballerControl>().Name()))] = true;
         for (auto element : FwdPanel().Children())
             tempSquad[stoi(to_string(element.as<FootballerControl>().Name()))] = true;
-        for (int column = 0; column < SubsGrid().ColumnDefinitions().Size(); ++column)
-            tempSquad[stoi(to_string(SubsGrid().Children().GetAt(column * 2 + 1).as<FootballerControl>().Name()))] = false;
+        for (auto element :SubsGrid().Children())
+            if (element.try_as<FootballerControl>())
+                tempSquad[stoi(to_string(element.as<FootballerControl>().Name()))] = false;
         
         Presenter::getInstance()->setTempSquad(tempSquad);
         Presenter::getInstance()->setSquadEdited(true);
@@ -50,14 +51,32 @@ namespace winrt::FootballFantasy::implementation
 
 void winrt::FootballFantasy::implementation::SubstitutePlayerPage::Page_Loaded(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
+    for (auto item : Frame().Parent().as<Controls::NavigationView>().MenuItems())
+        item.as<Controls::NavigationViewItem>().IsEnabled(false);
+    Frame().Parent().as<Controls::NavigationView>().IsBackEnabled(false);
+    Frame().Parent().as<Controls::NavigationView>().SettingsItem().as<Controls::NavigationViewItem>().IsEnabled(false);
 
     int pressedFootballerControlId = Presenter::getInstance()->getPressedFootballerControlId();
 
     unordered_map<int, struct UiFootballer> footballers;
+    int captainId;
+    int viceCaptainId;
     if (Presenter::getInstance()->getSquadEdited())
+    {
         footballers = Presenter::getInstance()->loadTempSquad();
+    }
     else
+    {
         footballers = Presenter::getInstance()->loadPickTeamPage();
+    }
+
+    if (Presenter::getInstance()->getCaptaincyEdited())
+    {
+        captainId = Presenter::getInstance()->getTempCaptainId();
+        viceCaptainId = Presenter::getInstance()->getTempViceCaptainId();
+    }
+    else
+        Presenter::getInstance()->getCaptainsIds(captainId, viceCaptainId);
 
     unordered_map<int, struct UiFootballer>::iterator it;
     UiFootballer pressedFootballer = footballers[pressedFootballerControlId];
@@ -89,10 +108,19 @@ void winrt::FootballFantasy::implementation::SubstitutePlayerPage::Page_Loaded(w
             footballerControl.PlayerName(to_hstring(footballer.name));
             footballerControl.PlayerInfo(to_hstring(footballer.info));
             footballerControl.Name(to_hstring(footballer.id));
+
             if (footballer.id != pressedFootballer.id) {
                 if (footballer.isStarting)
                 {
                     footballerControl.Content().as<Controls::Button>().IsEnabled(false); // Disable all other starting players
+
+                    if (footballer.id == captainId)
+                        footballerControl.CaptaincyIcon(L"\uE735");
+                    else if (footballer.id == viceCaptainId)
+                        footballerControl.CaptaincyIcon(L"\uE7C6");
+                    else
+                        footballerControl.CaptaincyIcon(L"");
+
                     // adding the control to the ui
                     if (footballer.position == "Goalkeeper")
                         GkPanel().Children().Append(footballerControl);
@@ -105,6 +133,7 @@ void winrt::FootballFantasy::implementation::SubstitutePlayerPage::Page_Loaded(w
                 }
                 else // Dealing with the bench
                 {
+                    footballerControl.CaptaincyIcon(L"");
                     if (pressedFootballer.position == "Goalkeeper")
                     {
                         if (footballer.position == "Goalkeeper")
@@ -218,12 +247,15 @@ void winrt::FootballFantasy::implementation::SubstitutePlayerPage::Page_Loaded(w
             }
             else
             {
+                if (footballer.id == captainId)
+                    footballerControl.CaptaincyIcon(L"\uE735");
+                else if (footballer.id == viceCaptainId)
+                    footballerControl.CaptaincyIcon(L"\uE7C6");
+                else
+                    footballerControl.CaptaincyIcon(L"");
+
                 footballerControl.Content().as<Controls::Button>().BorderThickness(ThicknessHelper::FromLengths(2, 2, 2, 2));
                 footballerControl.Content().as<Controls::Button>().BorderBrush(Media::SolidColorBrush(Windows::UI::Colors::Red()));
-                footballerControl.Content().as<Controls::Button>().Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-                    {
-                        CancelChanges(sender, e);
-                    });
                 if (footballer.position == "Goalkeeper")
                     GkPanel().Children().Append(footballerControl);
                 else if (footballer.position == "Defender")
@@ -249,6 +281,13 @@ void winrt::FootballFantasy::implementation::SubstitutePlayerPage::Page_Loaded(w
             {
                 if (footballer.isStarting)
                 {
+                    if (footballer.id == captainId)
+                        footballerControl.CaptaincyIcon(L"\uE735");
+                    else if (footballer.id == viceCaptainId)
+                        footballerControl.CaptaincyIcon(L"\uE7C6");
+                    else
+                        footballerControl.CaptaincyIcon(L"");
+
                     if (footballer.position == "Goalkeeper")
                         GkPanel().Children().Append(footballerControl);
                     else if (footballer.position == "Defender")
@@ -333,6 +372,8 @@ void winrt::FootballFantasy::implementation::SubstitutePlayerPage::Page_Loaded(w
                 }
                 else
                 {
+
+                    footballerControl.CaptaincyIcon(L"");
                     Controls::TextBlock pos;
                     if (footballer.position == "Goalkeeper")
                         pos.Text(L"GK");
@@ -371,13 +412,9 @@ void winrt::FootballFantasy::implementation::SubstitutePlayerPage::Page_Loaded(w
             }
             else 
             {
+                footballerControl.CaptaincyIcon(L"");
                 footballerControl.Content().as<Controls::Button>().BorderThickness(ThicknessHelper::FromLengths(2, 2, 2, 2));
                 footballerControl.Content().as<Controls::Button>().BorderBrush(Media::SolidColorBrush(Windows::UI::Colors::Green()));
-                footballerControl.Content().as<Controls::Button>().Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-                    {
-                        CancelChanges(sender, e);
-                    });
-
                 Controls::TextBlock pos;
                 if (footballer.position == "Goalkeeper")
                     pos.Text(L"GK");
@@ -405,6 +442,16 @@ void winrt::FootballFantasy::implementation::SubstitutePlayerPage::SwapFootballe
 {
     FootballerControl pressedPlayer = footballerControls[Presenter::getInstance()->getPressedFootballerControlId()];
     FootballerControl substitutePlayer = sender.as<Controls::Button>().Parent().as<FootballerControl>();
+
+    int captainId;
+    int viceCaptainId;
+    if (Presenter::getInstance()->getCaptaincyEdited())
+    {
+        captainId = Presenter::getInstance()->getTempCaptainId();
+        viceCaptainId = Presenter::getInstance()->getTempViceCaptainId();
+    }
+    else
+        Presenter::getInstance()->getCaptainsIds(captainId, viceCaptainId);
 
     int pressedPlayerId = stoi(to_string(pressedPlayer.Name()));
     int substitutePlayerId = stoi(to_string(substitutePlayer.Name()));
@@ -443,6 +490,21 @@ void winrt::FootballFantasy::implementation::SubstitutePlayerPage::SwapFootballe
         substitutePlayerParent.as<Controls::Grid>().SetColumn(pressedPlayer, column);
         substitutePlayerParent.as<Controls::Grid>().SetRow(pressedPlayer, 1);
         pressedPlayer.HorizontalAlignment(HorizontalAlignment::Center);
+
+        // dealing with captaincy
+        if (pressedPlayerId == captainId)
+        {
+            Presenter::getInstance()->setTempCaptainId(substitutePlayerId);
+            Presenter::getInstance()->setTempViceCaptainId(viceCaptainId);
+            Presenter::getInstance()->setCaptaincyEdited(true);
+        }
+        else if (pressedPlayerId == viceCaptainId)
+        {
+            Presenter::getInstance()->setTempCaptainId(captainId);
+            Presenter::getInstance()->setTempViceCaptainId(substitutePlayerId);
+            Presenter::getInstance()->setCaptaincyEdited(true);
+        }
+
     }
     else // pressed player out was benched 
     {
@@ -478,6 +540,20 @@ void winrt::FootballFantasy::implementation::SubstitutePlayerPage::SwapFootballe
             pressedPlayerParent.as<Controls::Grid>().SetColumn(substitutePlayer, column);
             pressedPlayerParent.as<Controls::Grid>().SetRow(substitutePlayer, 1);
             substitutePlayer.HorizontalAlignment(HorizontalAlignment::Center);
+
+            // dealing with captaincy
+            if (substitutePlayerId == captainId)
+            {
+                Presenter::getInstance()->setTempCaptainId(pressedPlayerId);
+                Presenter::getInstance()->setTempViceCaptainId(viceCaptainId);
+                Presenter::getInstance()->setCaptaincyEdited(true);
+            }
+            else if (substitutePlayerId == viceCaptainId)
+            {
+                Presenter::getInstance()->setTempCaptainId(captainId);
+                Presenter::getInstance()->setTempViceCaptainId(pressedPlayerId);
+                Presenter::getInstance()->setCaptaincyEdited(true);
+            }
         }
         else // substitute player was benched (both were on the bench)
         {
@@ -489,18 +565,20 @@ void winrt::FootballFantasy::implementation::SubstitutePlayerPage::SwapFootballe
             SubsGrid().Children().GetAt(pressedPlayerColumn * 2).as<Controls::TextBlock>().Text(substitutePlayerPosition);
             SubsGrid().Children().GetAt(substitutePlayerColumn * 2).as<Controls::TextBlock>().Text(pressedPlayerPosition);
 
-            uint32_t indexToRemove;
-            SubsGrid().Children().IndexOf(pressedPlayer, indexToRemove);
-            SubsGrid().Children().RemoveAt(indexToRemove);
-            SubsGrid().Children().IndexOf(substitutePlayer, indexToRemove);
-            SubsGrid().Children().RemoveAt(indexToRemove);
+            uint32_t pressedIndex;
+            uint32_t substituteIndex;
+            SubsGrid().Children().IndexOf(pressedPlayer, pressedIndex);
+            SubsGrid().Children().RemoveAt(pressedIndex);
+            SubsGrid().Children().IndexOf(substitutePlayer, substituteIndex);
+            SubsGrid().Children().RemoveAt(substituteIndex);
 
-            SubsGrid().Children().Append(substitutePlayer);
+
+            SubsGrid().Children().InsertAt(pressedIndex, substitutePlayer);
             SubsGrid().SetRow(substitutePlayer, 1);
             SubsGrid().SetColumn(substitutePlayer, pressedPlayerColumn);
             substitutePlayer.HorizontalAlignment(HorizontalAlignment::Center);
             
-            SubsGrid().Children().Append(pressedPlayer);
+            SubsGrid().Children().InsertAt(substituteIndex, pressedPlayer);
             SubsGrid().SetRow(pressedPlayer, 1);
             SubsGrid().SetColumn(pressedPlayer, substitutePlayerColumn);
             pressedPlayer.HorizontalAlignment(HorizontalAlignment::Center);
@@ -513,13 +591,24 @@ void winrt::FootballFantasy::implementation::SubstitutePlayerPage::SwapFootballe
 
 void winrt::FootballFantasy::implementation::SubstitutePlayerPage::CancelChanges(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
+    for (auto item : Frame().Parent().as<Controls::NavigationView>().MenuItems())
+        item.as<Controls::NavigationViewItem>().IsEnabled(true);
+    Frame().Parent().as<Controls::NavigationView>().IsBackEnabled(true);
+    Frame().Parent().as<Controls::NavigationView>().SettingsItem().as<Controls::NavigationViewItem>().IsEnabled(true);
+
     Presenter::getInstance()->setSquadEdited(false);
+    Presenter::getInstance()->setCaptaincyEdited(false);
     winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerTeamPickTeamPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
     Frame().Navigate(page);
 }
 
 void winrt::FootballFantasy::implementation::SubstitutePlayerPage::ConfirmChanges(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
+    for (auto item : Frame().Parent().as<Controls::NavigationView>().MenuItems())
+        item.as<Controls::NavigationViewItem>().IsEnabled(true);
+    Frame().Parent().as<Controls::NavigationView>().IsBackEnabled(true);
+    Frame().Parent().as<Controls::NavigationView>().SettingsItem().as<Controls::NavigationViewItem>().IsEnabled(true);
+
     Presenter::getInstance()->confirmChangesInPickTeam();
     winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerTeamPickTeamPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
     Frame().Navigate(page);

@@ -50,6 +50,12 @@
     <Page Include="SubstitutePlayerPage.xaml">
       <Filter>Views</Filter>
     </Page>
+    <Page Include="PlayerPointsPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="PlayerTransfersPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Midl Include="MainWindow.idl" />
@@ -176,13 +182,13 @@
     <Image Include="Assets\more.png">
       <Filter>Assets</Filter>
     </Image>
-    <Image Include="..\..\TermsConditions.png">
+    <Image Include="Assets\TermsConditions.png">
       <Filter>Assets</Filter>
     </Image>
-    <Image Include="..\..\shape.png">
+    <Image Include="Assets\Soccer.png">
       <Filter>Assets</Filter>
     </Image>
-    <Image Include="..\..\Soccer.png">
+    <Image Include="Assets\shape.png">
       <Filter>Assets</Filter>
     </Image>
   </ItemGroup>

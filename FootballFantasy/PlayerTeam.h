@@ -48,10 +48,7 @@ public:
 	bool addFootballer(Footballer*, const bool&);
 	unordered_map<int, pair<Footballer*, bool>>::iterator findFootballer(const int&);
 	bool removeFootballer(const int&);
-	void swapFootballers(const int&, const int&);
 	void transfer(const int&, Footballer*);
-	bool confirmTransfers();
-	void undoTransfer();
 	void updatePoints(int);
 
 };

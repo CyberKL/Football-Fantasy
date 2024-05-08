@@ -25,9 +25,27 @@ int Presenter::getPressedFootballerControlId()
 }
 
 
+int Presenter::getTempCaptainId()
+{
+    return tempCaptainId;
+}
+
+
+int Presenter::getTempViceCaptainId()
+{
+    return tempViceCaptainId;
+}
+
+
 bool Presenter::getSquadEdited()
 {
     return squadEdited;
+}
+
+
+bool Presenter::getCaptaincyEdited()
+{
+    return captaincyEdited;
 }
 
 
@@ -41,9 +59,28 @@ void Presenter::setTempSquad(unordered_map<int, bool> tempSquad)
     this->tempSquad = tempSquad;
 }
 
+
+void Presenter::setTempCaptainId(int id)
+{
+    tempCaptainId = id;
+}
+
+
+void Presenter::setTempViceCaptainId(int id)
+{
+    tempViceCaptainId = id;
+}
+
+
 void Presenter::setSquadEdited(bool squadEdited)
 {
     this->squadEdited = squadEdited;
+}
+
+
+void Presenter::setCaptaincyEdited(bool captaincyEdited)
+{
+    this->captaincyEdited = captaincyEdited;
 }
 
 bool Presenter::isUsernameDuplicate(const string& username)
@@ -80,6 +117,13 @@ PlayerTeam* Presenter::getPlayerTeam()
 {
     return loggedInPlayer->getTeam();
 }
+
+
+int Presenter::getLoggedInPlayerBudget()
+{
+    return loggedInPlayer->getTeam()->getBudget();
+}
+
 
 Footballer Presenter::getFootballer(int id)
 {
@@ -181,6 +225,47 @@ unordered_map<int, struct UiFootballer> Presenter::loadPickTeamPage()
     return footballers;
 }
 
+
+unordered_map<int, struct UiFootballer> Presenter::loadTeamPointsPage()
+{
+    unordered_map<int, pair<Footballer*, bool>> squad = loggedInPlayer->getTeam()->getSquad();
+    unordered_map<int, pair<Footballer*, bool>>::iterator it;
+    unordered_map<int, struct UiFootballer> footballers;
+    for (it = squad.begin(); it != squad.end(); it++)
+    {
+        struct UiFootballer uiFootballer;
+        Footballer footballer = *it->second.first;
+        uiFootballer.id = footballer.getId();
+        uiFootballer.name = footballer.getName();
+        uiFootballer.isStarting = it->second.second;
+        uiFootballer.position = footballer.getPosition();
+        uiFootballer.info = to_string(footballer.getGwPoints()[Manager::getInstance()->getCurrentGw()]);
+        footballers[uiFootballer.id] = uiFootballer;
+    }
+    return footballers;
+}
+
+
+unordered_map<int, struct UiFootballer> Presenter::loadTeamTransfersPage()
+{
+    unordered_map<int, pair<Footballer*, bool>> squad = loggedInPlayer->getTeam()->getSquad();
+    unordered_map<int, pair<Footballer*, bool>>::iterator it;
+    unordered_map<int, struct UiFootballer> footballers;
+    for (it = squad.begin(); it != squad.end(); it++)
+    {
+        struct UiFootballer uiFootballer;
+        Footballer footballer = *it->second.first;
+        uiFootballer.id = footballer.getId();
+        uiFootballer.name = footballer.getName();
+        uiFootballer.isStarting = it->second.second;
+        uiFootballer.position = footballer.getPosition();
+        uiFootballer.info = to_string(footballer.getPrice());
+        footballers[uiFootballer.id] = uiFootballer;
+    }
+    return footballers;
+}
+
+
 unordered_map<int, struct UiFootballer> Presenter::loadTempSquad()
 {
     unordered_map<int, pair<Footballer*, bool>> squad = loggedInPlayer->getTeam()->getSquad();
@@ -202,17 +287,51 @@ unordered_map<int, struct UiFootballer> Presenter::loadTempSquad()
     return footballers;
 }
 
+void Presenter::getCaptainsIds(int& captain, int& viceCaptain)
+{
+    captain = loggedInPlayer->getTeam()->getCaptain()->getId();
+    viceCaptain = loggedInPlayer->getTeam()->getViceCaptain()->getId();
+}
+
 void Presenter::confirmChangesInPickTeam()
 {
-    unordered_map<int, pair<Footballer*, bool>> squad;
-    unordered_map<int, bool>::iterator it;
 
-    for (it = tempSquad.begin(); it != tempSquad.end(); it++)
-        squad[it->first] = make_pair(Manager::getInstance()->getFootballers()[it->first], it->second);
+    if (squadEdited)
+    {
+        unordered_map<int, pair<Footballer*, bool>> squad;
+        unordered_map<int, bool>::iterator it;
 
-    loggedInPlayer->getTeam()->setSquad(squad);
-    squadEdited = false;
+        for (it = tempSquad.begin(); it != tempSquad.end(); it++)
+            squad[it->first] = make_pair(loggedInPlayer->getTeam()->getSquad()[it->first].first, it->second);
+
+        loggedInPlayer->getTeam()->setSquad(squad);
+        squadEdited = false;
+    }
+    
+    if (captaincyEdited)
+    {
+        loggedInPlayer->getTeam()->setCaptain(loggedInPlayer->getTeam()->getSquad()[tempCaptainId].first);
+        loggedInPlayer->getTeam()->setViceCaptain(loggedInPlayer->getTeam()->getSquad()[tempViceCaptainId].first);
+
+        captaincyEdited = false;
+    }
+    
 }
+
+void Presenter::confirmTransfersPage(stack<pair<int, int>> transfersStack)
+{
+    while (!transfersStack.empty())
+    {
+        int out = transfersStack.top().first;
+        int inId = transfersStack.top().second;
+
+        Footballer* in = Manager::getInstance()->getFootballers()[inId];
+        loggedInPlayer->getTeam()->transfer(out, in);
+
+        transfersStack.pop();
+    }
+}
+
 
 void Presenter::loadData()
 {
@@ -241,4 +360,35 @@ int Presenter::getLoggedInPlayerID()
 void Presenter::deleteAccount(int accountId)
 {
     Manager::getInstance()->deleteAccount(accountId);
+}
+
+
+map<int, vector<string>> Presenter::getCurrentGwRankings()
+{
+    return Manager::getInstance()->getGwOrderedPlayers()[Manager::getInstance()->getCurrentGw()];
+}
+
+map<int, vector<string>> Presenter::getTotalRankings()
+{
+    return Manager::getInstance()->getOrderedPlayers();
+}
+
+map<int, unordered_map<int, Match>> Presenter::getMatches()
+{
+    return Manager::getInstance()->getMatches();
+}
+
+int Presenter::getCurrentGw()
+{
+    return Manager::getInstance()->getCurrentGw();
+}
+
+void Presenter::logOut()
+{
+    loggedInPlayer = nullptr;
+}
+
+void Presenter::updateRate(double rate)
+{
+    Manager::getInstance()->rating(rate);
 }

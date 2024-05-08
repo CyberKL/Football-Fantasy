@@ -129,27 +129,6 @@ bool PlayerTeam::removeFootballer(const int& footballerId) {
 	return true;
 }
 
-void PlayerTeam::swapFootballers(const int& subbedOut, const int& subbedIn) {
-	unordered_map<int, pair<Footballer*, bool>>::iterator subbedOutIt = findFootballer(subbedOut);
-	unordered_map<int, pair<Footballer*, bool>>::iterator subbedInIt = findFootballer(subbedIn);
-
-	if (subbedOutIt->second.second) // subbed out was in the starting lineup
-	{
-		subbedOutIt->second.second = false;
-		subbedInIt->second.second = true;
-	}
-	else // subbed out was on the bench
-	{
-		if (subbedInIt->second.second) // subbed in was in the starting lineup
-		{
-			subbedOutIt->second.second = true;
-			subbedInIt->second.second = false;
-		}
-		// else 2 were on the bench , so nothing changed
-	}
-	// there is no scenario where both were starting
-}
-
 void PlayerTeam::transfer(const int& out, Footballer* in)
 {
 	unordered_map<int, pair<Footballer*, bool>>::iterator outIt = findFootballer(out);
@@ -157,33 +136,10 @@ void PlayerTeam::transfer(const int& out, Footballer* in)
 	bool isStarting = outIt->second.second;
 	removeFootballer(out);
 	addFootballer(in, isStarting);
-	transferStack.push(make_pair(outFootballer, in->getId()));
-}
-
-bool PlayerTeam::confirmTransfers()
-{
-	if (budget < 0.0)
-		return false; // Negative budget
-	
-	// Clear the transfer stack
-	stack<pair<Footballer*, int>> emptyStack;
-	transferStack.swap(emptyStack);
-	return true; // Transfers confirmed
-}
-
-void PlayerTeam::undoTransfer()
-{
-	Footballer* oldFootballer; // old is the footballer to be returned to the squad
-	int newFootballerId;
-	bool isStarting;
-
-	oldFootballer = transferStack.top().first;
-	newFootballerId = transferStack.top().second;
-	isStarting = findFootballer(newFootballerId)->second.second;
-
-	removeFootballer(newFootballerId);
-	addFootballer(oldFootballer, isStarting);
-	transferStack.pop();
+	if (outFootballer == captain)
+		captain = in;
+	else if (outFootballer == viceCaptain)
+		viceCaptain = in;
 }
 
 void PlayerTeam::updatePoints(int gameweek)

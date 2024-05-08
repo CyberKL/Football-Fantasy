@@ -41,9 +41,23 @@ namespace winrt::FootballFantasy::implementation
             SetValue(PlayerInfoProperty(), winrt::box_value(value));
         }
 
+        static winrt::Microsoft::UI::Xaml::DependencyProperty CaptaincyIconProperty() noexcept
+        {
+            return s_CaptaincyIconProperty;
+        }
+        auto CaptaincyIcon() const noexcept
+        {
+            return winrt::unbox_value<winrt::hstring>(GetValue(CaptaincyIconProperty()));
+        }
+        void CaptaincyIcon(winrt::hstring const& value)
+        {
+            SetValue(CaptaincyIconProperty(), winrt::box_value(value));
+        }
+
     private:
         static winrt::Microsoft::UI::Xaml::DependencyProperty s_PlayerNameProperty;
         static winrt::Microsoft::UI::Xaml::DependencyProperty s_PlayerInfoProperty;
+        static winrt::Microsoft::UI::Xaml::DependencyProperty s_CaptaincyIconProperty;
     };
 }
 

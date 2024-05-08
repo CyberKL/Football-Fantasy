@@ -3,6 +3,7 @@
 #if __has_include("TermsConditionsPage.g.cpp")
 #include "TermsConditionsPage.g.cpp"
 #endif
+#include <winrt/Windows.UI.Core.h>
 
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
@@ -21,10 +22,4 @@ namespace winrt::FootballFantasy::implementation
     {
         throw hresult_not_implemented();
     }
-
-    void winrt::FootballFantasy::implementation::TermsConditionsPage::Return(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-    {
-        Frame().GoBack();
-    }
-
 }

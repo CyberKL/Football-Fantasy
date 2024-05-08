@@ -156,6 +156,7 @@ void winrt::FootballFantasy::implementation::PlayerCreateTeamPage::AddFootballer
             FootballerControl footballerControl;
             footballerControl.PlayerName(to_hstring(footballer.getName()));
             footballerControl.PlayerInfo(to_hstring(Presenter::getInstance()->getFootballerNextMatch(footballerId)));
+            footballerControl.CaptaincyIcon(L"");
             footballerControl.Content().as<Controls::Button>().Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
                 {
                     removeFootballer(sender, e);
@@ -186,6 +187,11 @@ void winrt::FootballFantasy::implementation::PlayerCreateTeamPage::AddFootballer
 
 void winrt::FootballFantasy::implementation::PlayerCreateTeamPage::Page_Loaded(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {   
+    for (auto item : Frame().Parent().as<Controls::NavigationView>().MenuItems())
+        item.as<Controls::NavigationViewItem>().IsEnabled(false);
+    Frame().Parent().as<Controls::NavigationView>().IsBackEnabled(false);
+    Frame().Parent().as<Controls::NavigationView>().SettingsItem().as<Controls::NavigationViewItem>().IsEnabled(false);
+
     BudgetTextBlock().Text(to_hstring(Presenter::getInstance()->budgetToString(budget)));
 }
 
@@ -193,6 +199,10 @@ void winrt::FootballFantasy::implementation::PlayerCreateTeamPage::Page_Loaded(w
 void winrt::FootballFantasy::implementation::PlayerCreateTeamPage::SubmitBtn_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
     Presenter::getInstance()->createPlayerTeam(tempTeam, budget);
+    for (auto item : Frame().Parent().as<Controls::NavigationView>().MenuItems())
+        item.as<Controls::NavigationViewItem>().IsEnabled(true);
+    Frame().Parent().as<Controls::NavigationView>().IsBackEnabled(true);
+    Frame().Parent().as<Controls::NavigationView>().SettingsItem().as<Controls::NavigationViewItem>().IsEnabled(true);
     winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerTeamPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom};
     Frame().Navigate(page);
 }

@@ -1,12 +1,12 @@
 #pragma once
 
-#include "PlayerRankingsPage.g.h"
+#include "PlayerPointsPage.g.h"
 
 namespace winrt::FootballFantasy::implementation
 {
-    struct PlayerRankingsPage : PlayerRankingsPageT<PlayerRankingsPage>
+    struct PlayerPointsPage : PlayerPointsPageT<PlayerPointsPage>
     {
-        PlayerRankingsPage()
+        PlayerPointsPage()
         {
             // Xaml objects should not call InitializeComponent during construction.
             // See https://github.com/microsoft/cppwinrt/tree/master/nuget#initializecomponent
@@ -20,7 +20,7 @@ namespace winrt::FootballFantasy::implementation
 
 namespace winrt::FootballFantasy::factory_implementation
 {
-    struct PlayerRankingsPage : PlayerRankingsPageT<PlayerRankingsPage, implementation::PlayerRankingsPage>
+    struct PlayerPointsPage : PlayerPointsPageT<PlayerPointsPage, implementation::PlayerPointsPage>
     {
     };
 }

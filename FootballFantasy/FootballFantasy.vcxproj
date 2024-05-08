@@ -163,6 +163,10 @@
     <ClInclude Include="PlayerPage.xaml.h">
       <DependentUpon>PlayerPage.xaml</DependentUpon>
     </ClInclude>
+    <ClInclude Include="PlayerPointsPage.xaml.h">
+      <DependentUpon>PlayerPointsPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
     <ClInclude Include="PlayerRankingsPage.xaml.h">
       <DependentUpon>PlayerRankingsPage.xaml</DependentUpon>
     </ClInclude>
@@ -175,6 +179,11 @@
     </ClInclude>
     <ClInclude Include="PlayerTeamPickTeamPage.xaml.h">
       <DependentUpon>PlayerTeamPickTeamPage.xaml</DependentUpon>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="PlayerTransfersPage.xaml.h">
+      <DependentUpon>PlayerTransfersPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Presenter.h" />
@@ -216,10 +225,17 @@
     <Page Include="PlayerHomePage.xaml" />
     <Page Include="PlayerMorePage.xaml" />
     <Page Include="PlayerPage.xaml" />
+    <Page Include="PlayerPointsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="PlayerRankingsPage.xaml" />
     <Page Include="PlayerSettingsPage.xaml" />
     <Page Include="PlayerTeamPage.xaml" />
     <Page Include="PlayerTeamPickTeamPage.xaml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </Page>
+    <Page Include="PlayerTransfersPage.xaml">
+      <SubType>Designer</SubType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </Page>
     <Page Include="SignUpPage.xaml" />
@@ -288,6 +304,10 @@
     <ClCompile Include="PlayerPage.xaml.cpp">
       <DependentUpon>PlayerPage.xaml</DependentUpon>
     </ClCompile>
+    <ClCompile Include="PlayerPointsPage.xaml.cpp">
+      <DependentUpon>PlayerPointsPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
     <ClCompile Include="PlayerRankingsPage.xaml.cpp">
       <DependentUpon>PlayerRankingsPage.xaml</DependentUpon>
     </ClCompile>
@@ -300,6 +320,11 @@
     </ClCompile>
     <ClCompile Include="PlayerTeamPickTeamPage.xaml.cpp">
       <DependentUpon>PlayerTeamPickTeamPage.xaml</DependentUpon>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="PlayerTransfersPage.xaml.cpp">
+      <DependentUpon>PlayerTransfersPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Presenter.cpp" />
@@ -349,10 +374,19 @@
     <Midl Include="PlayerHomePage.idl" />
     <Midl Include="PlayerMorePage.idl" />
     <Midl Include="PlayerPage.idl" />
+    <Midl Include="PlayerPointsPage.idl">
+      <DependentUpon>PlayerPointsPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Midl>
     <Midl Include="PlayerRankingsPage.idl" />
     <Midl Include="PlayerSettingsPage.idl" />
     <Midl Include="PlayerTeamPage.idl" />
     <Midl Include="PlayerTeamPickTeamPage.idl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </Midl>
+    <Midl Include="PlayerTransfersPage.idl">
+      <DependentUpon>PlayerTransfersPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </Midl>
     <Midl Include="SignUpPage.idl" />
