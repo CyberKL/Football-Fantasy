@@ -147,18 +147,26 @@ namespace winrt::FootballFantasy::implementation
         grid.SetColumn(footballerControl, column);
         grid.Children().Append(footballerControl);
 
-        budget += stoi(to_string(footballerControl.PlayerInfo()));
+        budget += stoi(to_string(outFootballerControl.PlayerInfo()));
         budget -= footballer.getPrice();
         BudgetTextBlock().Text(to_hstring(Presenter::getInstance()->budgetToString(budget)));
         budget > 0 ? ConfirmBtn().IsEnabled(true) : ConfirmBtn().IsEnabled(false);
 
         transfersStack.pop();
+        if (transfersStack.empty())
+        {
+            winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerTransfersPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+            Frame().Navigate(page);
+        }
+            
     }
 }
 
 
 void winrt::FootballFantasy::implementation::PlayerTransfersPage::Page_Loaded(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
+    if (!tempTeam.empty()) tempTeam.clear();
+    while (!transfersStack.empty()) transfersStack.pop();
     budget = Presenter::getInstance()->getLoggedInPlayerBudget();
     BudgetTextBlock().Text(to_hstring(Presenter::getInstance()->budgetToString(budget)));
     unordered_map<int, struct UiFootballer> footballers;
@@ -213,7 +221,7 @@ void winrt::FootballFantasy::implementation::PlayerTransfersPage::Page_Loaded(wi
 void winrt::FootballFantasy::implementation::PlayerTransfersPage::FootballerControl_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
     pressedFootballerControl = sender.as<Controls::Button>().Parent().as<FootballerControl>();
-    string position = to_string(sender.as<FootballerControl>().Parent().as<Controls::Grid>().Name());
+    string position = to_string(pressedFootballerControl.Parent().as<Controls::Grid>().Name());
 
     vector<Footballer> footballers;
     if (position == "GkGrid")
@@ -232,11 +240,14 @@ void winrt::FootballFantasy::implementation::PlayerTransfersPage::FootballerCont
     Controls::ListView listView;
     for (Footballer footballer : footballers)
     {
+        bool found = false;
         for (FootballerControl footballerControl : tempTeam)
             if (stoi(to_string(footballerControl.Name())) == footballer.getId())
-                continue;
-
-        CreateListView(listView, footballer);
+            {
+                found = true;
+                break;
+            }
+        if(!found) CreateListView(listView, footballer);
     }
 
     Controls::ContentDialog dialog;
@@ -257,41 +268,44 @@ void winrt::FootballFantasy::implementation::PlayerTransfersPage::dialogButtonCl
 {
     auto parentDialog = dialog.as<Controls::ContentDialog>();
     auto listView = parentDialog.Content().as<Controls::ListView>();
-    auto selectedGrid = listView.SelectedItem().as<Controls::Grid>();
-    int footballerId = stoi(to_string(selectedGrid.Name()));
-    tempTeam.erase(pressedFootballerControl);
-    Footballer footballer = Presenter::getInstance()->getFootballer(footballerId);
-    FootballerControl footballerControl;
-    footballerControl.PlayerName(to_hstring(footballer.getName()));
-    footballerControl.PlayerInfo(to_hstring(footballer.getPrice()));
-    footballerControl.CaptaincyIcon(L"");
-    footballerControl.Content().as<Controls::Button>().Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-        {
-            FootballerControl_Click(sender, e);
-        });
-    footballerControl.Name(to_hstring(footballer.getId()));
-    tempTeam.insert(footballerControl);
-    auto grid = pressedFootballerControl.Parent().as<Controls::Grid>();
-    int column = Controls::Grid::GetColumn(pressedFootballerControl);
-    uint32_t indexToRemove;
-    grid.Children().IndexOf(pressedFootballerControl, indexToRemove);
-    grid.Children().RemoveAt(indexToRemove);
-    grid.SetColumn(footballerControl, column);
-    grid.Children().Append(footballerControl);
+    if (listView.SelectedItem() != nullptr)
+    {
+        auto selectedGrid = listView.SelectedItem().as<Controls::Grid>();
+        int footballerId = stoi(to_string(selectedGrid.Name()));
+        tempTeam.erase(pressedFootballerControl);
+        Footballer footballer = Presenter::getInstance()->getFootballer(footballerId);
+        FootballerControl footballerControl;
+        footballerControl.PlayerName(to_hstring(footballer.getName()));
+        footballerControl.PlayerInfo(to_hstring(footballer.getPrice()));
+        footballerControl.CaptaincyIcon(L"");
+        footballerControl.Content().as<Controls::Button>().Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+            {
+                FootballerControl_Click(sender, e);
+            });
+        footballerControl.Name(to_hstring(footballer.getId()));
+        tempTeam.insert(footballerControl);
+        auto grid = pressedFootballerControl.Parent().as<Controls::Grid>();
+        int column = Controls::Grid::GetColumn(pressedFootballerControl);
+        uint32_t indexToRemove;
+        grid.Children().IndexOf(pressedFootballerControl, indexToRemove);
+        grid.Children().RemoveAt(indexToRemove);
+        grid.SetColumn(footballerControl, column);
+        grid.Children().Append(footballerControl);
 
-    budget += stoi(to_string(footballerControl.PlayerInfo()));
-    budget -= footballer.getPrice();
-    BudgetTextBlock().Text(to_hstring(Presenter::getInstance()->budgetToString(budget)));
-    budget > 0 ? ConfirmBtn().IsEnabled(true) : ConfirmBtn().IsEnabled(false);
+        budget += stoi(to_string(pressedFootballerControl.PlayerInfo()));
+        budget -= footballer.getPrice();
+        BudgetTextBlock().Text(to_hstring(Presenter::getInstance()->budgetToString(budget)));
+        budget > 0 ? ConfirmBtn().IsEnabled(true) : ConfirmBtn().IsEnabled(false);
 
-    transfersStack.push(make_pair(stoi(to_string(pressedFootballerControl.Name())), footballer.getId()));
-    UndoBtn().IsEnabled(true);
+        transfersStack.push(make_pair(stoi(to_string(pressedFootballerControl.Name())), footballer.getId()));
+        UndoBtn().IsEnabled(true);
 
-    OptionsPanel().Visibility(Visibility::Visible);
-    for (auto item : Frame().Parent().as<Controls::NavigationView>().MenuItems())
-        item.as<Controls::NavigationViewItem>().IsEnabled(false);
-    Frame().Parent().as<Controls::NavigationView>().IsBackEnabled(false);
-    Frame().Parent().as<Controls::NavigationView>().SettingsItem().as<Controls::NavigationViewItem>().IsEnabled(false);
+        OptionsPanel().Visibility(Visibility::Visible);
+        for (auto item : Frame().Parent().as<Controls::NavigationView>().MenuItems())
+            item.as<Controls::NavigationViewItem>().IsEnabled(false);
+        Frame().Parent().as<Controls::NavigationView>().IsBackEnabled(false);
+        Frame().Parent().as<Controls::NavigationView>().SettingsItem().as<Controls::NavigationViewItem>().IsEnabled(false);
+    }
 }
 
 
@@ -321,6 +335,4 @@ void winrt::FootballFantasy::implementation::PlayerTransfersPage::ResetBtn_Click
 void winrt::FootballFantasy::implementation::PlayerTransfersPage::UndoBtn_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
     UndoTransfer();
-    if (transfersStack.empty())
-        UndoBtn().IsEnabled(false);
 }

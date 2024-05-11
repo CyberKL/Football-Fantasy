@@ -56,14 +56,16 @@ void winrt::FootballFantasy::implementation::SignUpPage::Hyperlink_Click(winrt::
 void winrt::FootballFantasy::implementation::SignUpPage::SignUpBtn_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
     hstring duplicateError = L"Username is already taken";
+    hstring adminError = L"Username can't be admin";
     hstring emptyError = L"Please enter a username";
     string username = to_string(UsernameBox().Text());
     string password = to_string(PasswordBox().Password());
     if (UsernameBox().Text().empty())
         UsernameError().Text(emptyError);
+    else if (to_string(UsernameBox().Text()) == "admin" || to_string(UsernameBox().Text()) == "Admin")
+        UsernameError().Text(adminError);
     else if (Presenter::getInstance()->isUsernameDuplicate(username))
-        // Handle duplicate username
-        UsernameError().Text(duplicateError);
+        UsernameError().Text(duplicateError); // Handle duplicate username
     else
     {
         Presenter::getInstance()->signUp(username, password);

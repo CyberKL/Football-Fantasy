@@ -35,17 +35,19 @@ void winrt::FootballFantasy::implementation::ChangePassword::Button_Click(winrt:
     string inputNewPass = to_string(newPasswordBox().Password());
     string inputConfirmPass = to_string(confirmPasswordBox().Password());
     
-    if (oldPass != inputOldPass || inputConfirmPass != inputNewPass)
-    {
+    if (inputConfirmPass != inputNewPass)
         MatchingPass().Text(L"They don't Match!");
+    else if(inputOldPass != oldPass)
+        MatchingPass().Text(L"Wrong old password");
+    else if(inputConfirmPass.length() < 8)
+        MatchingPass().Text(L"Password must be at least 8 chararcters long");
+    else 
+    {
+        MatchingPass().Text(L"");
+        Presenter::getInstance()->changePassword(inputNewPass);
 
-        // Setting text content
-        return;
+        winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.LoginPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+        Presenter::getInstance()->logOut();
+        Frame().Parent().as<Controls::NavigationView>().Parent().as<Controls::Page>().Frame().Navigate(page);
     }
-    MatchingPass().Text(L"");
-    Presenter::getInstance()->changePassword(inputNewPass);
-
-    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.LoginPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
-    Presenter::getInstance()->logOut();
-    Frame().Parent().as<Controls::NavigationView>().Parent().as<Controls::Page>().Frame().Navigate(page);
 }
