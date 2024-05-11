@@ -35,6 +35,11 @@ void winrt::FootballFantasy::implementation::LoginPage::LoginBtn_Click(winrt::Wi
 {
     string username = to_string(UsernameBox().Text());
     string password = to_string(PasswordBox().Password());
+    if (username == "Admin" && password=="AdminPass")
+    {
+        winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.AdminPanelPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+        Frame().Navigate(page);
+    }
     if (Presenter::getInstance()->login(username, password))
     {
         // Handle successful login

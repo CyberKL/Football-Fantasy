@@ -1,0 +1,9 @@
+namespace FootballFantasy
+{
+    [default_interface]
+    runtimeclass AdminEditMatchesPage : Microsoft.UI.Xaml.Controls.Page
+    {
+        AdminEditMatchesPage();
+        Int32 MyProperty;
+    }
+}
