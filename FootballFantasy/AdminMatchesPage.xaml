@@ -6,130 +6,21 @@
     xmlns:local="using:FootballFantasy"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
-    
-    
-    <Grid VerticalAlignment="Center">
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-
-        </Grid.RowDefinitions>
+    mc:Ignorable="d"
+    Loaded="Page_Loaded">
 
 
-        <Button Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_Click" Background="Transparent">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="{ThemeResource ActionColor}" BorderThickness="2" CornerRadius="20">
+        <Grid Background="{ThemeResource GradientImageBackground}" Padding="40,10">
+            <TextBlock Text="Gameweek 10" Foreground="White" Style="{ThemeResource HeaderStyle}"/>
+        </Grid>
+        <ScrollViewer Padding="10">
+            <Grid x:Name="MatchesGrid" RowSpacing="5">
+                
+                <Grid.RowDefinitions>
+                </Grid.RowDefinitions>
 
-          
-            <!-- Table Rows -->
-
-            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="500" Background="DarkBlue" Opacity="0.85" CornerRadius="10">
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-                <!-- Row 1 -->
-                <TextBlock Grid.Column="0" Grid.Row="0" Text="Manchester City" HorizontalAlignment="Center" Foreground="White" />
-                <TextBlock Grid.Column="1" Grid.Row="0" Text="VS" HorizontalAlignment="Center" Foreground="White"/>
-                <TextBlock Grid.Column="2" Grid.Row="0" Text="LiverPool" HorizontalAlignment="Center" Foreground="White"/>
             </Grid>
-        </Button>
-
-
-        <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_Click_1" Background="Transparent">
-
-
-            <!-- Table Rows -->
-
-            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="500" Background="DarkBlue" Opacity="0.85" CornerRadius="10">
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-
-                </Grid.ColumnDefinitions>
-
-                <!-- Row 1 -->
-                <TextBlock Grid.Column="0" Grid.Row="0" Text="Manchester City" HorizontalAlignment="Center" Foreground="White" />
-                <TextBlock Grid.Column="1" Grid.Row="0" Text="VS" HorizontalAlignment="Center" Foreground="White"/>
-                <TextBlock Grid.Column="2" Grid.Row="0" Text="LiverPool" HorizontalAlignment="Center" Foreground="White"/>
-            </Grid>
-        </Button>
-
-
-        <Button Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_Click_2" Background="Transparent">
-
-
-            <!-- Table Rows -->
-
-            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="500" Background="DarkBlue" Opacity="0.85" CornerRadius="10">
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-
-                </Grid.ColumnDefinitions>
-
-                <!-- Row 1 -->
-                <TextBlock Grid.Column="0" Grid.Row="0" Text="Manchester City" HorizontalAlignment="Center" Foreground="White" />
-                <TextBlock Grid.Column="1" Grid.Row="0" Text="VS" HorizontalAlignment="Center" Foreground="White"/>
-                <TextBlock Grid.Column="2" Grid.Row="0" Text="LiverPool" HorizontalAlignment="Center" Foreground="White"/>
-            </Grid>
-        </Button>
-
-
-
-        <Button Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_Click_3" Background="Transparent">
-
-
-            <!-- Table Rows -->
-
-            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="500" Background="DarkBlue" Opacity="0.85" CornerRadius="10">
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-
-                </Grid.ColumnDefinitions>
-
-                <!-- Row 1 -->
-                <TextBlock Grid.Column="0" Grid.Row="0" Text="Manchester City" HorizontalAlignment="Center" Foreground="White" />
-                <TextBlock Grid.Column="1" Grid.Row="0" Text="VS" HorizontalAlignment="Center" Foreground="White"/>
-                <TextBlock Grid.Column="2" Grid.Row="0" Text="LiverPool" HorizontalAlignment="Center" Foreground="White"/>
-            </Grid>
-        </Button>
-
-
-        <Button Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_Click_4" Background="Transparent">
-
-
-            <!-- Table Rows -->
-
-            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="500" Background="DarkBlue" Opacity="0.85" CornerRadius="10">
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-
-                </Grid.ColumnDefinitions>
-
-                <!-- Row 1 -->
-                <TextBlock Grid.Column="0" Grid.Row="0" Text="Manchester City" HorizontalAlignment="Center" Foreground="White" />
-                <TextBlock Grid.Column="1" Grid.Row="0" Text="VS" HorizontalAlignment="Center" Foreground="White"/>
-                <TextBlock Grid.Column="2" Grid.Row="0" Text="LiverPool" HorizontalAlignment="Center" Foreground="White"/>
-            </Grid>
-        </Button>
-
-    </Grid>
+        </ScrollViewer>
+    </StackPanel>
 </Page>

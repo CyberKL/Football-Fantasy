@@ -61,5 +61,12 @@ namespace winrt::FootballFantasy::implementation
 
 void winrt::FootballFantasy::implementation::AdminPanelPage::NavView_BackRequested(winrt::Microsoft::UI::Xaml::Controls::NavigationView const& sender, winrt::Microsoft::UI::Xaml::Controls::NavigationViewBackRequestedEventArgs const& args)
 {
+    if(AdminFrame().CanGoBack()) AdminFrame().GoBack();
+}
 
+
+void winrt::FootballFantasy::implementation::AdminPanelPage::Page_Loaded(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+{
+    //winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.AdminMatchesPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+    //AdminFrame().Navigate(page);
 }

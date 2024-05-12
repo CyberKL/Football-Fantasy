@@ -3,6 +3,7 @@
 #if __has_include("AdminMatchesPage.g.cpp")
 #include "AdminMatchesPage.g.cpp"
 #endif
+#include "Presenter.h"
 
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
@@ -24,38 +25,45 @@ namespace winrt::FootballFantasy::implementation
 }
 
 
-void winrt::FootballFantasy::implementation::AdminMatchesPage::Button_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+void winrt::FootballFantasy::implementation::AdminMatchesPage::Page_Loaded(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
-    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.AdminEditMatchesPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
-    Frame().Navigate(page);
-}
+    MatchesGrid().Children().Clear();
+    MatchesGrid().RowDefinitions().Clear();
+    unordered_map<int, Match> matches = Presenter::getInstance()->getMatches()[Presenter::getInstance()->getCurrentGw()];
+    unordered_map<int, Match>::iterator it;
+    int count = 0;
+    for (it = matches.begin(); it != matches.end(); it++)
+    {
+        MatchesGrid().RowDefinitions().Append(Controls::RowDefinition());
+        Controls::TextBlock homeTeamTextBlock;
+        Controls::TextBlock infoTextBlock;
+        Controls::TextBlock awayTeamTextBlock;
 
+        homeTeamTextBlock.Text(to_hstring(it->second.getHomeTeam()->getName()));
+        it->second.getPlayed() ? infoTextBlock.Text(to_hstring(it->second.getScore())) : infoTextBlock.Text(L"VS");
+        awayTeamTextBlock.Text(to_hstring(it->second.getAwayTeam()->getName()));
 
-void winrt::FootballFantasy::implementation::AdminMatchesPage::Button_Click_1(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-{
-    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.AdminEditMatchesPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
-    Frame().Navigate(page);
-}
+        Controls::Grid::SetColumn(infoTextBlock, 1);
+        Controls::Grid::SetColumn(awayTeamTextBlock, 2);
+        infoTextBlock.HorizontalAlignment(HorizontalAlignment::Center);
+        awayTeamTextBlock.HorizontalAlignment(HorizontalAlignment::Right);
 
+        Controls::Grid g;
 
+        g.Children().Append(homeTeamTextBlock);
+        g.Children().Append(infoTextBlock);
+        g.Children().Append(awayTeamTextBlock);
+        Controls::Button b;
+        b.Content(g);
+        b.Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+            {
+                winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.AdminEditMatchesPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+                Frame().Navigate(page);
+            });
+        Controls::Grid::SetRow(b, count);
 
-
-void winrt::FootballFantasy::implementation::AdminMatchesPage::Button_Click_2(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-{
-    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.AdminEditMatchesPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
-    Frame().Navigate(page);
-}
-
-
-void winrt::FootballFantasy::implementation::AdminMatchesPage::Button_Click_3(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-{
-    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.AdminEditMatchesPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
-    Frame().Navigate(page);
-}
-
-
-void winrt::FootballFantasy::implementation::AdminMatchesPage::Button_Click_4(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
-{
-    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.AdminEditMatchesPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
-    Frame().Navigate(page);
+        MatchesGrid().Children().Append(b);
+        
+        count++;
+    }
 }

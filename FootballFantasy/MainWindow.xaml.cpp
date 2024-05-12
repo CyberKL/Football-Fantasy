@@ -31,5 +31,5 @@ namespace winrt::FootballFantasy::implementation
 
 void winrt::FootballFantasy::implementation::MainWindow::Window_Activated(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::WindowActivatedEventArgs const& args)
 {
-    Navigate(L"FootballFantasy.SignUpPage"); // SignUpPage
+    Navigate(L"FootballFantasy.AdminPanelPage"); // SignUpPage
 }
