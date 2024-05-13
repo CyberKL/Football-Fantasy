@@ -144,10 +144,6 @@
       <DependentUpon>AdminPanelPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
-    <ClInclude Include="AdminRemoveFootballerPage.xaml.h">
-      <DependentUpon>AdminRemoveFootballerPage.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </ClInclude>
     <ClInclude Include="AdminRemoveFootballTeamPage.xaml.h">
       <DependentUpon>AdminRemoveFootballTeamPage.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -168,10 +164,6 @@
     <ClInclude Include="League.h" />
     <ClInclude Include="LoginPage.xaml.h">
       <DependentUpon>LoginPage.xaml</DependentUpon>
-    </ClInclude>
-    <ClInclude Include="LuckyWheel.xaml.h">
-      <DependentUpon>LuckyWheel.xaml</DependentUpon>
-      <SubType>Code</SubType>
     </ClInclude>
     <ClInclude Include="Manager.h" />
     <ClInclude Include="Match.h" />
@@ -259,9 +251,6 @@
     <Page Include="AdminPanelPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="AdminRemoveFootballerPage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="AdminRemoveFootballTeamPage.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -273,9 +262,6 @@
     </Page>
     <Page Include="FootballerControl.xaml" />
     <Page Include="LoginPage.xaml" />
-    <Page Include="LuckyWheel.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="MainWindow.xaml" />
     <Page Include="PlayerCreateTeamPage.xaml" />
     <Page Include="PlayerHomePage.xaml" />
@@ -338,10 +324,6 @@
       <DependentUpon>AdminPanelPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
-    <ClCompile Include="AdminRemoveFootballerPage.xaml.cpp">
-      <DependentUpon>AdminRemoveFootballerPage.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </ClCompile>
     <ClCompile Include="AdminRemoveFootballTeamPage.xaml.cpp">
       <DependentUpon>AdminRemoveFootballTeamPage.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -362,10 +344,6 @@
     <ClCompile Include="League.cpp" />
     <ClCompile Include="LoginPage.xaml.cpp">
       <DependentUpon>LoginPage.xaml</DependentUpon>
-    </ClCompile>
-    <ClCompile Include="LuckyWheel.xaml.cpp">
-      <DependentUpon>LuckyWheel.xaml</DependentUpon>
-      <SubType>Code</SubType>
     </ClCompile>
     <ClCompile Include="Manager.cpp" />
     <ClCompile Include="Match.cpp" />
@@ -464,10 +442,6 @@
       <DependentUpon>AdminPanelPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Midl>
-    <Midl Include="AdminRemoveFootballerPage.idl">
-      <DependentUpon>AdminRemoveFootballerPage.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Midl>
     <Midl Include="AdminRemoveFootballTeamPage.idl">
       <DependentUpon>AdminRemoveFootballTeamPage.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -482,10 +456,6 @@
     </Midl>
     <Midl Include="FootballerControl.idl" />
     <Midl Include="LoginPage.idl" />
-    <Midl Include="LuckyWheel.idl">
-      <DependentUpon>LuckyWheel.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Midl>
     <Midl Include="MainWindow.idl">
       <SubType>Code</SubType>
       <DependentUpon>MainWindow.xaml</DependentUpon>

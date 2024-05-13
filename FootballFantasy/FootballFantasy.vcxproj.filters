@@ -69,9 +69,6 @@
     <Page Include="AdminAddFootballer.xaml">
       <Filter>Views</Filter>
     </Page>
-    <Page Include="AdminRemoveFootballerPage.xaml">
-      <Filter>Views</Filter>
-    </Page>
     <Page Include="AdminChangeTeamPage.xaml">
       <Filter>Views</Filter>
     </Page>
@@ -79,9 +76,6 @@
       <Filter>Views</Filter>
     </Page>
     <Page Include="AdminRemoveFootballTeamPage.xaml">
-      <Filter>Views</Filter>
-    </Page>
-    <Page Include="LuckyWheel.xaml">
       <Filter>Views</Filter>
     </Page>
   </ItemGroup>
@@ -254,13 +248,13 @@
     <None Include="Assets\Footballers.json">
       <Filter>Assets</Filter>
     </None>
+    <None Include="Assets\FootballTeams.json">
+      <Filter>Assets</Filter>
+    </None>
     <None Include="Assets\Matches.json">
       <Filter>Assets</Filter>
     </None>
     <None Include="Assets\Players.json">
-      <Filter>Assets</Filter>
-    </None>
-    <None Include="Assets\FootballTeams.json">
       <Filter>Assets</Filter>
     </None>
   </ItemGroup>

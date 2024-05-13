@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Manager.h"
+#include <string>
 
 // Ensuring that only one instance is created and creating a new one if not
 Manager* Manager::instance = nullptr;
@@ -256,3 +257,31 @@ void Manager::rating(double playerRate)
 	totalRate += playerRate;
 	rate = totalRate / players.size();
 }
+
+void Manager::removeFootballer(int footballerId)
+{
+	footballers.erase(footballerId);
+}
+
+void Manager::RemoveFootballTeam(int teamId)
+{
+	footballTeams.erase(teamId);
+}
+
+void Manager::addedFootballer(string newFootballerName, int newFootballerPrice, string newFootballerPosition, int newFootballerTeam)
+{
+	FootballTeam* team = footballTeams[newFootballerTeam];
+	Footballer* newfootballer = new Footballer(newFootballerName,  newFootballerPosition,  newFootballerPrice, team->getLeague(), team);
+	footballers.insert(make_pair(newfootballer->getId(), newfootballer));
+}
+
+void Manager:: changeTeam(int footballerId, int teamId)
+{
+	footballers[footballerId]->setTeam(footballTeams[teamId]);
+	footballers[footballerId]->setLeagueName(footballTeams[teamId]->getLeague());
+}
+
+
+
+
+

@@ -3,7 +3,9 @@
 #if __has_include("AdminAddFootballer.g.cpp")
 #include "AdminAddFootballer.g.cpp"
 #endif
-
+#include <string>
+#include "Presenter.h"
+using namespace std;
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
 using namespace Microsoft::UI::Xaml::Controls;
@@ -43,6 +45,25 @@ namespace winrt::FootballFantasy::implementation
 
 void winrt::FootballFantasy::implementation::AdminAddFootballer::Button_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
-    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.AdminPanelPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+    string newFootballerName = to_string(FootballerName().Text());
+    int newFootballerTeam = stoi (to_string(FootballerTeam().SelectedItem().as<Controls::ComboBoxItem>().Name()));
+    string newFootballerPosition = to_string((FootballerPosition().SelectedItem().as<Controls::ComboBoxItem>().Content().as<winrt::hstring>()));
+    int newFootballerPrice = FootballerPrice().Value();
+
+    Presenter::getInstance()->addedFootballer(newFootballerName, newFootballerPrice, newFootballerPosition, newFootballerTeam);
+
+    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.AdminEditMatchesPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
     Frame().Navigate(page);
+}
+
+void winrt::FootballFantasy::implementation::AdminAddFootballer::Page_Loaded(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+{
+    unordered_map<int, FootballTeam*> footballteams = Presenter::getInstance()->getFootballTeams();
+    unordered_map<int, FootballTeam*> ::iterator it;
+    for (it = footballteams.begin(); it != footballteams.end(); it++) {
+        Controls::ComboBoxItem item;
+        item.Content(winrt::box_value(to_hstring(it->second->getName())));
+        item.Name(to_hstring(it->second->getId()));
+        FootballerTeam().Items().Append(item);
+    }
 }

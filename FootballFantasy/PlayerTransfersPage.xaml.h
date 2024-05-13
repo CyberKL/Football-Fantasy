@@ -23,6 +23,7 @@ namespace winrt::FootballFantasy::implementation
         void ResetBtn_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e);
         void UndoTransfer();
         void UndoBtn_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e);
+
     };
 }
 

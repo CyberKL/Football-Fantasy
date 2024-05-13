@@ -24,6 +24,7 @@ private:
 public:
 	// Constructor
 	Footballer(); // Default constructor
+	Footballer(string, string, int, string,FootballTeam* ); // parametrized constructor
 
 
 	// Getters
@@ -38,7 +39,7 @@ public:
 	FootballTeam* getTeam() const;
 
 	// Setters
-	void setTeam(FootballTeam&);
+	void setTeam(FootballTeam*);
 	void setLeagueName(string league);
 
 

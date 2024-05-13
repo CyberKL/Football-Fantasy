@@ -79,5 +79,15 @@ public:
 	int getCurrentGw();
 	void logOut();
 	void updateRate(double);
+	unordered_map<int,Footballer*> getFootballersList();
+	unordered_map<int, FootballTeam*> getFootballTeamList();
+	void removeFootballer(int footballerId);
+	void removeFootballTeam(int teamId);
+	pair<int, string> luckyWheelGenerator();
+	void addedFootballer(string newFootballerName, int newFootballerPrice, string newFootballerPosition, int newFootballerTeam);
+	unordered_map<int, FootballTeam*> getFootballTeams();
+	void changeTeam(int footballerId, int changedFootballerTeam);
+
+
 };
 

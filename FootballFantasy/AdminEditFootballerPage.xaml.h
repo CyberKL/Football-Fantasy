@@ -1,6 +1,7 @@
 #pragma once
 
 #include "AdminEditFootballerPage.g.h"
+#include "Footballer.h"
 
 namespace winrt::FootballFantasy::implementation
 {
@@ -18,6 +19,7 @@ namespace winrt::FootballFantasy::implementation
         void ChangeTeam_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e);
         void RemoveFootballer_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e);
         void AddFootballer_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e);
+        void CreateListView(winrt::Microsoft::UI::Xaml::Controls::ListView& listView, Footballer footballer);
     };
 }
 

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "AdminEditFootballteamPage.g.h"
-
+#include "FootballTeam.h"
 namespace winrt::FootballFantasy::implementation
 {
     struct AdminEditFootballteamPage : AdminEditFootballteamPageT<AdminEditFootballteamPage>
@@ -17,6 +17,7 @@ namespace winrt::FootballFantasy::implementation
 
         void AddFootballTeam_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e);
         void RemoveFootballTeam_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e);
+        void CreateListView(winrt::Microsoft::UI::Xaml::Controls::ListView& listView, FootballTeam footballTeam);
     };
 }
 
