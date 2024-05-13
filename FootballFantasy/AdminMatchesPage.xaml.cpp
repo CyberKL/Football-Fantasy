@@ -4,8 +4,6 @@
 #include "AdminMatchesPage.g.cpp"
 #endif
 #include "Presenter.h"
-#include <winrt/Windows.UI.Xaml.Media.h>
-#include <winrt/Windows.UI.h>
 
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;

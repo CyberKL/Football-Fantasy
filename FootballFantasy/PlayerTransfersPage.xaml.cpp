@@ -24,6 +24,7 @@ namespace winrt::FootballFantasy::implementation
     {
         throw hresult_not_implemented();
     }
+
     unordered_set<FootballerControl> tempTeam;
     int budget;
     stack<pair<int, int>> transfersStack;

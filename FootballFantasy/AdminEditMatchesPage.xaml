@@ -22,19 +22,21 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition />
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0" Spacing="5" HorizontalAlignment="Center" VerticalAlignment="Center">
 
                 <TextBlock x:Name="HomeTeamBlock" Text="" Foreground="White" />
-                <TextBox x:Name="HomeTeamScoreBox" PlaceholderText="score" Foreground="White" />
+                <TextBlock x:Name="HomeTeamScoreBlock" Foreground="White" />
 
             </StackPanel>
+            <Button x:Name="ConfirmBtn" Grid.Column="1" Content="Confirm" HorizontalAlignment="Center" Background="Transparent" Click="ConfirmBtn_Click" IsEnabled="False" />
 
 
-            <StackPanel Grid.Column="1" Spacing="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Grid.Column="2" Spacing="5" HorizontalAlignment="Center" VerticalAlignment="Center">
 
-                <TextBlock x:Name="AwayTeamBlock" Text="Team2Name" Foreground="White" />
-                <TextBox x:Name="AwayTeamScoreBox" PlaceholderText="score" Foreground="White" />
+                <TextBlock x:Name="AwayTeamBlock" Text="" Foreground="White" />
+                <TextBlock x:Name="AwayTeamScoreBlock" Foreground="White" />
 
             </StackPanel>
         </Grid>
@@ -47,12 +49,12 @@
             </Grid.ColumnDefinitions>
             
             <!-- Home team grid -->
-            <Grid x:Name="HomeTeamGrid" HorizontalAlignment="Center" ColumnSpacing="150">
+            <Grid HorizontalAlignment="Center" ColumnSpacing="150">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <Grid x:Name="HomeTeamStartingGrid" Grid.Column="0">
+                <Grid x:Name="HomeTeamStartingGrid" Grid.Column="0" RowSpacing="10">
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -69,20 +71,10 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock Text="Starting Xi" Grid.Row="0" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="1" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="2" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="3" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="4" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="5" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="6" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="7" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="8" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="9" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="10" Margin="5"/>
-                    
+                    <TextBlock Text="Starting Xi" Grid.Row="0" Margin="0,0,0,10" />
+
                 </Grid>
-                <Grid Grid.Column="1">
+                <Grid x:Name="HomeTeamSubsGrid" Grid.Column="1" RowSpacing="10">
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -97,22 +89,21 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock Text="Subs" Grid.Row="0" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="1" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="2" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="3" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="4" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="5" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="6" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="7" Margin="5"/>
+                    <TextBlock Text="Subs" Grid.Row="0" Margin="0,0,0,10" />
+                    <Button x:Name="HomeTeamSubBtn" HorizontalAlignment="Stretch" Grid.Row="8" Content="Substitute" Click="SubstituteFootballer" IsEnabled="False" />
+                    <ScrollViewer Grid.Row="9" HorizontalScrollBarVisibility="Auto" HorizontalScrollMode="Auto">
+                        <Grid x:Name="HomeSubstitutionsGrid">
+                            
+                        </Grid>
+                    </ScrollViewer>
 
                 </Grid>
 
             </Grid>
-            <!--<Button x:Name="HomeTeamBtn" Content="Enter Home Team Players" HorizontalAlignment="Center" />
-            <Button x:Name="AwayTeamBtn" Grid.Column="1" Content="Enter Away Team Players" HorizontalAlignment="Center" />-->
 
             <!-- Away team grid-->
             <Grid Grid.Column="1" HorizontalAlignment="Center" ColumnSpacing="150">
@@ -120,7 +111,7 @@
                     <ColumnDefinition />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0">
+                <Grid x:Name="AwayTeamStartingGrid" Grid.Column="0" RowSpacing="10">
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -137,20 +128,10 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock Text="Starting Xi" Grid.Row="0" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="1" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="2" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="3" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="4" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="5" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="6" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="7" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="8" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="9" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="10" Margin="5"/>
+                    <TextBlock Text="Starting Xi" Grid.Row="0" Margin="0,0,0,10" />
 
                 </Grid>
-                <Grid Grid.Column="1">
+                <Grid x:Name="AwayTeamSubsGrid" Grid.Column="1" RowSpacing="10">
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -167,14 +148,13 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock Text="Subs" Grid.Row="0" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="1" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="2" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="3" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="4" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="5" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="6" Margin="5"/>
-                    <TextBlock Text="PlayerName" Grid.Row="7" Margin="5"/>
+                    <TextBlock Text="Subs" Grid.Row="0" Margin="0,0,0,10" />
+                    <Button x:Name="AwayTeamSubBtn" HorizontalAlignment="Stretch" Grid.Row="8" Content="Substitute" Click="SubstituteFootballer" IsEnabled="False" />
+                    <ScrollViewer Grid.Row="9" HorizontalScrollBarVisibility="Auto" HorizontalScrollMode="Auto">
+                        <Grid x:Name="AwaySubstitutionsGrid">
+
+                        </Grid>
+                    </ScrollViewer>
 
                 </Grid>
 

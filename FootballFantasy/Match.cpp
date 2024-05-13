@@ -38,7 +38,7 @@ string Match::getScore() const
 	return score;
 }
 
-queue<Footballer*> Match::getScorers() const
+vector<Footballer*> Match::getScorers() const
 {
 	return scorers;
 }
@@ -46,6 +46,21 @@ queue<Footballer*> Match::getScorers() const
 bool Match::getPlayed() const
 {
 	return played;
+}
+
+void Match::setPlayed(bool played)
+{
+	this->played = played;
+}
+
+void Match::setScore(string score)
+{
+	this->score = score;
+}
+
+void Match::setScorers(vector<Footballer*>)
+{
+	this->scorers = scorers;
 }
 
 json Match::toJson()
@@ -58,10 +73,9 @@ json Match::toJson()
 	j["league"] = league;
 	j["score"] = score;
 	
-	while (!scorers.empty())
+	for (int i = 0; i < scorers.size(); i++)
 	{
-		j["scorers"].push_back(scorers.front()->getId());
-		scorers.pop();
+		j["scorers"].push_back(scorers[i]->getId());
 	}
 
 	j["played"] = played;
@@ -81,7 +95,7 @@ void Match::fromJson(json& j)
 	for (int id : j["scorers"])
 	{
 		Footballer* footballer = Manager::getInstance()->getFootballers()[id];
-		scorers.push(footballer);
+		scorers.push_back(footballer);
 	}
 
 	played = j["played"];

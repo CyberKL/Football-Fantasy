@@ -4,6 +4,7 @@
 #include "PlayerSettingsPage.g.cpp"
 #endif
 #include <winrt/Windows.ApplicationModel.DataTransfer.h>
+#include <winrt/Windows.UI.Xaml.Media.h>
 #include <winrt/Windows.UI.h>
 #include "Presenter.h"
 
@@ -73,6 +74,7 @@ void winrt::FootballFantasy::implementation::PlayerSettingsPage::ShareApp_Click(
     copyBtn.RequestedTheme(ElementTheme::Light);
     Controls::FontIcon f;
     f.Glyph(L"\uE8C8");
+    f.Foreground(Media::SolidColorBrush(Windows::UI::Colors::Black()));
     copyBtn.Content(f);
     copyBtn.Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
         {

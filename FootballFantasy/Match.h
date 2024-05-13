@@ -18,7 +18,7 @@ private:
 	int gw;
 	string league;
 	string score;
-	queue<Footballer*> scorers;
+	vector<Footballer*> scorers;
 	bool played;
 
 public:
@@ -32,8 +32,13 @@ public:
 	FootballTeam* getAwayTeam() const;
 	int getGw() const;
 	string getScore() const;
-	queue<Footballer*> getScorers() const;
+	vector<Footballer*> getScorers() const;
 	bool getPlayed() const;
+
+	// Setters
+	void setScore(string);
+	void setScorers(vector<Footballer*>);
+	void setPlayed(bool);
 
 	// Handles file serialization to and from JSON
 	json toJson();

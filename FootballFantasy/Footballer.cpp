@@ -68,24 +68,49 @@ void Footballer::setLeagueName(string league)
 
 
 // update points of footballer
-void Footballer:: updatePoints(int goals)
+void Footballer::updatePoints(int goals, int assists, int penaltiesMissed, int yellowCards, bool redCard, int ownGoals, int penaltiesSaved, int shotsSaved, int timePlayed, int goalsConceded, bool cleanSheet)
 {
 	int gw = Manager::getInstance()->getCurrentGw();
+	
+	int points = 0;
 	if (position == "Goalkeeper" || position == "Defender")
-		gwPoints[gw] += 6 * goals;
-
+	{
+		points += 6 * goals;
+		if (cleanSheet) points += 4;
+		points -= goalsConceded / 2;
+	}
 	else if (position == "Midfielder")
-		gwPoints[gw] += 5 * goals;
-
+	{
+		points += 5 * goals;
+		if (cleanSheet) points += 1;
+	}
 	else if (position == "Forward")
-		gwPoints[gw] += 4 * goals;
-		
+		points += 4 * goals;
+
+	if (position == "Goalkeeper")
+	{
+		points += shotsSaved / 3;
+		points += 5 * penaltiesSaved;
+	}
+
+	points += 3 * assists;
+	points -= 2 * penaltiesMissed;
+	points -= yellowCards;
+	if (redCard) points -= 3;
+	points -= 2 * ownGoals;
+
+	if (timePlayed >= 60)
+		points += 2;
+	else
+		points += 1;
+
+	gwPoints[gw] = points;
 }
 
-void Footballer:: updatePrice()
+void Footballer::updatePrice()
 {
 	int gw = Manager::getInstance()->getCurrentGw();
-	price = gwPoints[gw] * 10 ;
+	price += gwPoints[gw] * 10 ;
 }
 
 string Footballer::priceToString() const

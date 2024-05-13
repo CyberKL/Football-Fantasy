@@ -402,3 +402,8 @@ void Presenter::updateRate(double rate)
 {
     Manager::getInstance()->rating(rate);
 }
+
+void Presenter::updateFootballerPoints(int id, int goals, int assists, int penaltiesMissed, int yellowCards, bool redCard, int ownGoals, int penaltiesSaved, int shotsSaved, int timePlayed, int goalsConceded, bool cleanSheet)
+{
+    Manager::getInstance()->getFootballers()[id]->updatePoints(goals, assists, penaltiesMissed, yellowCards, redCard, ownGoals, penaltiesSaved, shotsSaved, timePlayed, goalsConceded, cleanSheet);
+}

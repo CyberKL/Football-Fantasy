@@ -43,7 +43,7 @@ public:
 
 
 	//functions
-	void updatePoints(int goals);
+	void updatePoints(int, int, int, int, bool, int, int, int, int, int, bool);
 	void updatePrice();
 	string priceToString() const;
 	string positionAbbrv() const;

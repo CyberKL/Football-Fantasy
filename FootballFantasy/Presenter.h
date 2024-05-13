@@ -79,5 +79,6 @@ public:
 	int getCurrentGw();
 	void logOut();
 	void updateRate(double);
+	void updateFootballerPoints(int, int, int, int, int, bool, int, int, int, int, int, bool);
 };
 

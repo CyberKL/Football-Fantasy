@@ -33,6 +33,11 @@ string FootballTeam::getLeague() const
 	return league;
 }
 
+vector<Footballer*> FootballTeam::getFootballers()
+{
+	return footballers;
+}
+
 
 // update points of team 
 void FootballTeam::updatePoints(char result)

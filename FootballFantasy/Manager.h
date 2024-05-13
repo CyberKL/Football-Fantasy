@@ -34,6 +34,7 @@ private:
 	map<int, vector<string>> orderedPlayers;
 	double totalRate;
 	double rate;
+	bool seasonStarted;
 
 	Manager(); //Private constructor to prevent instantiation
 
