@@ -9,11 +9,19 @@
     mc:Ignorable="d"
     Loaded="Page_Loaded">
 
-    <NavigationView x:Name="NavView" Background="{StaticResource GradientImageBackground}" IsBackButtonVisible="Visible" IsBackEnabled="True" BackRequested="NavView_BackRequested" IsSettingsVisible="False" IsTitleBarAutoPaddingEnabled="False" SelectionChanged="NavView_SelectionChanged" RequestedTheme="Dark">
+
+    <NavigationView x:Name="NavView" Grid.Row="1" PaneDisplayMode="Left" IsTabStop="False" Background="{StaticResource GradientImageBackground}" IsBackButtonVisible="Visible" IsBackEnabled="True" BackRequested="NavView_BackRequested" IsSettingsVisible="False" IsTitleBarAutoPaddingEnabled="False" SelectionChanged="NavView_SelectionChanged" RequestedTheme="Dark">
         <NavigationView.MenuItems>
-            <NavigationViewItem Content="Matches" Icon="Add"  Tag="Matches" IsSelected="True"/>
-            <NavigationViewItem Content="Data" Icon="Edit" Tag="Data"/>
+            <NavigationViewItem Content="Matches" Icon="Add" ToolTipService.ToolTip="Matches" Tag="Matches"/>
+           
+            <NavigationViewItem Content="Edit" Icon="Edit" ToolTipService.ToolTip="Edit" SelectsOnInvoked="False">
+                <NavigationViewItem.MenuItems>
+                    <NavigationViewItem Content="Footballers" Icon="Contact" ToolTipService.ToolTip="footballer" Tag="Footballers"/>
+                    <NavigationViewItem Content="Football Team" Icon="People" ToolTipService.ToolTip="football team" Tag="FootballTeam"/>
+                </NavigationViewItem.MenuItems>
+            </NavigationViewItem>
         </NavigationView.MenuItems>
+
         <NavigationView.FooterMenuItems>
             <NavigationViewItem Content="Logout" Tag="Logout">
                 <NavigationViewItem.Icon>
@@ -23,6 +31,9 @@
         </NavigationView.FooterMenuItems>
         <Frame x:Name="AdminFrame" Background="{ThemeResource NeutralColor}" />
     </NavigationView>
-
+    
+    
+    
+   
 
 </Page>

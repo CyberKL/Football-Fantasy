@@ -2,6 +2,7 @@
 #include "Presenter.h"
 #include <sstream>
 #include <iomanip>
+#include <random>
 
 // Ensuring that only one instance is created and creating a new one if not
 Presenter* Presenter::instance = nullptr;
@@ -342,7 +343,6 @@ void Presenter::confirmTransfersPage(stack<pair<int, int>> transfersStack)
     }
 }
 
-
 void Presenter::loadData()
 {
     Manager::getInstance()->load();
@@ -401,6 +401,57 @@ void Presenter::logOut()
 void Presenter::updateRate(double rate)
 {
     Manager::getInstance()->rating(rate);
+}
+
+unordered_map<int, Footballer*> Presenter::getFootballersList()
+{
+    return Manager::getInstance()->getFootballers();
+}
+
+void Presenter:: removeFootballer(int footballerId)
+{
+    Manager::getInstance()->removeFootballer(footballerId);
+}
+
+unordered_map<int, FootballTeam*> Presenter::getFootballTeamList()
+{
+    return Manager::getInstance()->getFootballTeams();
+}
+
+void Presenter::removeFootballTeam(int teamId)
+{
+    Manager::getInstance()->RemoveFootballTeam(teamId);
+}
+
+pair<int, string> Presenter::luckyWheelGenerator()
+{
+    // Generate a random index
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<> dist(0, Presenter::getInstance()->getFootballersList().size() - 1);
+    int randomIndex = dist(gen);
+
+    string name = Presenter::getInstance()->getFootballersList()[randomIndex]->getName();
+
+    pair<int, string> generatedFootballer = make_pair(randomIndex, name);
+    return generatedFootballer;
+}
+
+void Presenter::addedFootballer(string newFootballerName, int newFootballerPrice, string newFootballerPosition, int newFootballerTeam)
+{
+    Manager::getInstance()->addedFootballer( newFootballerName,  newFootballerPrice,  newFootballerPosition,  newFootballerTeam);
+}
+
+
+unordered_map<int, FootballTeam*> Presenter::getFootballTeams()
+{
+    return Manager::getInstance()->getFootballTeams();
+}
+
+void Presenter::changeTeam(int footballerId, int changedFootballerTeam)
+{
+   Manager::getInstance()->changeTeam(footballerId, changedFootballerTeam);
+}
 }
 
 void Presenter::updateFootballerPoints(int id, int goals, int assists, int penaltiesMissed, int yellowCards, bool redCard, int ownGoals, int penaltiesSaved, int shotsSaved, int timePlayed, int goalsConceded, bool cleanSheet)

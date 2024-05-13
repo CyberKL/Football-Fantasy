@@ -90,5 +90,14 @@ public:
 	void changePassword(int playerID, string newPassword);
 
 	void rating(double playerRate);
+	
+	void removeFootballer(int footballerId);
+
+	void changeTeam(int footballerId, int teamId);
+
+	void RemoveFootballTeam(int teamId);
+
+	void addedFootballer(string newFootballerName, int newFootballerPrice, string newFootballerPosition, int newFootballerTeam);
+
 };
 
