@@ -17,6 +17,7 @@ private:
 
 	Player* loggedInPlayer;
 	int pressedFootballerControlId;
+	Match pressedMatch;
 	unordered_map<int, bool> tempSquad;
 	int tempCaptainId;
 	int tempViceCaptainId;
@@ -38,6 +39,7 @@ public:
 	int getTempViceCaptainId();
 	bool getSquadEdited();
 	bool getCaptaincyEdited();
+	Match getPressedMatch();
 
 	// Setters
 	void setPressedFootballerControlId(int);
@@ -46,6 +48,7 @@ public:
 	void setTempViceCaptainId(int);
 	void setSquadEdited(bool);
 	void setCaptaincyEdited(bool);
+	void setPressedMatch(Match);
 
 	bool isUsernameDuplicate(const string&);
 	void signUp(const string&, const string&);

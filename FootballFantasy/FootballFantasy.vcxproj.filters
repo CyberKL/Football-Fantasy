@@ -254,13 +254,13 @@
     <None Include="Assets\Footballers.json">
       <Filter>Assets</Filter>
     </None>
-    <None Include="Assets\FootballTeams.json">
-      <Filter>Assets</Filter>
-    </None>
     <None Include="Assets\Matches.json">
       <Filter>Assets</Filter>
     </None>
     <None Include="Assets\Players.json">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\FootballTeams.json">
       <Filter>Assets</Filter>
     </None>
   </ItemGroup>

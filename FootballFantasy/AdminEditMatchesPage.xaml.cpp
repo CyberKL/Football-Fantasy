@@ -3,6 +3,7 @@
 #if __has_include("AdminEditMatchesPage.g.cpp")
 #include "AdminEditMatchesPage.g.cpp"
 #endif
+#include "Presenter.h"
 
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
@@ -21,5 +22,16 @@ namespace winrt::FootballFantasy::implementation
     {
         throw hresult_not_implemented();
     }
+
+}
+
+
+void winrt::FootballFantasy::implementation::AdminEditMatchesPage::Page_Loaded(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+{
+    /*Match match = Presenter::getInstance()->getPressedMatch();
+
+    HomeTeamBlock().Text(to_hstring(match.getHomeTeam()->getName()));
+    AwayTeamBlock().Text(to_hstring(match.getAwayTeam()->getName()));*/
+
 
 }

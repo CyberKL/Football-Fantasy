@@ -53,6 +53,14 @@ json FootballTeam::toJson()
 	j["name"] = name;
 	j["points"] = points;
 	j["league"] = league;
+
+	vector<Footballer*>::iterator it;
+	int i = 0;
+	for (it = footballers.begin(); it != footballers.end(); it++, i++)
+	{
+		j["footballers"][i] = (*it)->getId();
+	}
+
 	return j;
 }
 
@@ -62,4 +70,9 @@ void FootballTeam::fromJson(json& j)
 	name = j["name"];
 	points = j["points"];
 	league = j["league"];
+}
+
+void FootballTeam::loadFootballer(Footballer* footballer)
+{
+	footballers.push_back(footballer);
 }

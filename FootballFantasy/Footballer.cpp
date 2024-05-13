@@ -159,4 +159,5 @@ void Footballer::fromJson(json& j)
 		gwPoints[stoi(it.key())] = it.value();
 
 	price = j["price"];
+	team->loadFootballer(this);
 }

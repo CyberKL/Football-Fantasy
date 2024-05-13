@@ -68,6 +68,6 @@ void winrt::FootballFantasy::implementation::AdminPanelPage::NavView_BackRequest
 
 void winrt::FootballFantasy::implementation::AdminPanelPage::Page_Loaded(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
-    //winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.AdminMatchesPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
-    //AdminFrame().Navigate(page);
+    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.AdminEditMatchesPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+    AdminFrame().Navigate(page);
 }
