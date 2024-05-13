@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Manager.h"
+#include <string>
 
 // Ensuring that only one instance is created and creating a new one if not
 Manager* Manager::instance = nullptr;
@@ -161,7 +162,7 @@ void Manager::load()
 	// Loading from the json files
 
 	// Loading football teams
-	ifstream footballTeamsFile("D:\\Uni\\Year 2\\2nd Semester\\Data Structure\\ProjectFinal\\FootballFantasy\\FootballFantasy\\Assets\\FootballTeams.json");
+	ifstream footballTeamsFile("C:\\Users\\marya\\OneDrive\\Desktop\\cs\\year 2\\2nd semester\\Data Structures\\ProjectFinal\\Football-Fantasy\\FootballFantasy\\Assets\\FootballTeams.json");
 	json jsonFootballTeams;
 	footballTeamsFile >> jsonFootballTeams;
 	for (json j : jsonFootballTeams) 
@@ -172,7 +173,7 @@ void Manager::load()
 	}
 
 	// loading footballers
-	ifstream footballersFile("D:\\Uni\\Year 2\\2nd Semester\\Data Structure\\ProjectFinal\\FootballFantasy\\FootballFantasy\\Assets\\Footballers.json");
+	ifstream footballersFile("C:\\Users\\marya\\OneDrive\\Desktop\\cs\\year 2\\2nd semester\\Data Structures\\ProjectFinal\\Football-Fantasy\\FootballFantasy\\Assets\\Footballers.json");
 	json jsonFootballers;
 	footballersFile >> jsonFootballers;
 	for (json j : jsonFootballers)
@@ -184,7 +185,7 @@ void Manager::load()
 
 
 	// loading matches
-	ifstream matchesFile("D:\\Uni\\Year 2\\2nd Semester\\Data Structure\\ProjectFinal\\FootballFantasy\\FootballFantasy\\Assets\\Matches.json");
+	ifstream matchesFile("C:\\Users\\marya\\OneDrive\\Desktop\\cs\\year 2\\2nd semester\\Data Structures\\ProjectFinal\\Football-Fantasy\\FootballFantasy\\Assets\\Matches.json");
 	json jsonMatches;
 	matchesFile >> jsonMatches;
 	for (json j : jsonMatches)
@@ -195,7 +196,7 @@ void Manager::load()
 	}
 
 	// loading players
-	ifstream playersFile("D:\\Uni\\Year 2\\2nd Semester\\Data Structure\\ProjectFinal\\FootballFantasy\\FootballFantasy\\Assets\\Players.json");
+	ifstream playersFile("C:\\Users\\marya\\OneDrive\\Desktop\\cs\\year 2\\2nd semester\\Data Structures\\ProjectFinal\\Football-Fantasy\\FootballFantasy\\Assets\\Players.json");
 	json jsonPlayers;
 	playersFile >> jsonPlayers;
 	for (json j : jsonPlayers)
@@ -256,3 +257,31 @@ void Manager::rating(double playerRate)
 	totalRate += playerRate;
 	rate = totalRate / players.size();
 }
+
+void Manager::removeFootballer(int footballerId)
+{
+	footballers.erase(footballerId);
+}
+
+void Manager::RemoveFootballTeam(int teamId)
+{
+	footballTeams.erase(teamId);
+}
+
+void Manager::addedFootballer(string newFootballerName, int newFootballerPrice, string newFootballerPosition, int newFootballerTeam)
+{
+	FootballTeam* team = footballTeams[newFootballerTeam];
+	Footballer* newfootballer = new Footballer(newFootballerName,  newFootballerPosition,  newFootballerPrice, team->getLeague(), team);
+	footballers.insert(make_pair(newfootballer->getId(), newfootballer));
+}
+
+void Manager:: changeTeam(int footballerId, int teamId)
+{
+	footballers[footballerId]->setTeam(footballTeams[teamId]);
+	footballers[footballerId]->setLeagueName(footballTeams[teamId]->getLeague());
+}
+
+
+
+
+

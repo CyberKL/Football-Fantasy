@@ -42,9 +42,9 @@ void Admin::updateFootballTeam(int id1, int id2)
 	Footballer* footballer1 = Manager::getInstance()->getFootballers()[id1];
 	Footballer* footballer2 = Manager::getInstance()->getFootballers()[id2];
 
-	footballer1->setTeam(*footballer2->getTeam());
+	footballer1->setTeam(footballer2->getTeam());
 	footballer1->setLeagueName(footballer2->getLeagueName());
-	footballer2->setTeam(*footballer1->getTeam());
+	footballer2->setTeam(footballer1->getTeam());
 	footballer2->setLeagueName(footballer1->getLeagueName());
 }
 

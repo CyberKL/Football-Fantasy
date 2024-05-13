@@ -7,7 +7,22 @@ int Footballer::count = Manager::getInstance()->getCounts()["Footballer"];
 
 // Constructor
 Footballer::Footballer()
-	: id(0), leagueName(""), price(0.0f) {}
+	: id(0), leagueName(""), price(0) {}
+
+// parametrized constructor
+Footballer::Footballer(string name, string position, int price, string leagueName, FootballTeam* team)
+{
+	this->name = name;
+	this->id = count;
+	this->position = position;
+	this->price = price;
+	this->leagueName = leagueName;
+	this->team = team;
+	this->totalPoints = 0;
+	count++;
+}
+
+
 
 // Getters
 int Footballer::getCount()
@@ -56,9 +71,9 @@ FootballTeam* Footballer::getTeam() const
 }
 
 // Setters
-void Footballer::setTeam(FootballTeam& team)
+void Footballer::setTeam(FootballTeam*  team)
 {
-	this->team = &team;
+	this->team = team;
 }
 
 void Footballer::setLeagueName(string league)

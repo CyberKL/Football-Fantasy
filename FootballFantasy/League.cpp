@@ -20,7 +20,7 @@ map<int, vector<FootballTeam*>> League::getStandings() const
 
 void League::updateStandingsPoints()
 {
-	!standings.empty() ? standings.clear() : 0;
+	if(!standings.empty()) standings.clear();
 
 	unordered_map<int, FootballTeam*> teams = Manager::getInstance()->getFootballTeams();
 	unordered_map<int, FootballTeam*>::iterator it;

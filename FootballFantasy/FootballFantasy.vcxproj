@@ -108,8 +108,28 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Admin.h" />
+    <ClInclude Include="AdminAddFootballer.xaml.h">
+      <DependentUpon>AdminAddFootballer.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="AdminAddFootballTeamPage.xaml.h">
+      <DependentUpon>AdminAddFootballTeamPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="AdminChangeTeamPage.xaml.h">
+      <DependentUpon>AdminChangeTeamPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
     <ClInclude Include="AdminDataPage.xaml.h">
       <DependentUpon>AdminDataPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="AdminEditFootballerPage.xaml.h">
+      <DependentUpon>AdminEditFootballerPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="AdminEditFootballteamPage.xaml.h">
+      <DependentUpon>AdminEditFootballteamPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
     <ClInclude Include="AdminEditMatchesPage.xaml.h">
@@ -122,6 +142,10 @@
     </ClInclude>
     <ClInclude Include="AdminPanelPage.xaml.h">
       <DependentUpon>AdminPanelPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="AdminRemoveFootballTeamPage.xaml.h">
+      <DependentUpon>AdminRemoveFootballTeamPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
     <ClInclude Include="ChangePassword.xaml.h">
@@ -200,7 +224,22 @@
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml" />
+    <Page Include="AdminAddFootballer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AdminAddFootballTeamPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AdminChangeTeamPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="AdminDataPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AdminEditFootballerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AdminEditFootballteamPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Include="AdminEditMatchesPage.xaml">
@@ -210,6 +249,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="AdminPanelPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AdminRemoveFootballTeamPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Include="ChangePassword.xaml">
@@ -246,8 +288,28 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Admin.cpp" />
+    <ClCompile Include="AdminAddFootballer.xaml.cpp">
+      <DependentUpon>AdminAddFootballer.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="AdminAddFootballTeamPage.xaml.cpp">
+      <DependentUpon>AdminAddFootballTeamPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="AdminChangeTeamPage.xaml.cpp">
+      <DependentUpon>AdminChangeTeamPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
     <ClCompile Include="AdminDataPage.xaml.cpp">
       <DependentUpon>AdminDataPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="AdminEditFootballerPage.xaml.cpp">
+      <DependentUpon>AdminEditFootballerPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="AdminEditFootballteamPage.xaml.cpp">
+      <DependentUpon>AdminEditFootballteamPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
     <ClCompile Include="AdminEditMatchesPage.xaml.cpp">
@@ -260,6 +322,10 @@
     </ClCompile>
     <ClCompile Include="AdminPanelPage.xaml.cpp">
       <DependentUpon>AdminPanelPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="AdminRemoveFootballTeamPage.xaml.cpp">
+      <DependentUpon>AdminRemoveFootballTeamPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
     <ClCompile Include="ChangePassword.xaml.cpp">
@@ -340,8 +406,28 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <Midl Include="AdminAddFootballer.idl">
+      <DependentUpon>AdminAddFootballer.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Midl>
+    <Midl Include="AdminAddFootballTeamPage.idl">
+      <DependentUpon>AdminAddFootballTeamPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Midl>
+    <Midl Include="AdminChangeTeamPage.idl">
+      <DependentUpon>AdminChangeTeamPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Midl>
     <Midl Include="AdminDataPage.idl">
       <DependentUpon>AdminDataPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Midl>
+    <Midl Include="AdminEditFootballerPage.idl">
+      <DependentUpon>AdminEditFootballerPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Midl>
+    <Midl Include="AdminEditFootballteamPage.idl">
+      <DependentUpon>AdminEditFootballteamPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Midl>
     <Midl Include="AdminEditMatchesPage.idl">
@@ -354,6 +440,10 @@
     </Midl>
     <Midl Include="AdminPanelPage.idl">
       <DependentUpon>AdminPanelPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Midl>
+    <Midl Include="AdminRemoveFootballTeamPage.idl">
+      <DependentUpon>AdminRemoveFootballTeamPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Midl>
     <Midl Include="ChangePassword.idl">
