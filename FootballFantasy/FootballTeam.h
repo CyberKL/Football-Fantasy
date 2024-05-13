@@ -7,6 +7,8 @@
 using json = nlohmann::json;
 using namespace std;
 
+class Footballer;
+
 class FootballTeam
 {
 private:
@@ -15,6 +17,7 @@ private:
 	int points;
 	int id;
 	string league;
+	vector<Footballer*> footballers;
 
 public:
 	// Constructors
@@ -28,10 +31,12 @@ public:
 	int getPoints();
 	int getId();
 	string getLeague() const;
+	vector<Footballer*> getFootballers();
 
 	// Handles file serialization to and from JSON
 	json toJson();
 	void fromJson(json&);
+	void loadFootballer(Footballer*);
 
 	//update points of team 
 	void updatePoints(char );

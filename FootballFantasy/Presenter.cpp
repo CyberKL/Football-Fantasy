@@ -48,6 +48,11 @@ bool Presenter::getCaptaincyEdited()
     return captaincyEdited;
 }
 
+Match Presenter::getPressedMatch()
+{
+    return pressedMatch;
+}
+
 
 void Presenter::setPressedFootballerControlId(int pressedFootballerControlId)
 {
@@ -81,6 +86,11 @@ void Presenter::setSquadEdited(bool squadEdited)
 void Presenter::setCaptaincyEdited(bool captaincyEdited)
 {
     this->captaincyEdited = captaincyEdited;
+}
+
+void Presenter::setPressedMatch(Match pressedMatch)
+{
+    this->pressedMatch = pressedMatch;
 }
 
 bool Presenter::isUsernameDuplicate(const string& username)

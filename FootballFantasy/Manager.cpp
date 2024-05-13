@@ -253,6 +253,6 @@ void Manager:: changePassword(int playerID, string newPassword)
 
 void Manager::rating(double playerRate)
 {
-	totalRate = +playerRate;
+	totalRate += playerRate;
 	rate = totalRate / players.size();
 }

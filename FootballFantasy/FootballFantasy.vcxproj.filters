@@ -56,6 +56,10 @@
     <Page Include="PlayerTransfersPage.xaml">
       <Filter>Views</Filter>
     </Page>
+    <Page Include="AdminDataPage.xaml" />
+    <Page Include="AdminEditMatchesPage.xaml" />
+    <Page Include="AdminMatchesPage.xaml" />
+    <Page Include="AdminPanelPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Midl Include="MainWindow.idl" />
@@ -226,13 +230,13 @@
     <None Include="Assets\Footballers.json">
       <Filter>Assets</Filter>
     </None>
-    <None Include="Assets\FootballTeams.json">
-      <Filter>Assets</Filter>
-    </None>
     <None Include="Assets\Matches.json">
       <Filter>Assets</Filter>
     </None>
     <None Include="Assets\Players.json">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\FootballTeams.json">
       <Filter>Assets</Filter>
     </None>
   </ItemGroup>

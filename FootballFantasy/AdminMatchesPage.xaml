@@ -11,16 +11,27 @@
 
 
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="{ThemeResource ActionColor}" BorderThickness="2" CornerRadius="20">
-        <Grid Background="{ThemeResource GradientImageBackground}" Padding="40,10">
-            <TextBlock Text="Gameweek 10" Foreground="White" Style="{ThemeResource HeaderStyle}"/>
+        
+        <Grid ColumnSpacing="150" Background="{ThemeResource GradientImageBackground}" Padding="40,10">
+            <TextBlock x:Name="GameweekBlock" Text="Gameweek 10" Foreground="White" Style="{ThemeResource HeaderStyle}" HorizontalAlignment="Center"/>
         </Grid>
-        <ScrollViewer Padding="10">
-            <Grid x:Name="MatchesGrid" RowSpacing="5">
+        
+        <ScrollViewer Padding="20" VerticalScrollBarVisibility="Auto">
+            
+            <Grid x:Name="MatchesGrid" ColumnSpacing="100" RowSpacing="15">
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition  Width="*"/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
                 
                 <Grid.RowDefinitions>
                 </Grid.RowDefinitions>
-
+                
             </Grid>
+            
         </ScrollViewer>
+        
     </StackPanel>
 </Page>

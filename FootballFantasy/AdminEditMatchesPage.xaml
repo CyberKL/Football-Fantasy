@@ -6,7 +6,8 @@
     xmlns:local="using:FootballFantasy"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Loaded="Page_Loaded">
     
     <!-- Main grid -->
     <Grid Padding="20" VerticalAlignment="Center">
@@ -24,16 +25,16 @@
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0" Spacing="5" HorizontalAlignment="Center" VerticalAlignment="Center">
 
-                <TextBlock Text="Team1Name" Foreground="White" />
-                <TextBox PlaceholderText="score" Foreground="White" />
+                <TextBlock x:Name="HomeTeamBlock" Text="" Foreground="White" />
+                <TextBox x:Name="HomeTeamScoreBox" PlaceholderText="score" Foreground="White" />
 
             </StackPanel>
 
 
             <StackPanel Grid.Column="1" Spacing="5" HorizontalAlignment="Center" VerticalAlignment="Center">
 
-                <TextBlock Text="Team2Name" Foreground="White" />
-                <TextBox PlaceholderText="score" Foreground="White" />
+                <TextBlock x:Name="AwayTeamBlock" Text="Team2Name" Foreground="White" />
+                <TextBox x:Name="AwayTeamScoreBox" PlaceholderText="score" Foreground="White" />
 
             </StackPanel>
         </Grid>
@@ -46,12 +47,12 @@
             </Grid.ColumnDefinitions>
             
             <!-- Home team grid -->
-            <Grid HorizontalAlignment="Center" ColumnSpacing="150" >
+            <Grid x:Name="HomeTeamGrid" HorizontalAlignment="Center" ColumnSpacing="150">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0">
+                <Grid x:Name="HomeTeamStartingGrid" Grid.Column="0">
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -110,6 +111,8 @@
                 </Grid>
 
             </Grid>
+            <!--<Button x:Name="HomeTeamBtn" Content="Enter Home Team Players" HorizontalAlignment="Center" />
+            <Button x:Name="AwayTeamBtn" Grid.Column="1" Content="Enter Away Team Players" HorizontalAlignment="Center" />-->
 
             <!-- Away team grid-->
             <Grid Grid.Column="1" HorizontalAlignment="Center" ColumnSpacing="150">
