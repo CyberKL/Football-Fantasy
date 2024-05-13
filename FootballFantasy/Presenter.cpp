@@ -452,7 +452,6 @@ void Presenter::changeTeam(int footballerId, int changedFootballerTeam)
 {
    Manager::getInstance()->changeTeam(footballerId, changedFootballerTeam);
 }
-}
 
 void Presenter::updateFootballerPoints(int id, int goals, int assists, int penaltiesMissed, int yellowCards, bool redCard, int ownGoals, int penaltiesSaved, int shotsSaved, int timePlayed, int goalsConceded, bool cleanSheet)
 {

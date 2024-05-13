@@ -56,10 +56,6 @@
     <Page Include="PlayerTransfersPage.xaml">
       <Filter>Views</Filter>
     </Page>
-    <Page Include="AdminDataPage.xaml" />
-    <Page Include="AdminEditMatchesPage.xaml" />
-    <Page Include="AdminMatchesPage.xaml" />
-    <Page Include="AdminPanelPage.xaml" />
     <Page Include="AdminEditFootballerPage.xaml">
       <Filter>Views</Filter>
     </Page>
@@ -88,6 +84,18 @@
       <Filter>Views</Filter>
     </Page>
     <Page Include="AdminDataPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="AdminDataPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="AdminEditMatchesPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="AdminMatchesPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="AdminPanelPage.xaml">
       <Filter>Views</Filter>
     </Page>
   </ItemGroup>
