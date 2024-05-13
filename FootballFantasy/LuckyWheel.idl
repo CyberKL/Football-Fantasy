@@ -1,0 +1,9 @@
+namespace FootballFantasy
+{
+    [default_interface]
+    runtimeclass LuckyWheel : Microsoft.UI.Xaml.Controls.Page
+    {
+        LuckyWheel();
+        Int32 MyProperty;
+    }
+}

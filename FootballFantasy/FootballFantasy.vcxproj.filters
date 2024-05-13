@@ -56,6 +56,34 @@
     <Page Include="PlayerTransfersPage.xaml">
       <Filter>Views</Filter>
     </Page>
+    <Page Include="AdminDataPage.xaml" />
+    <Page Include="AdminEditMatchesPage.xaml" />
+    <Page Include="AdminMatchesPage.xaml" />
+    <Page Include="AdminPanelPage.xaml" />
+    <Page Include="AdminEditFootballerPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="AdminEditFootballteamPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="AdminAddFootballer.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="AdminRemoveFootballerPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="AdminChangeTeamPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="AdminAddFootballTeamPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="AdminRemoveFootballTeamPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
+    <Page Include="LuckyWheel.xaml">
+      <Filter>Views</Filter>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Midl Include="MainWindow.idl" />

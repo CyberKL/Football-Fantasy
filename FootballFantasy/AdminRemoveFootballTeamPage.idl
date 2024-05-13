@@ -1,0 +1,9 @@
+namespace FootballFantasy
+{
+    [default_interface]
+    runtimeclass AdminRemoveFootballTeamPage : Microsoft.UI.Xaml.Controls.Page
+    {
+        AdminRemoveFootballTeamPage();
+        Int32 MyProperty;
+    }
+}

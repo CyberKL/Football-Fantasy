@@ -42,8 +42,11 @@ namespace winrt::FootballFantasy::implementation
                 hstring tag = selectedItem.Tag().as<winrt::hstring>();
                 if (tag == L"Matches")
                     Navigate(L"FootballFantasy.AdminMatchesPage");
-                else if (tag == L"Data")
-                    Navigate(L"FootballFantasy.AdminDataPage");
+                else if (tag == L"Footballers")
+                    Navigate(L"FootballFantasy.AdminEditFootballerPage");
+                else if (tag == L"FootballTeam")
+                    Navigate(L"FootballFantasy.AdminEditFootballteamPage");
+
                 else if (tag == L"Logout")
                 {
                     winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.SignUpPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
@@ -55,8 +58,6 @@ namespace winrt::FootballFantasy::implementation
     
 }
 
-
-  
 
 
 void winrt::FootballFantasy::implementation::AdminPanelPage::NavView_BackRequested(winrt::Microsoft::UI::Xaml::Controls::NavigationView const& sender, winrt::Microsoft::UI::Xaml::Controls::NavigationViewBackRequestedEventArgs const& args)
