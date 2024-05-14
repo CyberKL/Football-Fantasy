@@ -144,7 +144,9 @@ vector<Footballer> Manager::searchFootballersByPosition(string position)
 	vector<Footballer> matchedFootballers;
 	unordered_map<int, Footballer*>::iterator it;
 	for (it = footballers.begin(); it != footballers.end(); it++)
-		it->second->getPosition() == position ? matchedFootballers.push_back(*it->second) : 0;
+		if(it->second->getPosition() == position) 
+			matchedFootballers.push_back(*it->second);
+
 	return matchedFootballers;
 }
 
@@ -259,7 +261,6 @@ void Manager:: changePassword(int playerID, string newPassword)
 {
 	players[playerID].setPassword(newPassword);
 }
-
 
 void Manager::rating(double playerRate)
 {
