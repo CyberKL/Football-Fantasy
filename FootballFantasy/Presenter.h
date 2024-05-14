@@ -87,6 +87,8 @@ public:
 	void addedFootballer(string newFootballerName, int newFootballerPrice, string newFootballerPosition, int newFootballerTeam);
 	unordered_map<int, FootballTeam*> getFootballTeams();
 	void changeTeam(int footballerId, int changedFootballerTeam);
+	bool getSeasonStarted();
+	void setSeasonStarted(bool);
 
 
 	void updateFootballerPoints(int, int, int, int, int, bool, int, int, int, int, int, bool);

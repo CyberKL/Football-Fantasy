@@ -65,6 +65,11 @@ map<int, vector<string>> Manager::getOrderedPlayers()
 	return orderedPlayers;
 }
 
+bool Manager::getSeasonStarted()
+{
+	return seasonStarted;
+}
+
 
 // Setters
 void Manager::setPlayers(const unordered_map<int, Player>& players)
@@ -88,6 +93,10 @@ void Manager::setMatches(const map<int, unordered_map<int, Match>>& matches) {
 	this->matches = matches;
 }
 
+void Manager::setSeasonStarted(bool seasonStarted)
+{
+	this->seasonStarted = seasonStarted;
+}
 
 // Sign up process
 bool Manager::isUsernameDuplicate(const string& username)

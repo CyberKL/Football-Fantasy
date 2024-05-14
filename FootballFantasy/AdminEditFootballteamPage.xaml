@@ -23,7 +23,7 @@
                     </Button.Background>
 
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Add FootballTeam" HorizontalAlignment="Left" Foreground="White"/>
+                        <TextBlock Text="Add Football team" HorizontalAlignment="Left" Foreground="White"/>
                         <!-- Add a transparent rectangle to create space -->
                         <Rectangle Width="370" Fill="Transparent"/>
                         <FontIcon Glyph="&#xEBE7;" FontSize="16" HorizontalAlignment="Right" Foreground="White"/>
@@ -38,7 +38,7 @@
                     </Button.Background>
 
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text=" Remove FootballTeam" HorizontalAlignment="Left" Foreground="White"/>
+                        <TextBlock Text=" Remove Football team" HorizontalAlignment="Left" Foreground="White"/>
                         <!-- Add a transparent rectangle to create space -->
                         <Rectangle Width="380" Fill="Transparent"/>
                         <FontIcon Glyph="&#xEBE7;" FontSize="16" HorizontalAlignment="Right" Foreground="White"/>

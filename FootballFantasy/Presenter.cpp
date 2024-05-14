@@ -54,6 +54,11 @@ Match Presenter::getPressedMatch()
     return pressedMatch;
 }
 
+bool Presenter::getSeasonStarted()
+{
+    return Manager::getInstance()->getSeasonStarted();
+}
+
 
 void Presenter::setPressedFootballerControlId(int pressedFootballerControlId)
 {
@@ -92,6 +97,11 @@ void Presenter::setCaptaincyEdited(bool captaincyEdited)
 void Presenter::setPressedMatch(Match pressedMatch)
 {
     this->pressedMatch = pressedMatch;
+}
+
+void Presenter::setSeasonStarted(bool seasonStarted)
+{
+    Manager::getInstance()->setSeasonStarted(seasonStarted);
 }
 
 bool Presenter::isUsernameDuplicate(const string& username)

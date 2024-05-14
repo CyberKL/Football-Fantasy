@@ -34,7 +34,7 @@ private:
 	map<int, vector<string>> orderedPlayers;
 	double totalRate;
 	double rate;
-	bool seasonStarted;
+	bool seasonStarted = false;
 
 	Manager(); //Private constructor to prevent instantiation
 
@@ -59,6 +59,7 @@ public:
 	int getCurrentGw();
 	unordered_map<int, map<int, vector<string>>> getGwOrderedPlayers();
 	map<int, vector<string>> getOrderedPlayers();
+	bool getSeasonStarted();
 
 	// Setters
 	void setPlayers(const unordered_map<int, Player>&);
@@ -66,6 +67,7 @@ public:
 	void setFootballers(const std::unordered_map<int, Footballer*>&);
 	void setFootballTeams(const std::unordered_map<int, FootballTeam*>&);
 	void setMatches(const std::map<int, std::unordered_map<int, Match>>&);
+	void setSeasonStarted(bool);
 
 	bool isUsernameDuplicate(const string&);
 	void addPlayer(const string&, const string&);

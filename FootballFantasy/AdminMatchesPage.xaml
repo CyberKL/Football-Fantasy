@@ -10,7 +10,7 @@
     Loaded="Page_Loaded">
 
 
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="{ThemeResource ActionColor}" BorderThickness="2" CornerRadius="20">
+    <StackPanel x:Name="MainPanel" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="{ThemeResource ActionColor}" BorderThickness="2" CornerRadius="20" Visibility="Collapsed">
         
         <Grid ColumnSpacing="150" Background="{ThemeResource GradientImageBackground}" Padding="40,10">
             <TextBlock x:Name="GameweekBlock" Text="Gameweek 10" Foreground="White" Style="{ThemeResource HeaderStyle}" HorizontalAlignment="Center"/>

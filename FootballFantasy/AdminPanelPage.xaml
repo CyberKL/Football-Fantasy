@@ -12,9 +12,9 @@
 
     <NavigationView x:Name="NavView" Grid.Row="1" PaneDisplayMode="Left" IsTabStop="False" Background="{StaticResource GradientImageBackground}" IsBackButtonVisible="Visible" IsBackEnabled="True" BackRequested="NavView_BackRequested" IsSettingsVisible="False" IsTitleBarAutoPaddingEnabled="False" SelectionChanged="NavView_SelectionChanged" RequestedTheme="Dark">
         <NavigationView.MenuItems>
-            <NavigationViewItem Content="Matches" Icon="Add" ToolTipService.ToolTip="Matches" Tag="Matches"/>
+            <NavigationViewItem Content="Matches" Icon="Add" ToolTipService.ToolTip="Matches" Tag="Matches" IsSelected="True"/>
            
-            <NavigationViewItem Content="Edit" Icon="Edit" ToolTipService.ToolTip="Edit" SelectsOnInvoked="False">
+            <NavigationViewItem Content="Edit" Icon="Edit" ToolTipService.ToolTip="Edit" SelectsOnInvoked="False" Tag="Edit">
                 <NavigationViewItem.MenuItems>
                     <NavigationViewItem Content="Footballers" Icon="Contact" ToolTipService.ToolTip="footballer" Tag="Footballers"/>
                     <NavigationViewItem Content="Football Team" Icon="People" ToolTipService.ToolTip="football team" Tag="FootballTeam"/>
