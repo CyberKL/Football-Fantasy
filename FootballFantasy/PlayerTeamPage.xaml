@@ -27,15 +27,15 @@
             </Grid.RowDefinitions>
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <TextBlock Text="Average" />
-                <TextBlock Text="55" TextAlignment="Center" />
+                <TextBlock x:Name="AverageBlock" Text="" TextAlignment="Center" />
             </StackPanel>
             <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Button x:Name="PlayerPointsBtn" Content="Points" Click="PlayerPointsBtn_Click" />
-                <TextBlock Text="55" TextAlignment="Center" />
+                <TextBlock x:Name="PlayerPointsBlock" Text="" TextAlignment="Center" />
             </StackPanel>
             <StackPanel Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="Highest" />
-                <TextBlock Text="55" TextAlignment="Center" />
+                <Button x:Name="HighestBtn" Content="Highest" Click="HighestBtn_Click" />
+                <TextBlock x:Name="HighestBlock" Text="" TextAlignment="Center" />
             </StackPanel>
             <Grid Grid.Row="2" Grid.ColumnSpan="3">
                 <Grid.ColumnDefinitions>

@@ -23,6 +23,8 @@ namespace winrt::FootballFantasy::implementation
     {
         throw hresult_not_implemented();
     }
+
+    Player* highestPlayer = nullptr;
 }
 
 
@@ -49,11 +51,27 @@ void winrt::FootballFantasy::implementation::PlayerTeamPage::Page_Loaded(winrt::
         winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerCreateTeamPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
         Frame().Navigate(page);
     }
+
+    /*int average = Presenter::getInstance()->getAveragePlayerPoints();
+    AverageBlock().Text(to_hstring(average));
+
+    highestPlayer = Presenter::getInstance()->getHighestPlayer();
+
+    HighestBlock().Text(to_hstring(highestPlayer->getTeam()->getPoints()[Presenter::getInstance()->getCurrentGw()]));
+
+    PlayerPointsBlock().Text(to_hstring(playerTeam->getPoints()[Presenter::getInstance()->getCurrentGw()]));*/
 }
 
 
 void winrt::FootballFantasy::implementation::PlayerTeamPage::PlayerPointsBtn_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
     winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerPointsPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+    Frame().Navigate(page);
+}
+
+
+void winrt::FootballFantasy::implementation::PlayerTeamPage::HighestBtn_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+{
+    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.HighestPlayerPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
     Frame().Navigate(page);
 }

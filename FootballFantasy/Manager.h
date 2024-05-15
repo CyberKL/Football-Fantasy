@@ -23,18 +23,18 @@ class Manager
 private:
 	static Manager* instance;
 
-	unordered_map<int, Player> players;
-	map<string, League> leagues;
+	unordered_map<int, Player*> players;
+	map<string, League*> leagues;
 	unordered_map<int, Footballer*> footballers;
 	unordered_map<int, FootballTeam*> footballTeams;
-	map<int, unordered_map<int, Match>> matches;
+	map<int, unordered_map<int, Match*>> matches;
 	map<string, int> counts;
-	int currentGw = 1; // should not be intialized here
+	int currentGw; // should not be intialized here
 	unordered_map<int, map<int, vector<string>>> gwOrderedPlayers;
 	map<int, vector<string>> orderedPlayers;
 	double totalRate;
 	double rate;
-	bool seasonStarted = false;
+	bool seasonStarted;
 
 	Manager(); //Private constructor to prevent instantiation
 
@@ -50,11 +50,11 @@ public:
 	static Manager* getInstance();
 
 	// Getters
-	unordered_map<int, Player> getPlayers();
-	map<string, League> getLeagues();
+	unordered_map<int, Player*> getPlayers();
+	map<string, League*> getLeagues();
 	unordered_map<int, Footballer*> getFootballers();
 	unordered_map<int, FootballTeam*> getFootballTeams();
-	map<int, unordered_map<int, Match>> getMatches();
+	map<int, unordered_map<int, Match*>> getMatches();
 	map<string, int> getCounts();
 	int getCurrentGw();
 	unordered_map<int, map<int, vector<string>>> getGwOrderedPlayers();
@@ -62,11 +62,11 @@ public:
 	bool getSeasonStarted();
 
 	// Setters
-	void setPlayers(const unordered_map<int, Player>&);
-	void setLeagues(const std::map<std::string, League>&);
+	void setPlayers(const unordered_map<int, Player*>&);
+	void setLeagues(const std::map<std::string, League*>&);
 	void setFootballers(const std::unordered_map<int, Footballer*>&);
 	void setFootballTeams(const std::unordered_map<int, FootballTeam*>&);
-	void setMatches(const std::map<int, std::unordered_map<int, Match>>&);
+	void setMatches(const std::map<int, std::unordered_map<int, Match*>>&);
 	void setSeasonStarted(bool);
 
 	bool isUsernameDuplicate(const string&);
@@ -101,5 +101,13 @@ public:
 
 	void addedFootballer(string newFootballerName, int newFootballerPrice, string newFootballerPosition, int newFootballerTeam);
 
+	void addFootballTeam(string, string);
+
+	void makeMatchesList();
+	void updatePlayerPoints();
+	void updateLeagueStandings();
+	int getAveragePlayerPoints();
+	Player* getHighestPlayer();
+	void progressGameweek();
 };
 

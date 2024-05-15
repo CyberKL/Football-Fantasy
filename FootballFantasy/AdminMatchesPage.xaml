@@ -32,6 +32,8 @@
             </Grid>
             
         </ScrollViewer>
-        
+
+        <Button x:Name="FinishBtn" Content="Finish gameweek" HorizontalAlignment="Center" Margin="0,0,0,10" Click="FinishBtn_Click"/>
+
     </StackPanel>
 </Page>

@@ -51,7 +51,7 @@ void Admin::updateFootballTeam(int id1, int id2)
 void Admin:: updateMatchScore(int matchId, int htScore,int atScore )
 {
 	int gameWeek = Manager::getInstance()->getCurrentGw();
-	Match match = Manager::getInstance()->getMatches()[gameWeek][matchId];
+	Match match = *Manager::getInstance()->getMatches()[gameWeek][matchId];
 
 	if (htScore > atScore)
 	{

@@ -161,6 +161,10 @@
       <DependentUpon>FootballerControl.xaml</DependentUpon>
     </ClInclude>
     <ClInclude Include="FootballTeam.h" />
+    <ClInclude Include="HighestPlayerPage.xaml.h">
+      <DependentUpon>HighestPlayerPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
     <ClInclude Include="League.h" />
     <ClInclude Include="LoginPage.xaml.h">
       <DependentUpon>LoginPage.xaml</DependentUpon>
@@ -211,6 +215,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Presenter.h" />
+    <ClInclude Include="roundrobin.h" />
     <ClInclude Include="SignUpPage.xaml.h">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
     </ClInclude>
@@ -261,6 +266,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="FootballerControl.xaml" />
+    <Page Include="HighestPlayerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="LoginPage.xaml" />
     <Page Include="MainWindow.xaml" />
     <Page Include="PlayerCreateTeamPage.xaml" />
@@ -341,6 +349,10 @@
       <DependentUpon>FootballerControl.xaml</DependentUpon>
     </ClCompile>
     <ClCompile Include="FootballTeam.cpp" />
+    <ClCompile Include="HighestPlayerPage.xaml.cpp">
+      <DependentUpon>HighestPlayerPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
     <ClCompile Include="League.cpp" />
     <ClCompile Include="LoginPage.xaml.cpp">
       <DependentUpon>LoginPage.xaml</DependentUpon>
@@ -394,6 +406,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Presenter.cpp" />
+    <ClCompile Include="roundrobin.cpp" />
     <ClCompile Include="SignUpPage.xaml.cpp">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
     </ClCompile>
@@ -455,6 +468,10 @@
       <SubType>Code</SubType>
     </Midl>
     <Midl Include="FootballerControl.idl" />
+    <Midl Include="HighestPlayerPage.idl">
+      <DependentUpon>HighestPlayerPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Midl>
     <Midl Include="LoginPage.idl" />
     <Midl Include="MainWindow.idl">
       <SubType>Code</SubType>
@@ -490,6 +507,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Assets\counts.txt" />
+    <Text Include="Assets\state.txt" />
     <Text Include="readme.txt">
       <DeploymentContent>false</DeploymentContent>
     </Text>

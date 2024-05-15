@@ -52,7 +52,7 @@ void winrt::FootballFantasy::implementation::AdminAddFootballer::Button_Click(wi
 
     Presenter::getInstance()->addedFootballer(newFootballerName, newFootballerPrice, newFootballerPosition, newFootballerTeam);
 
-    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.AdminEditMatchesPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.AdminMatchesPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
     Frame().Navigate(page);
 }
 

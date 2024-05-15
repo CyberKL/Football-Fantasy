@@ -24,6 +24,7 @@ private:
 public:
 	// Constructors
 	Match(); // Default constructor
+	Match(FootballTeam*, FootballTeam*, int, string);
 
 	// Getters
 	static int getCount();
