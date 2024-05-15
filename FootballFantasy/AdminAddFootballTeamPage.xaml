@@ -8,29 +8,22 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" RequestedTheme="Light">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" RequestedTheme="Light">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="1" Text="Name:" Margin="10"/>
-        <TextBox x:Name="FootballTeamName" Grid.Row="2" Margin="10" />
+        <TextBox x:Name="FootballTeamName" Header="Name" Grid.Row="0" />
 
-        <TextBlock Grid.Row="3" Text="League:" Margin="10"/>
-        <TextBox x:Name="FootballerTeam" Grid.Row="4" Margin="10" />
+        <ComboBox x:Name="LeagueBox" Header="League" PlaceholderText="Pick league" Grid.Row="1">
+            <ComboBoxItem Content="Premier League" />
+            <ComboBoxItem Content="La Liga" />
+            <ComboBoxItem Content="Seria A" />
+        </ComboBox>
 
-        <Button Grid.Row="9" Content="Add" Margin="50" Click="Button_Click"  VerticalAlignment="Bottom"/>
+        <Button Grid.Row="9" Content="Add" Click="Button_Click"  VerticalAlignment="Bottom"/>
 
         <TextBlock x:Name="Invalid" Grid.Row="8" Margin="10" HorizontalAlignment="Center" Foreground="Red" />
 

@@ -112,13 +112,11 @@ namespace winrt::FootballFantasy::implementation
 
 
 
-
 void winrt::FootballFantasy::implementation::AdminEditFootballteamPage::AddFootballTeam_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
     winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.AdminAddFootballTeamPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
     Frame().Navigate(page);
 }
-
 
 
 void winrt::FootballFantasy::implementation::AdminEditFootballteamPage::RemoveFootballTeam_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)

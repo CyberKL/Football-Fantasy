@@ -98,6 +98,9 @@
     <Page Include="AdminPanelPage.xaml">
       <Filter>Views</Filter>
     </Page>
+    <Page Include="HighestPlayerPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Midl Include="MainWindow.idl" />
@@ -165,6 +168,9 @@
     <ClCompile Include="Presenter.cpp">
       <Filter>Presenters</Filter>
     </ClCompile>
+    <ClCompile Include="roundrobin.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -194,6 +200,9 @@
     </ClInclude>
     <ClInclude Include="Presenter.h">
       <Filter>Presenters</Filter>
+    </ClInclude>
+    <ClInclude Include="roundrobin.h">
+      <Filter>Models</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -256,6 +265,9 @@
     <Text Include="Assets\counts.txt">
       <Filter>Assets</Filter>
     </Text>
+    <Text Include="Assets\state.txt">
+      <Filter>Assets</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <Manifest Include="app.manifest" />
@@ -265,9 +277,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Assets\Footballers.json">
-      <Filter>Assets</Filter>
-    </None>
     <None Include="Assets\FootballTeams.json">
       <Filter>Assets</Filter>
     </None>
@@ -275,6 +284,9 @@
       <Filter>Assets</Filter>
     </None>
     <None Include="Assets\Players.json">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\Footballers.json">
       <Filter>Assets</Filter>
     </None>
   </ItemGroup>

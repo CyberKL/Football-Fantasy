@@ -8,6 +8,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Activated="Window_Activated"
-    Title="Football Fantasy">
+    Title="Football Fantasy"
+    Closed="Window_Closed">
     <Frame x:Name="FrameContainer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 </Window>

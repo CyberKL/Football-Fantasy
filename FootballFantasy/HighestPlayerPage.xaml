@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="FootballFantasy.HighestPlayerPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FootballFantasy"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="Page_Loaded">
+
+    <Grid x:Name="FootballFieldGrid" BorderBrush="White" BorderThickness="2,2,2,0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <!-- Football field items -->
+        <Rectangle Fill="#f4f4f4" Canvas.ZIndex="-1" />
+        <Rectangle Grid.Row="1" Fill="#fefefa"  Canvas.ZIndex="-1" />
+        <Rectangle Grid.Row="2" Fill="#f4f4f4" Canvas.ZIndex="-1" />
+        <Rectangle Grid.Row="3" Fill="#fefefa" Canvas.ZIndex="-1" />
+        <Rectangle Grid.Row="4" Fill="#f4f4f4" Canvas.ZIndex="-1" />
+        <Rectangle Grid.Row="5" Fill="#fefefa" Canvas.ZIndex="-1" />
+        <Rectangle Grid.Row="6" Fill="#f4f4f4" Canvas.ZIndex="-1" />
+        <Rectangle Grid.Row="7" Fill="#fefefa" Canvas.ZIndex="-1" />
+        <Rectangle Grid.Row="8" Fill="#f4f4f4" Canvas.ZIndex="-1" />
+        <Rectangle Grid.Row="9" Fill="#fefefa" Canvas.ZIndex="-1" />
+        <Ellipse Grid.Row="7" Fill="Transparent" Stroke="#118b77" Width="100" Height="100" Grid.RowSpan="2"/>
+        <Ellipse Grid.Row="7" Grid.RowSpan="2" Fill="#118b77" Width="10" Height="10" />
+        <Rectangle Grid.Row="8" Fill="#118b77" Canvas.ZIndex="1" Height="2" VerticalAlignment="Top" />
+
+        <!-- Footballers items -->
+        <StackPanel x:Name="GkPanel" Grid.RowSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
+
+        </StackPanel>
+        <StackPanel x:Name="DefPanel" Grid.Row="2" Grid.RowSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="100">
+
+        </StackPanel>
+        <StackPanel x:Name="MidPanel" Grid.Row="4" Grid.RowSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="100">
+
+        </StackPanel>
+        <StackPanel x:Name="FwdPanel" Grid.Row="6" Grid.RowSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="100">
+
+        </StackPanel>
+        <Grid x:Name="SubsGrid" Grid.Row="8" Grid.RowSpan="2" Background="{ThemeResource ColoredGlassBackground}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="4*"/>
+            </Grid.RowDefinitions>
+
+        </Grid>
+
+    </Grid>
+</Page>

@@ -43,7 +43,7 @@
         </StackPanel>
 
         <!-- Options -->
-        <StackPanel x:Name="OptionsPanel" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="Collapsed">
+        <StackPanel x:Name="OptionsPanel" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="Collapsed" Margin="50,0,0,0" Spacing="40">
             <Button x:Name="UndoBtn" Click="UndoBtn_Click" IsEnabled="False">
                 <FontIcon Glyph="&#xE7A7;" />
             </Button>

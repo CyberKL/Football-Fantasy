@@ -27,18 +27,32 @@ namespace winrt::FootballFantasy::implementation
 
 void winrt::FootballFantasy::implementation::PlayerHomePage::Page_Loaded(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
-    int numOfGw = Presenter::getInstance()->getMatches().size();
-    for (int i = 0; i < numOfGw; i++)
+    if (Presenter::getInstance()->getSeasonStarted())
     {
-        GwBox().Items().Append(winrt::box_value(to_hstring(i + 1)));
-    }
-    for (auto&& item : GwBox().Items())
-    {
-        if (item && item.as<hstring>() == to_hstring(Presenter::getInstance()->getCurrentGw()))
+        MainPanel().Visibility(Visibility::Visible);
+        int numOfGw = Presenter::getInstance()->getMatches().size();
+        for (int i = 0; i < numOfGw; i++)
         {
-            GwBox().SelectedItem(item);
-            break;
+            GwBox().Items().Append(winrt::box_value(to_hstring(i + 1)));
         }
+        for (auto&& item : GwBox().Items())
+        {
+            if (item && item.as<hstring>() == to_hstring(Presenter::getInstance()->getCurrentGw()))
+            {
+                GwBox().SelectedItem(item);
+                break;
+            }
+        }
+    }
+    else
+    {
+        Controls::TextBlock textBlock;
+        textBlock.Text(L"Season has not started yet, please check back soon!");
+        textBlock.HorizontalAlignment(HorizontalAlignment::Center);
+        textBlock.VerticalAlignment(VerticalAlignment::Center);
+        textBlock.FontSize(56);
+        textBlock.TextAlignment(TextAlignment::Center);
+        this->Content(textBlock);
     }
 }
 
@@ -68,9 +82,9 @@ void winrt::FootballFantasy::implementation::PlayerHomePage::GwBox_SelectionChan
     MatchesGrid().Children().Clear();
     MatchesGrid().RowDefinitions().Clear();
     int gw = stoi(to_string(sender.as<winrt::Microsoft::UI::Xaml::Controls::ComboBox>().SelectedItem().as<winrt::hstring>()));
-    unordered_map<int, Match> matches = Presenter::getInstance()->getMatches()[gw];
+    unordered_map<int, Match*> matches = Presenter::getInstance()->getMatches()[gw];
 
-    unordered_map<int, Match>::iterator it;
+    unordered_map<int, Match*>::iterator it;
     int count = 0;
     for (it = matches.begin(); it != matches.end(); it++)
     {
@@ -79,18 +93,18 @@ void winrt::FootballFantasy::implementation::PlayerHomePage::GwBox_SelectionChan
         Controls::Button infoTextBlock;
         Controls::TextBlock awayTeamTextBlock;
 
-        homeTeamTextBlock.Text(to_hstring(it->second.getHomeTeam()->getName()));
-        it->second.getPlayed() ? infoTextBlock.Content(winrt::box_value(to_hstring(it->second.getScore()))) : infoTextBlock.Content(winrt::box_value(L"VS"));
+        homeTeamTextBlock.Text(to_hstring(it->second->getHomeTeam()->getName()));
+        it->second->getPlayed() ? infoTextBlock.Content(winrt::box_value(to_hstring(it->second->getScore()))) : infoTextBlock.Content(winrt::box_value(L"VS"));
         infoTextBlock.Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
             {
                 int gameweek = stoi(to_string(GwBox().SelectedItem().as<winrt::hstring>()));
-                Match match = Presenter::getInstance()->getMatches()[gameweek][stoi(to_string(sender.as<Controls::Button>().Name()))];
+                Match* match = Presenter::getInstance()->getMatches()[gameweek][stoi(to_string(sender.as<Controls::Button>().Name()))];
                 Presenter::getInstance()->setPressedMatch(match);
                 winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.PlayerViewMatchPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
                 Frame().Navigate(page);
             });
         infoTextBlock.FontSize(16);
-        awayTeamTextBlock.Text(to_hstring(it->second.getAwayTeam()->getName()));
+        awayTeamTextBlock.Text(to_hstring(it->second->getAwayTeam()->getName()));
 
         homeTeamTextBlock.VerticalAlignment(VerticalAlignment::Center);
         awayTeamTextBlock.VerticalAlignment(VerticalAlignment::Center);

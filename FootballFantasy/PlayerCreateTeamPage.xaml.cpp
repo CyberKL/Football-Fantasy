@@ -33,6 +33,7 @@ namespace winrt::FootballFantasy::implementation
 }
 
 unordered_set<int> tempTeam;
+int luckyFootballerId = -1;
 int budget = 100000;
 
 void winrt::FootballFantasy::implementation::PlayerCreateTeamPage::AddFootballer(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
@@ -140,6 +141,7 @@ void winrt::FootballFantasy::implementation::PlayerCreateTeamPage::AddFootballer
         g.Children().Append(name);
         g.SetColumn(f, 1);
         g.Children().Append(f);
+        if (footballer.getId() == luckyFootballerId) g.Background(Media::SolidColorBrush(Windows::UI::Colors::DarkBlue()));
         listView.Items().Append(g);
     }
     
@@ -171,7 +173,7 @@ void winrt::FootballFantasy::implementation::PlayerCreateTeamPage::AddFootballer
                 grid.Children().RemoveAt(indexToRemove);
                 grid.SetColumn(footballerControl, column);
                 grid.Children().Append(footballerControl);
-                budget -= footballer.getPrice();
+                if (footballerId != luckyFootballerId) budget -= footballer.getPrice();
                 BudgetTextBlock().Text(to_hstring(Presenter::getInstance()->budgetToString(budget)));
                 tempTeam.size() == 15 && budget > 0 ? SubmitBtn().IsEnabled(true) : SubmitBtn().IsEnabled(false);
             }
@@ -246,8 +248,26 @@ void winrt::FootballFantasy::implementation::PlayerCreateTeamPage::removeFootbal
     addBtn.Content(s);
     g.SetColumn(addBtn, column);
     g.Children().Append(addBtn);
-    budget += footballer.getPrice();
+    if (stoi(to_string(footballerControl.Name())) != luckyFootballerId) budget += footballer.getPrice();
     BudgetTextBlock().Text(to_hstring(Presenter::getInstance()->budgetToString(budget)));
     tempTeam.erase(footballer.getId());
     SubmitBtn().IsEnabled(false);
+}
+
+
+void winrt::FootballFantasy::implementation::PlayerCreateTeamPage::LuckyPickBtn_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+{
+    pair<int, string> footballer;
+    do
+        footballer = Presenter::getInstance()->luckyWheelGenerator();
+    while (tempTeam.find(footballer.first) != tempTeam.end());
+    Controls::ContentDialog dialog;
+
+    dialog.XamlRoot(this->XamlRoot());
+    hstring mssg = L"Congratulations you have won " + to_hstring(footballer.second) + L" for free, please add him to your team";
+    dialog.Content(winrt::box_value(mssg));
+    dialog.PrimaryButtonText(L"Done");
+    luckyFootballerId = footballer.first;
+    dialog.ShowAsync();
+    
 }

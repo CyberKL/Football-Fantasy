@@ -167,7 +167,7 @@ json Footballer::toJson()
 	json j;
 	j["_id"] = id;
 	j["name"] = name;
-	j["team"] = team->getName();
+	j["teamId"] = team->getId();
 	j["league"] = leagueName;
 	j["position"] = position;
 	j["totalPoints"] = totalPoints;

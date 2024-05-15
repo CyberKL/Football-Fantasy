@@ -7,6 +7,11 @@ int Match::count = Manager::getInstance()->getCounts()["Match"];
 Match::Match()
 	: id(0), homeTeam(nullptr), awayTeam(nullptr), gw(0), league(""), score(""), played(false) { }
 
+Match::Match(FootballTeam* homeTeam, FootballTeam* awayTeam, int gw, string league)
+	: id(count), homeTeam(homeTeam), awayTeam(awayTeam), gw(gw), league(league), played(false) {
+	count++;
+}
+
 // Getters
 int Match::getCount()
 {
