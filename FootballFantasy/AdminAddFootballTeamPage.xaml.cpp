@@ -3,6 +3,7 @@
 #if __has_include("AdminAddFootballTeamPage.g.cpp")
 #include "AdminAddFootballTeamPage.g.cpp"
 #endif
+#include "Presenter.h"
 
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
@@ -27,6 +28,10 @@ namespace winrt::FootballFantasy::implementation
 
 void winrt::FootballFantasy::implementation::AdminAddFootballTeamPage::Button_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
 {
-    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.AdminPanelPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+    string name = to_string(FootballTeamName().Text());
+    string league = to_string(LeagueBox().SelectedItem().as<Controls::ComboBoxItem>().Content().as<winrt::hstring>());
+
+    Presenter::getInstance()->addFootballTeam(name, league);
+    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.AdminMatchesPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
     Frame().Navigate(page);
 }

@@ -3,6 +3,7 @@
 #if __has_include("MainWindow.g.cpp")
 #include "MainWindow.g.cpp"
 #endif
+#include "Presenter.h"
 
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
@@ -32,4 +33,9 @@ namespace winrt::FootballFantasy::implementation
 void winrt::FootballFantasy::implementation::MainWindow::Window_Activated(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::WindowActivatedEventArgs const& args)
 {
     Navigate(L"FootballFantasy.SignUpPage"); // SignUpPage
+}
+
+void winrt::FootballFantasy::implementation::MainWindow::Window_Closed(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::WindowEventArgs const& args)
+{
+    Presenter::getInstance()->saveData();
 }

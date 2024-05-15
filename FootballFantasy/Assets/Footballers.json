@@ -1,4554 +1,3728 @@
-[{
-  "_id": 0,
-  "name": "Thibaut Courtois",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2900,
-  "teamId": 0
-},
-{
-  "_id": 1,
-  "name": "Dani Carvajal",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2600,
-  "teamId": 0
-},
-{
-  "_id": 2,
-  "name": "Éder Militão",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7600,
-  "teamId": 0
-},
-{
-  "_id": 3,
-  "name": "David Alaba",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3800,
-  "teamId": 0
-},
-{
-  "_id": 4,
-  "name": "Jude Bellingham",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10800,
-  "teamId": 0
-},
-{
-  "_id": 5,
-  "name": "Nacho Fernández",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2900,
-  "teamId": 0
-},
-{
-  "_id": 6,
-  "name": "Vinícius Júnior",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9500,
-  "teamId": 0
-},
-{
-  "_id": 7,
-  "name": "Toni Kroos",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2900,
-  "teamId": 0
-},
-{
-  "_id": 8,
-  "name": "Luka Modrić",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2900,
-  "teamId": 0
-},
-{
-  "_id": 9,
-  "name": "Rodrygo",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11000,
-  "teamId": 0
-},
-{
-  "_id": 10,
-  "name": "Eduardo Camavinga",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2100,
-  "teamId": 0
-},
-{
-  "_id": 11,
-  "name": "Andriy Lunin",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2900,
-  "teamId": 0
-},
-{
-  "_id": 12,
-  "name": "Joselu",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3700,
-  "teamId": 0
-},
-{
-  "_id": 13,
-  "name": "Federico Valverde",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7200,
-  "teamId": 0
-},
-{
-  "_id": 14,
-  "name": "Lucas Vázquez",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3300,
-  "teamId": 0
-},
-{
-  "_id": 15,
-  "name": "Aurélien Tchouaméni",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8900,
-  "teamId": 0
-},
-{
-  "_id": 16,
-  "name": "Dani Ceballos",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3700,
-  "teamId": 0
-},
-{
-  "_id": 17,
-  "name": "Fran García",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5600,
-  "teamId": 0
-},
-{
-  "_id": 18,
-  "name": "Brahim Díaz",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2700,
-  "teamId": 0
-},
-{
-  "_id": 19,
-  "name": "Antonio Rüdiger",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4900,
-  "teamId": 0
-},
-{
-  "_id": 20,
-  "name": "Ferland Mendy",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4800,
-  "teamId": 0
-},
-{
-  "_id": 21,
-  "name": "Arda Güler",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2200,
-  "teamId": 0
-},
-{
-  "_id": 22,
-  "name": "Kepa Arrizabalaga",
-  "team": "Real Madrid",
-  "league": "La Liga",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2600,
-  "teamId": 0
-},
-{
-  "_id": 23,
-  "name": "Marc-André ter Stegen",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9900,
-  "teamId": 1
-},
-{
-  "_id": 24,
-  "name": "Iñaki Peña",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 14500,
-  "teamId": 1
-},
-{
-  "_id": 25,
-  "name": "João Cancelo",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10200,
-  "teamId": 1
-},
-{
-  "_id": 26,
-  "name": "Alejandro Balde",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3600,
-  "teamId": 1
-},
-{
-  "_id": 27,
-  "name": "Ronald Araújo",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10800,
-  "teamId": 1
-},
-{
-  "_id": 28,
-  "name": "Iñigo Martínez",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 12000,
-  "teamId": 1
-},
-{
-  "_id": 29,
-  "name": "Andreas Christensen",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 12800,
-  "teamId": 1
-},
-{
-  "_id": 30,
-  "name": "Marcos Alonso",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5400,
-  "teamId": 1
-},
-{
-  "_id": 31,
-  "name": "Jules Koundé",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7800,
-  "teamId": 1
-},
-{
-  "_id": 32,
-  "name": "Gavi",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2700,
-  "teamId": 1
-},
-{
-  "_id": 33,
-  "name": "Pedri",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4100,
-  "teamId": 1
-},
-{
-  "_id": 34,
-  "name": "Oriol Romeu",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 13000,
-  "teamId": 1
-},
-{
-  "_id": 35,
-  "name": "Sergi Roberto",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3500,
-  "teamId": 1
-},
-{
-  "_id": 36,
-  "name": "Frenkie de Jong",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9200,
-  "teamId": 1
-},
-{
-  "_id": 37,
-  "name": "İlkay Gündoğan",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7400,
-  "teamId": 1
-},
-{
-  "_id": 38,
-  "name": "Ferran Torres",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4200,
-  "teamId": 1
-},
-{
-  "_id": 39,
-  "name": "Robert Lewandowski",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6800,
-  "teamId": 1
-},
-{
-  "_id": 40,
-  "name": "Raphinha",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9100,
-  "teamId": 1
-},
-{
-  "_id": 41,
-  "name": "João Félix",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4200,
-  "teamId": 1
-},
-{
-  "_id": 42,
-  "name": "Vitor Roque",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2200,
-  "teamId": 1
-},
-{
-  "_id": 43,
-  "name": "Horațiu Moldovan",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2600,
-  "teamId": 2
-},
-{
-  "_id": 44,
-  "name": "José Giménez",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10200,
-  "teamId": 2
-},
-{
-  "_id": 45,
-  "name": "César Azpilicueta",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11100,
-  "teamId": 2
-},
-{
-  "_id": 46,
-  "name": "Gabriel Paulista",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10900,
-  "teamId": 2
-},
-{
-  "_id": 47,
-  "name": "Rodrigo De Paul",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2800,
-  "teamId": 2
-},
-{
-  "_id": 48,
-  "name": "Koke",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4300,
-  "teamId": 2
-},
-{
-  "_id": 49,
-  "name": "Antoine Griezmann",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3000,
-  "teamId": 2
-},
-{
-  "_id": 50,
-  "name": "Saúl",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4800,
-  "teamId": 2
-},
-{
-  "_id": 51,
-  "name": "Memphis Depay",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4800,
-  "teamId": 2
-},
-{
-  "_id": 52,
-  "name": "Ángel Correa",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10900,
-  "teamId": 2
-},
-{
-  "_id": 53,
-  "name": "Thomas Lemar",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4700,
-  "teamId": 2
-},
-{
-  "_id": 54,
-  "name": "Samuel Lino",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7300,
-  "teamId": 2
-},
-{
-  "_id": 55,
-  "name": "Jan Oblak",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7400,
-  "teamId": 2
-},
-{
-  "_id": 56,
-  "name": "Marcos Llorente",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6700,
-  "teamId": 2
-},
-{
-  "_id": 57,
-  "name": "Stefan Savić",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5600,
-  "teamId": 2
-},
-{
-  "_id": 58,
-  "name": "Nahuel Molina",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 13000,
-  "teamId": 2
-},
-{
-  "_id": 59,
-  "name": "Rodrigo Riquelme",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9300,
-  "teamId": 2
-},
-{
-  "_id": 60,
-  "name": "Arthur Vermeeren",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10900,
-  "teamId": 2
-},
-{
-  "_id": 61,
-  "name": "Álvaro Morata",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3000,
-  "teamId": 2
-},
-{
-  "_id": 62,
-  "name": "Axel Witsel",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4400,
-  "teamId": 2
-},
-{
-  "_id": 63,
-  "name": "Mario Hermoso",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6400,
-  "teamId": 2
-},
-{
-  "_id": 64,
-  "name": "Reinildo Mandava",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2900,
-  "teamId": 2
-},
-{
-  "_id": 65,
-  "name": "Pablo Barrios",
-  "team": "Atlético Madrid",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8200,
-  "teamId": 2
-},
-{
-  "_id": 66,
-  "name": "Juan Carlos",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5800,
-  "teamId": 3
-},
-{
-  "_id": 67,
-  "name": "Miguel Gutiérrez",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2700,
-  "teamId": 3
-},
-{
-  "_id": 68,
-  "name": "Arnau Martínez",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5100,
-  "teamId": 3
-},
-{
-  "_id": 69,
-  "name": "David López",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2600,
-  "teamId": 3
-},
-{
-  "_id": 70,
-  "name": "Ibrahima Kébé",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2300,
-  "teamId": 3
-},
-{
-  "_id": 71,
-  "name": "Cristhian Stuani",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11800,
-  "teamId": 3
-},
-{
-  "_id": 72,
-  "name": "Viktor Tsyhankov",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9600,
-  "teamId": 3
-},
-{
-  "_id": 73,
-  "name": "Artem Dovbyk",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5900,
-  "teamId": 3
-},
-{
-  "_id": 74,
-  "name": "Borja García",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6300,
-  "teamId": 3
-},
-{
-  "_id": 75,
-  "name": "Valery Fernández",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9600,
-  "teamId": 3
-},
-{
-  "_id": 76,
-  "name": "Paulo Gazzaniga",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5600,
-  "teamId": 3
-},
-{
-  "_id": 77,
-  "name": "Aleix García",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10900,
-  "teamId": 3
-},
-{
-  "_id": 78,
-  "name": "Juanpe",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 12400,
-  "teamId": 3
-},
-{
-  "_id": 79,
-  "name": "Sávio",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9100,
-  "teamId": 3
-},
-{
-  "_id": 80,
-  "name": "Daley Blind",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3300,
-  "teamId": 3
-},
-{
-  "_id": 81,
-  "name": "Pablo Torre",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2600,
-  "teamId": 3
-},
-{
-  "_id": 82,
-  "name": "Toni Villa",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4100,
-  "teamId": 3
-},
-{
-  "_id": 83,
-  "name": "Yan Couto",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9000,
-  "teamId": 3
-},
-{
-  "_id": 84,
-  "name": "Yangel Herrera",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3100,
-  "teamId": 3
-},
-{
-  "_id": 85,
-  "name": "Jhon Solís",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2300,
-  "teamId": 3
-},
-{
-  "_id": 86,
-  "name": "Iván Martín",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8200,
-  "teamId": 3
-},
-{
-  "_id": 87,
-  "name": "Portu",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3000,
-  "teamId": 3
-},
-{
-  "_id": 88,
-  "name": "Eric García",
-  "team": "Girona",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8300,
-  "teamId": 3
-},
-{
-  "_id": 89,
-  "name": "Unai Simón",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4600,
-  "teamId": 4
-},
-{
-  "_id": 90,
-  "name": "Dani Vivian",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2100,
-  "teamId": 4
-},
-{
-  "_id": 91,
-  "name": "Aitor Paredes",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8300,
-  "teamId": 4
-},
-{
-  "_id": 92,
-  "name": "Yeray Álvarez",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4500,
-  "teamId": 4
-},
-{
-  "_id": 93,
-  "name": "Mikel Vesga",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6000,
-  "teamId": 4
-},
-{
-  "_id": 94,
-  "name": "Álex Berenguer",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6500,
-  "teamId": 4
-},
-{
-  "_id": 95,
-  "name": "Oihan Sancet",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4000,
-  "teamId": 4
-},
-{
-  "_id": 96,
-  "name": "Iñaki Williams",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3600,
-  "teamId": 4
-},
-{
-  "_id": 97,
-  "name": "Iker Muniain",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2400,
-  "teamId": 4
-},
-{
-  "_id": 98,
-  "name": "Nico Williams",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2800,
-  "teamId": 4
-},
-{
-  "_id": 99,
-  "name": "Gorka Guruzeta",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8100,
-  "teamId": 4
-},
-{
-  "_id": 100,
-  "name": "Julen Agirrezabala",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6000,
-  "teamId": 4
-},
-{
-  "_id": 101,
-  "name": "Dani García",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3000,
-  "teamId": 4
-},
-{
-  "_id": 102,
-  "name": "Iñigo Lekue",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5100,
-  "teamId": 4
-},
-{
-  "_id": 103,
-  "name": "Iñigo Ruiz de Galarreta",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2700,
-  "teamId": 4
-},
-{
-  "_id": 104,
-  "name": "Yuri Berchiche",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5700,
-  "teamId": 4
-},
-{
-  "_id": 105,
-  "name": "Óscar de Marcos",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4500,
-  "teamId": 4
-},
-{
-  "_id": 106,
-  "name": "Imanol García de Albéniz",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6200,
-  "teamId": 4
-},
-{
-  "_id": 107,
-  "name": "Asier Villalibre",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3800,
-  "teamId": 4
-},
-{
-  "_id": 108,
-  "name": "Ander Herrera",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2600,
-  "teamId": 4
-},
-{
-  "_id": 109,
-  "name": "Raúl García",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8200,
-  "teamId": 4
-},
-{
-  "_id": 110,
-  "name": "Beñat Prados",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3600,
-  "teamId": 4
-},
-{
-  "_id": 111,
-  "name": "Unai Gómez",
-  "team": "Athletic Bilbao",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8600,
-  "teamId": 4
-},
-{
-  "_id": 112,
-  "name": "Álex Remiro",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10400,
-  "teamId": 5
-},
-{
-  "_id": 113,
-  "name": "Álvaro Odriozola",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6200,
-  "teamId": 5
-},
-{
-  "_id": 114,
-  "name": "Aihen Muñoz",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9200,
-  "teamId": 5
-},
-{
-  "_id": 115,
-  "name": "Martín Zubimendi",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4500,
-  "teamId": 5
-},
-{
-  "_id": 116,
-  "name": "Igor Zubeldia",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5400,
-  "teamId": 5
-},
-{
-  "_id": 117,
-  "name": "Aritz Elustondo",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 12000,
-  "teamId": 5
-},
-{
-  "_id": 118,
-  "name": "Ander Barrenetxea",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2200,
-  "teamId": 5
-},
-{
-  "_id": 119,
-  "name": "Mikel Merino",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6300,
-  "teamId": 5
-},
-{
-  "_id": 120,
-  "name": "Carlos Fernández",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11500,
-  "teamId": 5
-},
-{
-  "_id": 121,
-  "name": "Mikel Oyarzabal",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3200,
-  "teamId": 5
-},
-{
-  "_id": 122,
-  "name": "Sheraldo Becker",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9200,
-  "teamId": 5
-},
-{
-  "_id": 123,
-  "name": "Arsen Zakharyan",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7500,
-  "teamId": 5
-},
-{
-  "_id": 124,
-  "name": "Takefusa Kubo",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7000,
-  "teamId": 5
-},
-{
-  "_id": 125,
-  "name": "Urko González de Zárate",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2100,
-  "teamId": 5
-},
-{
-  "_id": 126,
-  "name": "Jon Ander Olasagasti",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10000,
-  "teamId": 5
-},
-{
-  "_id": 127,
-  "name": "Kieran Tierney",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 13000,
-  "teamId": 5
-},
-{
-  "_id": 128,
-  "name": "Hamari Traoré",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2400,
-  "teamId": 5
-},
-{
-  "_id": 129,
-  "name": "Umar Sadiq",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10300,
-  "teamId": 5
-},
-{
-  "_id": 130,
-  "name": "Jon Pacheco",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2600,
-  "teamId": 5
-},
-{
-  "_id": 131,
-  "name": "André Silva",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4000,
-  "teamId": 5
-},
-{
-  "_id": 132,
-  "name": "Beñat Turrientes",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3900,
-  "teamId": 5
-},
-{
-  "_id": 133,
-  "name": "Brais Méndez",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2300,
-  "teamId": 5
-},
-{
-  "_id": 134,
-  "name": "Robin Le Normand",
-  "team": "Real Sociedad",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 13200,
-  "teamId": 5
-},
-{
-  "_id": 135,
-  "name": "Victor Lindelöf",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3000,
-  "teamId": 6
-},
-{
-  "_id": 136,
-  "name": "Eric Bailly",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8100,
-  "teamId": 6
-},
-{
-  "_id": 137,
-  "name": "Sofyan Amrabat",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2400,
-  "teamId": 6
-},
-{
-  "_id": 138,
-  "name": "Harry Maguire",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3700,
-  "teamId": 6
-},
-{
-  "_id": 139,
-  "name": "Lisandro Martínez",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7200,
-  "teamId": 6
-},
-{
-  "_id": 140,
-  "name": "Mason Mount",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 12700,
-  "teamId": 6
-},
-{
-  "_id": 141,
-  "name": "Bruno Fernandes",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3100,
-  "teamId": 6
-},
-{
-  "_id": 142,
-  "name": "Anthony Martial",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8000,
-  "teamId": 6
-},
-{
-  "_id": 143,
-  "name": "Marcus Rashford",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9800,
-  "teamId": 6
-},
-{
-  "_id": 144,
-  "name": "Rasmus Højlund",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 13300,
-  "teamId": 6
-},
-{
-  "_id": 145,
-  "name": "Tyrell Malacia",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8600,
-  "teamId": 6
-},
-{
-  "_id": 146,
-  "name": "Christian Eriksen",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6400,
-  "teamId": 6
-},
-{
-  "_id": 147,
-  "name": "Amad Diallo",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4400,
-  "teamId": 6
-},
-{
-  "_id": 148,
-  "name": "Casemiro",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6100,
-  "teamId": 6
-},
-{
-  "_id": 149,
-  "name": "Raphaël Varane",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11100,
-  "teamId": 6
-},
-{
-  "_id": 150,
-  "name": "Diogo Dalot",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 13400,
-  "teamId": 6
-},
-{
-  "_id": 151,
-  "name": "Antony",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2600,
-  "teamId": 6
-},
-{
-  "_id": 152,
-  "name": "Luke Shaw",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2100,
-  "teamId": 6
-},
-{
-  "_id": 153,
-  "name": "André Onana",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5500,
-  "teamId": 6
-},
-{
-  "_id": 154,
-  "name": "Dean Henderson",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6100,
-  "teamId": 6
-},
-{
-  "_id": 155,
-  "name": "Jonny Evans",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9500,
-  "teamId": 6
-},
-{
-  "_id": 156,
-  "name": "Kobbie Mainoo",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5900,
-  "teamId": 6
-},
-{
-  "_id": 157,
-  "name": "Scott McTominay",
-  "team": "Manchester United",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8500,
-  "teamId": 6
-},
-{
-  "_id": 158,
-  "name": "Ederson",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5300,
-  "teamId": 7
-},
-{
-  "_id": 159,
-  "name": "Stefan Ortega",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 13000,
-  "teamId": 7
-},
-{
-  "_id": 160,
-  "name": "Scott Carson",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6600,
-  "teamId": 7
-},
-{
-  "_id": 161,
-  "name": "Kyle Walker",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7600,
-  "teamId": 7
-},
-{
-  "_id": 162,
-  "name": "Rúben Dias",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9800,
-  "teamId": 7
-},
-{
-  "_id": 163,
-  "name": "John Stones",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2400,
-  "teamId": 7
-},
-{
-  "_id": 164,
-  "name": "Nathan Aké",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4100,
-  "teamId": 7
-},
-{
-  "_id": 165,
-  "name": "Sergio Gómez",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8500,
-  "teamId": 7
-},
-{
-  "_id": 166,
-  "name": "Joško Gvardiol",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6000,
-  "teamId": 7
-},
-{
-  "_id": 167,
-  "name": "Manuel Akanji",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11400,
-  "teamId": 7
-},
-{
-  "_id": 168,
-  "name": "Rico Lewis",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5800,
-  "teamId": 7
-},
-{
-  "_id": 169,
-  "name": "Mateo Kovačić",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6800,
-  "teamId": 7
-},
-{
-  "_id": 170,
-  "name": "Jack Grealish",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5700,
-  "teamId": 7
-},
-{
-  "_id": 171,
-  "name": "Jérémy Doku",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3300,
-  "teamId": 7
-},
-{
-  "_id": 172,
-  "name": "Rodri",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2300,
-  "teamId": 7
-},
-{
-  "_id": 173,
-  "name": "Kevin De Bruyne",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7500,
-  "teamId": 7
-},
-{
-  "_id": 174,
-  "name": "Bernardo Silva",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3200,
-  "teamId": 7
-},
-{
-  "_id": 175,
-  "name": "Matheus Nunes",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2700,
-  "teamId": 7
-},
-{
-  "_id": 176,
-  "name": "Phil Foden",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4700,
-  "teamId": 7
-},
-{
-  "_id": 177,
-  "name": "Oscar Bobb",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11700,
-  "teamId": 7
-},
-{
-  "_id": 178,
-  "name": "Erling Haaland",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3600,
-  "teamId": 7
-},
-{
-  "_id": 179,
-  "name": "Julián Álvarez",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2300,
-  "teamId": 7
-},
-{
-  "_id": 180,
-  "name": "Aaron Ramsdale",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10200,
-  "teamId": 8
-},
-{
-  "_id": 181,
-  "name": "David Raya",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3300,
-  "teamId": 8
-},
-{
-  "_id": 182,
-  "name": "William Saliba",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2500,
-  "teamId": 8
-},
-{
-  "_id": 183,
-  "name": "Ben White",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3000,
-  "teamId": 8
-},
-{
-  "_id": 184,
-  "name": "Gabriel Magalhães",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2200,
-  "teamId": 8
-},
-{
-  "_id": 185,
-  "name": "Jurriën Timber",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7100,
-  "teamId": 8
-},
-{
-  "_id": 186,
-  "name": "Jakub Kiwior",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2900,
-  "teamId": 8
-},
-{
-  "_id": 187,
-  "name": "Cédric Soares",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2300,
-  "teamId": 8
-},
-{
-  "_id": 188,
-  "name": "Takehiro Tomiyasu",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7700,
-  "teamId": 8
-},
-{
-  "_id": 189,
-  "name": "Oleksandr Zinchenko",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 13000,
-  "teamId": 8
-},
-{
-  "_id": 190,
-  "name": "Thomas Partey",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 13700,
-  "teamId": 8
-},
-{
-  "_id": 191,
-  "name": "Martin Ødegaard",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11600,
-  "teamId": 8
-},
-{
-  "_id": 192,
-  "name": "Emile Smith Rowe",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11800,
-  "teamId": 8
-},
-{
-  "_id": 193,
-  "name": "Jorginho",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8800,
-  "teamId": 8
-},
-{
-  "_id": 194,
-  "name": "Fábio Vieira",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7900,
-  "teamId": 8
-},
-{
-  "_id": 195,
-  "name": "Mohamed Elneny",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8300,
-  "teamId": 8
-},
-{
-  "_id": 196,
-  "name": "Kai Havertz",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7600,
-  "teamId": 8
-},
-{
-  "_id": 197,
-  "name": "Declan Rice",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6100,
-  "teamId": 8
-},
-{
-  "_id": 198,
-  "name": "Bukayo Saka",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6000,
-  "teamId": 8
-},
-{
-  "_id": 199,
-  "name": "Gabriel Jesus",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2700,
-  "teamId": 8
-},
-{
-  "_id": 200,
-  "name": "Gabriel Martinelli",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7400,
-  "teamId": 8
-},
-{
-  "_id": 201,
-  "name": "Eddie Nketiah",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3000,
-  "teamId": 8
-},
-{
-  "_id": 202,
-  "name": "Leandro Trossard",
-  "team": "Arsenal",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9400,
-  "teamId": 8
-},
-{
-  "_id": 203,
-  "name": "Guglielmo Vicario",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6800,
-  "teamId": 9
-},
-{
-  "_id": 204,
-  "name": "Fraser Forster",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4600,
-  "teamId": 9
-},
-{
-  "_id": 205,
-  "name": "Radu Drăgușin",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2500,
-  "teamId": 8
-},
-{
-  "_id": 206,
-  "name": "Emerson Royal",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5200,
-  "teamId": 9
-},
-{
-  "_id": 207,
-  "name": "Cristian Romero",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 13300,
-  "teamId": 9
-},
-{
-  "_id": 208,
-  "name": "Ryan Sessegnon",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3000,
-  "teamId": 9
-},
-{
-  "_id": 209,
-  "name": "Pedro Porro",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4000,
-  "teamId": 9
-},
-{
-  "_id": 210,
-  "name": "Ben Davies",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2100,
-  "teamId": 9
-},
-{
-  "_id": 211,
-  "name": "Micky van de Ven",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5800,
-  "teamId": 9
-},
-{
-  "_id": 212,
-  "name": "Destiny Udogie",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6000,
-  "teamId": 9
-},
-{
-  "_id": 213,
-  "name": "Oliver Skipp",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11900,
-  "teamId": 9
-},
-{
-  "_id": 214,
-  "name": "Pierre-Emile Højbjerg",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2400,
-  "teamId": 9
-},
-{
-  "_id": 215,
-  "name": "Yves Bissouma",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5100,
-  "teamId": 9
-},
-{
-  "_id": 216,
-  "name": "James Maddison",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8500,
-  "teamId": 9
-},
-{
-  "_id": 217,
-  "name": "Giovani Lo Celso",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 13700,
-  "teamId": 9
-},
-{
-  "_id": 218,
-  "name": "Rodrigo Bentancur",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9600,
-  "teamId": 9
-},
-{
-  "_id": 219,
-  "name": "Son Heung-min",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9900,
-  "teamId": 9
-},
-{
-  "_id": 220,
-  "name": "Richarlison",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4200,
-  "teamId": 9
-},
-{
-  "_id": 221,
-  "name": "Bryan Gil",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5300,
-  "teamId": 9
-},
-{
-  "_id": 222,
-  "name": "Timo Werner",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10500,
-  "teamId": 9
-},
-{
-  "_id": 223,
-  "name": "Dejan Kulusevski",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3000,
-  "teamId": 9
-},
-{
-  "_id": 224,
-  "name": "Brennan Johnson",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4400,
-  "teamId": 9
-},
-{
-  "_id": 225,
-  "name": "Japhet Tanganga",
-  "team": "Tottenham Hotspur",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3000,
-  "teamId": 9
-},
-{
-  "_id": 226,
-  "name": "Alisson",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5000,
-  "teamId": 10
-},
-{
-  "_id": 227,
-  "name": "Caoimhín Kelleher",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5800,
-  "teamId": 10
-},
-{
-  "_id": 228,
-  "name": "Joe Gomez",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2800,
-  "teamId": 10
-},
-{
-  "_id": 229,
-  "name": "Virgil van Dijk",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2100,
-  "teamId": 10
-},
-{
-  "_id": 230,
-  "name": "Ibrahima Konaté",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2300,
-  "teamId": 10
-},
-{
-  "_id": 231,
-  "name": "Kostas Tsimikas",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4100,
-  "teamId": 10
-},
-{
-  "_id": 232,
-  "name": "Andrew Robertson",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2900,
-  "teamId": 10
-},
-{
-  "_id": 233,
-  "name": "Joël Matip",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2700,
-  "teamId": 10
-},
-{
-  "_id": 234,
-  "name": "Trent Alexander-Arnold",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2400,
-  "teamId": 10
-},
-{
-  "_id": 235,
-  "name": "Jarell Quansah",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 12100,
-  "teamId": 10
-},
-{
-  "_id": 236,
-  "name": "Conor Bradley",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7200,
-  "teamId": 10
-},
-{
-  "_id": 237,
-  "name": "Wataru Endō",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8000,
-  "teamId": 10
-},
-{
-  "_id": 238,
-  "name": "Thiago",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5300,
-  "teamId": 10
-},
-{
-  "_id": 239,
-  "name": "Dominik Szoboszlai",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3700,
-  "teamId": 10
-},
-{
-  "_id": 240,
-  "name": "Alexis Mac Allister",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6500,
-  "teamId": 10
-},
-{
-  "_id": 241,
-  "name": "Curtis Jones",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4300,
-  "teamId": 10
-},
-{
-  "_id": 242,
-  "name": "Harvey Elliott",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7200,
-  "teamId": 10
-},
-{
-  "_id": 243,
-  "name": "Ryan Gravenberch",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 12900,
-  "teamId": 10
-},
-{
-  "_id": 244,
-  "name": "Luis Díaz",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2600,
-  "teamId": 10
-},
-{
-  "_id": 245,
-  "name": "Darwin Núñez",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7700,
-  "teamId": 10
-},
-{
-  "_id": 246,
-  "name": "Mohamed Salah",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4200,
-  "teamId": 10
-},
-{
-  "_id": 247,
-  "name": "Cody Gakpo",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4500,
-  "teamId": 10
-},
-{
-  "_id": 248,
-  "name": "Diogo Jota",
-  "team": "Liverpool",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 12900,
-  "teamId": 10
-},
-{
-  "_id": 249,
-  "name": "Robert Sánchez",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10000,
-  "teamId": 11
-},
-{
-  "_id": 250,
-  "name": "Đorđe Petrović",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 14600,
-  "teamId": 11
-},
-{
-  "_id": 251,
-  "name": "Axel Disasi",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8300,
-  "teamId": 11
-},
-{
-  "_id": 252,
-  "name": "Marc Cucurella",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2800,
-  "teamId": 11
-},
-{
-  "_id": 253,
-  "name": "Benoît Badiashile",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10600,
-  "teamId": 11
-},
-{
-  "_id": 254,
-  "name": "Thiago Silva",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 12300,
-  "teamId": 11
-},
-{
-  "_id": 255,
-  "name": "Trevoh Chalobah",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6000,
-  "teamId": 11
-},
-{
-  "_id": 256,
-  "name": "Ben Chilwell",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6900,
-  "teamId": 11
-},
-{
-  "_id": 257,
-  "name": "Reece James",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10000,
-  "teamId": 11
-},
-{
-  "_id": 258,
-  "name": "Malo Gusto",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8000,
-  "teamId": 11
-},
-{
-  "_id": 259,
-  "name": "Wesley Fofana",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6600,
-  "teamId": 11
-},
-{
-  "_id": 260,
-  "name": "Malang Sarr",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2800,
-  "teamId": 11
-},
-{
-  "_id": 261,
-  "name": "Enzo Fernández",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3100,
-  "teamId": 11
-},
-{
-  "_id": 262,
-  "name": "Carney Chukwuemeka",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11300,
-  "teamId": 11
-},
-{
-  "_id": 263,
-  "name": "Conor Gallagher",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10400,
-  "teamId": 11
-},
-{
-  "_id": 264,
-  "name": "Moisés Caicedo",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4900,
-  "teamId": 11
-},
-{
-  "_id": 265,
-  "name": "Roméo Lavia",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6500,
-  "teamId": 11
-},
-{
-  "_id": 266,
-  "name": "Raheem Sterling",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3600,
-  "teamId": 11
-},
-{
-  "_id": 267,
-  "name": "Mykhailo Mudryk",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5400,
-  "teamId": 11
-},
-{
-  "_id": 268,
-  "name": "Noni Madueke",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9200,
-  "teamId": 11
-},
-{
-  "_id": 269,
-  "name": "Nicolas Jackson",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6800,
-  "teamId": 11
-},
-{
-  "_id": 270,
-  "name": "Christopher Nkunku",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9800,
-  "teamId": 11
-},
-{
-  "_id": 271,
-  "name": "Cole Palmer",
-  "team": "Chelsea",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10300,
-  "teamId": 11
-},
-{
-  "_id": 272,
-  "name": "Mike Maignan",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2400,
-  "teamId": 12
-},
-{
-  "_id": 273,
-  "name": "Marco Sportiello",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10900,
-  "teamId": 12
-},
-{
-  "_id": 274,
-  "name": "Davide Calabria",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2700,
-  "teamId": 12
-},
-{
-  "_id": 275,
-  "name": "Théo Hernandez",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2500,
-  "teamId": 12
-},
-{
-  "_id": 276,
-  "name": "Pierre Kalulu",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4000,
-  "teamId": 12
-},
-{
-  "_id": 277,
-  "name": "Fikayo Tomori",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8400,
-  "teamId": 12
-},
-{
-  "_id": 278,
-  "name": "Simon Kjær",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3000,
-  "teamId": 12
-},
-{
-  "_id": 279,
-  "name": "Malick Thiaw",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3300,
-  "teamId": 12
-},
-{
-  "_id": 280,
-  "name": "Mattia Caldara",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6600,
-  "teamId": 12
-},
-{
-  "_id": 281,
-  "name": "Filippo Terracciano",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8700,
-  "teamId": 12
-},
-{
-  "_id": 282,
-  "name": "Alessandro Florenzi",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6900,
-  "teamId": 12
-},
-{
-  "_id": 283,
-  "name": "Matteo Gabbia",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8200,
-  "teamId": 12
-},
-{
-  "_id": 284,
-  "name": "Ismaël Bennacer",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2300,
-  "teamId": 12
-},
-{
-  "_id": 285,
-  "name": "Ruben Loftus-Cheek",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2600,
-  "teamId": 12
-},
-{
-  "_id": 286,
-  "name": "Tijjani Reijnders",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9500,
-  "teamId": 12
-},
-{
-  "_id": 287,
-  "name": "Tommaso Pobega",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8000,
-  "teamId": 12
-},
-{
-  "_id": 288,
-  "name": "Yunus Musah",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9400,
-  "teamId": 12
-},
-{
-  "_id": 289,
-  "name": "Olivier Giroud",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5900,
-  "teamId": 12
-},
-{
-  "_id": 290,
-  "name": "Rafael Leão",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10400,
-  "teamId": 12
-},
-{
-  "_id": 291,
-  "name": "Christian Pulisic",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9600,
-  "teamId": 12
-},
-{
-  "_id": 292,
-  "name": "Luka Jović",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2600,
-  "teamId": 12
-},
-{
-  "_id": 293,
-  "name": "Noah Okafor",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4400,
-  "teamId": 12
-},
-{
-  "_id": 294,
-  "name": "Samuel Chukwueze",
-  "team": "AC Milan",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11600,
-  "teamId": 12
-},
-{
-  "_id": 295,
-  "name": "Yann Sommer",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2200,
-  "teamId": 13
-},
-{
-  "_id": 296,
-  "name": "Raffaele Di Gennaro",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6800,
-  "teamId": 13
-},
-{
-  "_id": 297,
-  "name": "Emil Audero",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8400,
-  "teamId": 13
-},
-{
-  "_id": 298,
-  "name": "Stefan de Vrij",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11600,
-  "teamId": 13
-},
-{
-  "_id": 299,
-  "name": "Francesco Acerbi",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3400,
-  "teamId": 13
-},
-{
-  "_id": 300,
-  "name": "Benjamin Pavard",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9500,
-  "teamId": 13
-},
-{
-  "_id": 301,
-  "name": "Yann Aurel Bisseck",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7900,
-  "teamId": 13
-},
-{
-  "_id": 302,
-  "name": "Federico Dimarco",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8800,
-  "teamId": 13
-},
-{
-  "_id": 303,
-  "name": "Matteo Darmian",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2700,
-  "teamId": 13
-},
-{
-  "_id": 304,
-  "name": "Alessandro Bastoni",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2300,
-  "teamId": 13
-},
-{
-  "_id": 305,
-  "name": "Denzel Dumfries",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2400,
-  "teamId": 13
-},
-{
-  "_id": 306,
-  "name": "Stefano Sensi",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7000,
-  "teamId": 13
-},
-{
-  "_id": 307,
-  "name": "Juan Cuadrado",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10800,
-  "teamId": 13
-},
-{
-  "_id": 308,
-  "name": "Davy Klaassen",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10400,
-  "teamId": 13
-},
-{
-  "_id": 309,
-  "name": "Davide Frattesi",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8900,
-  "teamId": 13
-},
-{
-  "_id": 310,
-  "name": "Hakan Çalhanoğlu",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5700,
-  "teamId": 13
-},
-{
-  "_id": 311,
-  "name": "Henrikh Mkhitaryan",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11400,
-  "teamId": 13
-},
-{
-  "_id": 312,
-  "name": "Nicolò Barella",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 13000,
-  "teamId": 13
-},
-{
-  "_id": 313,
-  "name": "Carlos Augusto",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5400,
-  "teamId": 13
-},
-{
-  "_id": 314,
-  "name": "Marko Arnautović",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9300,
-  "teamId": 13
-},
-{
-  "_id": 315,
-  "name": "Marcus Thuram",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8100,
-  "teamId": 13
-},
-{
-  "_id": 316,
-  "name": "Lautaro Martínez",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3200,
-  "teamId": 13
-},
-{
-  "_id": 317,
-  "name": "Alexis Sánchez",
-  "team": "Inter Milan",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8500,
-  "teamId": 13
-},
-{
-  "_id": 318,
-  "name": "Alex Meret",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 12700,
-  "teamId": 14
-},
-{
-  "_id": 319,
-  "name": "Natan",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2900,
-  "teamId": 14
-},
-{
-  "_id": 320,
-  "name": "Diego Demme",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8200,
-  "teamId": 14
-},
-{
-  "_id": 321,
-  "name": "Juan Jesus",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5000,
-  "teamId": 14
-},
-{
-  "_id": 322,
-  "name": "Mário Rui",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11300,
-  "teamId": 14
-},
-{
-  "_id": 323,
-  "name": "Hamed Traorè",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5000,
-  "teamId": 14
-},
-{
-  "_id": 324,
-  "name": "Victor Osimhen",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9200,
-  "teamId": 14
-},
-{
-  "_id": 325,
-  "name": "Amir Rrahmani",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6500,
-  "teamId": 14
-},
-{
-  "_id": 326,
-  "name": "Nikita Contini",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9100,
-  "teamId": 14
-},
-{
-  "_id": 327,
-  "name": "Hubert Idasiak",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5600,
-  "teamId": 14
-},
-{
-  "_id": 328,
-  "name": "Mathías Olivera",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2400,
-  "teamId": 14
-},
-{
-  "_id": 329,
-  "name": "Giovanni Simeone",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7600,
-  "teamId": 14
-},
-{
-  "_id": 330,
-  "name": "Piotr Zieliński",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9800,
-  "teamId": 14
-},
-{
-  "_id": 331,
-  "name": "Matteo Politano",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2400,
-  "teamId": 14
-},
-{
-  "_id": 332,
-  "name": "Giovanni Di Lorenzo",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2100,
-  "teamId": 14
-},
-{
-  "_id": 333,
-  "name": "Cyril Ngonge",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9000,
-  "teamId": 14
-},
-{
-  "_id": 334,
-  "name": "Jesper Lindstrøm",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7200,
-  "teamId": 14
-},
-{
-  "_id": 335,
-  "name": "Leander Dendoncker",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2300,
-  "teamId": 14
-},
-{
-  "_id": 336,
-  "name": "Stanislav Lobotka",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2100,
-  "teamId": 14
-},
-{
-  "_id": 337,
-  "name": "Khvicha Kvaratskhelia",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6400,
-  "teamId": 14
-},
-{
-  "_id": 338,
-  "name": "Giacomo Raspadori",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6500,
-  "teamId": 14
-},
-{
-  "_id": 339,
-  "name": "Pierluigi Gollini",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10300,
-  "teamId": 14
-},
-{
-  "_id": 340,
-  "name": "André-Frank Zambo Anguissa",
-  "team": "Napoli",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2400,
-  "teamId": 14
-},
-{
-  "_id": 341,
-  "name": "Wojciech Szczęsny",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8400,
-  "teamId": 15
-},
-{
-  "_id": 342,
-  "name": "Carlo Pinsoglio",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7600,
-  "teamId": 15
-},
-{
-  "_id": 343,
-  "name": "Mattia Perin",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4400,
-  "teamId": 15
-},
-{
-  "_id": 344,
-  "name": "Mattia De Sciglio",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4700,
-  "teamId": 15
-},
-{
-  "_id": 345,
-  "name": "Bremer",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2800,
-  "teamId": 15
-},
-{
-  "_id": 346,
-  "name": "Federico Gatti",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4000,
-  "teamId": 15
-},
-{
-  "_id": 347,
-  "name": "Danilo",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10800,
-  "teamId": 15
-},
-{
-  "_id": 348,
-  "name": "Alex Sandro",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11400,
-  "teamId": 15
-},
-{
-  "_id": 349,
-  "name": "Daniele Rugani",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2800,
-  "teamId": 15
-},
-{
-  "_id": 350,
-  "name": "Andrea Cambiaso",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3700,
-  "teamId": 15
-},
-{
-  "_id": 351,
-  "name": "Tiago Djaló",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 13600,
-  "teamId": 15
-},
-{
-  "_id": 352,
-  "name": "Manuel Locatelli",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7200,
-  "teamId": 15
-},
-{
-  "_id": 353,
-  "name": "Filip Kostić",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5000,
-  "teamId": 15
-},
-{
-  "_id": 354,
-  "name": "Weston McKennie",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3000,
-  "teamId": 15
-},
-{
-  "_id": 355,
-  "name": "Fabio Miretti",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6600,
-  "teamId": 15
-},
-{
-  "_id": 356,
-  "name": "Timothy Weah",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2400,
-  "teamId": 15
-},
-{
-  "_id": 357,
-  "name": "Adrien Rabiot",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9800,
-  "teamId": 15
-},
-{
-  "_id": 358,
-  "name": "Carlos Alcaraz",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8200,
-  "teamId": 15
-},
-{
-  "_id": 359,
-  "name": "Nikola Sekulov",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4700,
-  "teamId": 15
-},
-{
-  "_id": 360,
-  "name": "Hans Nicolussi",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11700,
-  "teamId": 15
-},
-{
-  "_id": 361,
-  "name": "Federico Chiesa",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4900,
-  "teamId": 15
-},
-{
-  "_id": 362,
-  "name": "Dušan Vlahović",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7700,
-  "teamId": 15
-},
-{
-  "_id": 363,
-  "name": "Arkadiusz Milik",
-  "team": "Juventus",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4000,
-  "teamId": 15
-},
-{
-  "_id": 364,
-  "name": "Rui Patrício",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10400,
-  "teamId": 16
-},
-{
-  "_id": 365,
-  "name": "Rick Karsdorp",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2200,
-  "teamId": 16
-},
-{
-  "_id": 366,
-  "name": "Dean Huijsen",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3700,
-  "teamId": 16
-},
-{
-  "_id": 367,
-  "name": "Bryan Cristante",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11500,
-  "teamId": 16
-},
-{
-  "_id": 368,
-  "name": "Evan Ndicka",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 12900,
-  "teamId": 16
-},
-{
-  "_id": 369,
-  "name": "Chris Smalling",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11000,
-  "teamId": 16
-},
-{
-  "_id": 370,
-  "name": "Lorenzo Pellegrini",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7700,
-  "teamId": 16
-},
-{
-  "_id": 371,
-  "name": "Tammy Abraham",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10000,
-  "teamId": 16
-},
-{
-  "_id": 372,
-  "name": "Diego Llorente",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7300,
-  "teamId": 16
-},
-{
-  "_id": 373,
-  "name": "Leandro Paredes",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2800,
-  "teamId": 16
-},
-{
-  "_id": 374,
-  "name": "Sardar Azmoun",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7300,
-  "teamId": 16
-},
-{
-  "_id": 375,
-  "name": "Zeki Çelik",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11800,
-  "teamId": 16
-},
-{
-  "_id": 376,
-  "name": "Renato Sanches",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4900,
-  "teamId": 16
-},
-{
-  "_id": 377,
-  "name": "Paulo Dybala",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11000,
-  "teamId": 16
-},
-{
-  "_id": 378,
-  "name": "Houssem Aouar",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2200,
-  "teamId": 16
-},
-{
-  "_id": 379,
-  "name": "Gianluca Mancini",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10800,
-  "teamId": 16
-},
-{
-  "_id": 380,
-  "name": "Leonardo Spinazzola",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7600,
-  "teamId": 16
-},
-{
-  "_id": 381,
-  "name": "Rasmus Kristensen",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7000,
-  "teamId": 16
-},
-{
-  "_id": 382,
-  "name": "Pietro Boer",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5900,
-  "teamId": 16
-},
-{
-  "_id": 383,
-  "name": "Angeliño",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2900,
-  "teamId": 16
-},
-{
-  "_id": 384,
-  "name": "Romelu Lukaku",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9500,
-  "teamId": 16
-},
-{
-  "_id": 385,
-  "name": "Stephan El Shaarawy",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11500,
-  "teamId": 16
-},
-{
-  "_id": 386,
-  "name": "Mile Svilar",
-  "team": "Roma",
-  "league": "Seria A",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2700,
-  "teamId": 16
-},
-{
-  "_id": 387,
-  "name": "Luigi Sepe",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 4200,
-  "teamId": 17
-},
-{
-  "_id": 388,
-  "name": "Christos Mandas",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2100,
-  "teamId": 17
-},
-{
-  "_id": 389,
-  "name": "Federico Magro",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3900,
-  "teamId": 17
-},
-{
-  "_id": 390,
-  "name": "Ivan Provedel",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Goalkeeper",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10600,
-  "teamId": 17
-},
-{
-  "_id": 391,
-  "name": "Luca Pellegrini",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5800,
-  "teamId": 17
-},
-{
-  "_id": 392,
-  "name": "Patric Gabarrón",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3600,
-  "teamId": 17
-},
-{
-  "_id": 393,
-  "name": "Alessio Romagnoli",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7400,
-  "teamId": 17
-},
-{
-  "_id": 394,
-  "name": "Nicolò Casale",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2800,
-  "teamId": 17
-},
-{
-  "_id": 395,
-  "name": "Dimitrije Kamenović",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 12100,
-  "teamId": 17
-},
-{
-  "_id": 396,
-  "name": "Elseid Hysaj",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3900,
-  "teamId": 17
-},
-{
-  "_id": 397,
-  "name": "Manuel Lazzari",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3300,
-  "teamId": 17
-},
-{
-  "_id": 398,
-  "name": "Mario Gila",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3100,
-  "teamId": 17
-},
-{
-  "_id": 399,
-  "name": "Fabio Ruggeri",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5400,
-  "teamId": 17
-},
-{
-  "_id": 400,
-  "name": "Adam Marušić",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 12600,
-  "teamId": 17
-},
-{
-  "_id": 401,
-  "name": "Matías Vecino",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 7300,
-  "teamId": 17
-},
-{
-  "_id": 402,
-  "name": "Daichi Kamada",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 12100,
-  "teamId": 17
-},
-{
-  "_id": 403,
-  "name": "Matteo Guendouzi",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 11900,
-  "teamId": 17
-},
-{
-  "_id": 404,
-  "name": "Luis Alberto",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9300,
-  "teamId": 17
-},
-{
-  "_id": 405,
-  "name": "Danilo Cataldi",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2600,
-  "teamId": 17
-},
-{
-  "_id": 406,
-  "name": "Nicolò Rovella",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2600,
-  "teamId": 17
-},
-{
-  "_id": 407,
-  "name": "Felipe Anderson",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 9700,
-  "teamId": 17
-},
-{
-  "_id": 408,
-  "name": "Pedro",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 5300,
-  "teamId": 17
-},
-{
-  "_id": 409,
-  "name": "Ciro Immobile",
-  "team": "Lazio",
-  "league": "Seria A",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 2100,
-  "teamId": 17
-},
-{
-  "_id": 410,
-  "name": "Fermín López",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 6200,
-  "teamId": 1
-},
-{
-  "_id": 411,
-  "name": "Lamine Yamal",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Forward",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 10100,
-  "teamId": 1
-},
-{
-  "_id": 412,
-  "name": "Pau Cubarsí",
-  "team": "Barcelona",
-  "league": "La Liga",
-  "position": "Defender",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 8600,
-  "teamId": 1
-},
-{
-  "_id": 414,
-  "name": "Jacob Wright",
-  "team": "Manchester City",
-  "league": "Premier League",
-  "position": "Midfielder",
-  "totalPoints": 0,
-  "gwPoints": null,
-  "price": 3000,
-  "teamId": 7
-}]
+[
+    {
+        "_id": 0,
+        "league": "La Liga",
+        "name": "Thibaut Courtois",
+        "position": "Goalkeeper",
+        "price": 2900,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 399,
+        "league": "Seria A",
+        "name": "Fabio Ruggeri",
+        "position": "Defender",
+        "price": 5400,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 1,
+        "league": "La Liga",
+        "name": "Dani Carvajal",
+        "position": "Defender",
+        "price": 2600,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 2,
+        "league": "La Liga",
+        "name": "Éder Militão",
+        "position": "Defender",
+        "price": 7600,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 393,
+        "league": "Seria A",
+        "name": "Alessio Romagnoli",
+        "position": "Defender",
+        "price": 7400,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 3,
+        "league": "La Liga",
+        "name": "David Alaba",
+        "position": "Defender",
+        "price": 3800,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 4,
+        "league": "La Liga",
+        "name": "Jude Bellingham",
+        "position": "Midfielder",
+        "price": 10800,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 387,
+        "league": "Seria A",
+        "name": "Luigi Sepe",
+        "position": "Goalkeeper",
+        "price": 4200,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 5,
+        "league": "La Liga",
+        "name": "Nacho Fernández",
+        "position": "Defender",
+        "price": 2900,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 397,
+        "league": "Seria A",
+        "name": "Manuel Lazzari",
+        "position": "Defender",
+        "price": 3300,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 6,
+        "league": "La Liga",
+        "name": "Vinícius Júnior",
+        "position": "Forward",
+        "price": 9500,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 7,
+        "league": "La Liga",
+        "name": "Toni Kroos",
+        "position": "Midfielder",
+        "price": 2900,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 407,
+        "league": "Seria A",
+        "name": "Felipe Anderson",
+        "position": "Forward",
+        "price": 9700,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 8,
+        "league": "La Liga",
+        "name": "Luka Modrić",
+        "position": "Midfielder",
+        "price": 2900,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 9,
+        "league": "La Liga",
+        "name": "Rodrygo",
+        "position": "Forward",
+        "price": 11000,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 401,
+        "league": "Seria A",
+        "name": "Matías Vecino",
+        "position": "Midfielder",
+        "price": 7300,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 10,
+        "league": "La Liga",
+        "name": "Eduardo Camavinga",
+        "position": "Midfielder",
+        "price": 2100,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 11,
+        "league": "La Liga",
+        "name": "Andriy Lunin",
+        "position": "Goalkeeper",
+        "price": 2900,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 395,
+        "league": "Seria A",
+        "name": "Dimitrije Kamenović",
+        "position": "Defender",
+        "price": 12100,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 12,
+        "league": "La Liga",
+        "name": "Joselu",
+        "position": "Forward",
+        "price": 3700,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 13,
+        "league": "La Liga",
+        "name": "Federico Valverde",
+        "position": "Forward",
+        "price": 7200,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 405,
+        "league": "Seria A",
+        "name": "Danilo Cataldi",
+        "position": "Midfielder",
+        "price": 2600,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 14,
+        "league": "La Liga",
+        "name": "Lucas Vázquez",
+        "position": "Forward",
+        "price": 3300,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 15,
+        "league": "La Liga",
+        "name": "Aurélien Tchouaméni",
+        "position": "Midfielder",
+        "price": 8900,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 16,
+        "league": "La Liga",
+        "name": "Dani Ceballos",
+        "position": "Midfielder",
+        "price": 3700,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 17,
+        "league": "La Liga",
+        "name": "Fran García",
+        "position": "Defender",
+        "price": 5600,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 409,
+        "league": "Seria A",
+        "name": "Ciro Immobile",
+        "position": "Forward",
+        "price": 2100,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 18,
+        "league": "La Liga",
+        "name": "Brahim Díaz",
+        "position": "Forward",
+        "price": 2700,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 19,
+        "league": "La Liga",
+        "name": "Antonio Rüdiger",
+        "position": "Defender",
+        "price": 4900,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 403,
+        "league": "Seria A",
+        "name": "Matteo Guendouzi",
+        "position": "Midfielder",
+        "price": 11900,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 20,
+        "league": "La Liga",
+        "name": "Ferland Mendy",
+        "position": "Defender",
+        "price": 4800,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 21,
+        "league": "La Liga",
+        "name": "Arda Güler",
+        "position": "Midfielder",
+        "price": 2200,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 22,
+        "league": "La Liga",
+        "name": "Kepa Arrizabalaga",
+        "position": "Goalkeeper",
+        "price": 2600,
+        "teamId": 0,
+        "totalPoints": 0
+    },
+    {
+        "_id": 23,
+        "league": "La Liga",
+        "name": "Marc-André ter Stegen",
+        "position": "Goalkeeper",
+        "price": 9900,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 24,
+        "league": "La Liga",
+        "name": "Iñaki Peña",
+        "position": "Goalkeeper",
+        "price": 14500,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 25,
+        "league": "La Liga",
+        "name": "João Cancelo",
+        "position": "Defender",
+        "price": 10200,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 26,
+        "league": "La Liga",
+        "name": "Alejandro Balde",
+        "position": "Defender",
+        "price": 3600,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 27,
+        "league": "La Liga",
+        "name": "Ronald Araújo",
+        "position": "Defender",
+        "price": 10800,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 411,
+        "league": "La Liga",
+        "name": "Lamine Yamal",
+        "position": "Forward",
+        "price": 10100,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 28,
+        "league": "La Liga",
+        "name": "Iñigo Martínez",
+        "position": "Defender",
+        "price": 12000,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 29,
+        "league": "La Liga",
+        "name": "Andreas Christensen",
+        "position": "Defender",
+        "price": 12800,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 30,
+        "league": "La Liga",
+        "name": "Marcos Alonso",
+        "position": "Defender",
+        "price": 5400,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 31,
+        "league": "La Liga",
+        "name": "Jules Koundé",
+        "position": "Defender",
+        "price": 7800,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 32,
+        "league": "La Liga",
+        "name": "Gavi",
+        "position": "Forward",
+        "price": 2700,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 33,
+        "league": "La Liga",
+        "name": "Pedri",
+        "position": "Midfielder",
+        "price": 4100,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 34,
+        "league": "La Liga",
+        "name": "Oriol Romeu",
+        "position": "Midfielder",
+        "price": 13000,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 35,
+        "league": "La Liga",
+        "name": "Sergi Roberto",
+        "position": "Midfielder",
+        "price": 3500,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 36,
+        "league": "La Liga",
+        "name": "Frenkie de Jong",
+        "position": "Midfielder",
+        "price": 9200,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 37,
+        "league": "La Liga",
+        "name": "İlkay Gündoğan",
+        "position": "Midfielder",
+        "price": 7400,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 38,
+        "league": "La Liga",
+        "name": "Ferran Torres",
+        "position": "Forward",
+        "price": 4200,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 39,
+        "league": "La Liga",
+        "name": "Robert Lewandowski",
+        "position": "Forward",
+        "price": 6800,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 40,
+        "league": "La Liga",
+        "name": "Raphinha",
+        "position": "Forward",
+        "price": 9100,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 41,
+        "league": "La Liga",
+        "name": "João Félix",
+        "position": "Forward",
+        "price": 4200,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 42,
+        "league": "La Liga",
+        "name": "Vitor Roque",
+        "position": "Forward",
+        "price": 2200,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 43,
+        "league": "La Liga",
+        "name": "Horațiu Moldovan",
+        "position": "Goalkeeper",
+        "price": 2600,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 44,
+        "league": "La Liga",
+        "name": "José Giménez",
+        "position": "Defender",
+        "price": 10200,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 45,
+        "league": "La Liga",
+        "name": "César Azpilicueta",
+        "position": "Defender",
+        "price": 11100,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 46,
+        "league": "La Liga",
+        "name": "Gabriel Paulista",
+        "position": "Defender",
+        "price": 10900,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 47,
+        "league": "La Liga",
+        "name": "Rodrigo De Paul",
+        "position": "Midfielder",
+        "price": 2800,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 48,
+        "league": "La Liga",
+        "name": "Koke",
+        "position": "Midfielder",
+        "price": 4300,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 49,
+        "league": "La Liga",
+        "name": "Antoine Griezmann",
+        "position": "Forward",
+        "price": 3000,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 50,
+        "league": "La Liga",
+        "name": "Saúl",
+        "position": "Defender",
+        "price": 4800,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 51,
+        "league": "La Liga",
+        "name": "Memphis Depay",
+        "position": "Forward",
+        "price": 4800,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 52,
+        "league": "La Liga",
+        "name": "Ángel Correa",
+        "position": "Forward",
+        "price": 10900,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 53,
+        "league": "La Liga",
+        "name": "Thomas Lemar",
+        "position": "Midfielder",
+        "price": 4700,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 54,
+        "league": "La Liga",
+        "name": "Samuel Lino",
+        "position": "Midfielder",
+        "price": 7300,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 55,
+        "league": "La Liga",
+        "name": "Jan Oblak",
+        "position": "Goalkeeper",
+        "price": 7400,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 56,
+        "league": "La Liga",
+        "name": "Marcos Llorente",
+        "position": "Midfielder",
+        "price": 6700,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 391,
+        "league": "Seria A",
+        "name": "Luca Pellegrini",
+        "position": "Defender",
+        "price": 5800,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 57,
+        "league": "La Liga",
+        "name": "Stefan Savić",
+        "position": "Defender",
+        "price": 5600,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 58,
+        "league": "La Liga",
+        "name": "Nahuel Molina",
+        "position": "Midfielder",
+        "price": 13000,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 385,
+        "league": "Seria A",
+        "name": "Stephan El Shaarawy",
+        "position": "Forward",
+        "price": 11500,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 59,
+        "league": "La Liga",
+        "name": "Rodrigo Riquelme",
+        "position": "Midfielder",
+        "price": 9300,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 60,
+        "league": "La Liga",
+        "name": "Arthur Vermeeren",
+        "position": "Midfielder",
+        "price": 10900,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 61,
+        "league": "La Liga",
+        "name": "Álvaro Morata",
+        "position": "Forward",
+        "price": 3000,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 62,
+        "league": "La Liga",
+        "name": "Axel Witsel",
+        "position": "Defender",
+        "price": 4400,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 389,
+        "league": "Seria A",
+        "name": "Federico Magro",
+        "position": "Goalkeeper",
+        "price": 3900,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 63,
+        "league": "La Liga",
+        "name": "Mario Hermoso",
+        "position": "Defender",
+        "price": 6400,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 64,
+        "league": "La Liga",
+        "name": "Reinildo Mandava",
+        "position": "Defender",
+        "price": 2900,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 65,
+        "league": "La Liga",
+        "name": "Pablo Barrios",
+        "position": "Midfielder",
+        "price": 8200,
+        "teamId": 2,
+        "totalPoints": 0
+    },
+    {
+        "_id": 66,
+        "league": "La Liga",
+        "name": "Juan Carlos",
+        "position": "Goalkeeper",
+        "price": 5800,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 67,
+        "league": "La Liga",
+        "name": "Miguel Gutiérrez",
+        "position": "Defender",
+        "price": 2700,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 68,
+        "league": "La Liga",
+        "name": "Arnau Martínez",
+        "position": "Defender",
+        "price": 5100,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 69,
+        "league": "La Liga",
+        "name": "David López",
+        "position": "Midfielder",
+        "price": 2600,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 70,
+        "league": "La Liga",
+        "name": "Ibrahima Kébé",
+        "position": "Midfielder",
+        "price": 2300,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 71,
+        "league": "La Liga",
+        "name": "Cristhian Stuani",
+        "position": "Forward",
+        "price": 11800,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 72,
+        "league": "La Liga",
+        "name": "Viktor Tsyhankov",
+        "position": "Forward",
+        "price": 9600,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 73,
+        "league": "La Liga",
+        "name": "Artem Dovbyk",
+        "position": "Forward",
+        "price": 5900,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 74,
+        "league": "La Liga",
+        "name": "Borja García",
+        "position": "Midfielder",
+        "price": 6300,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 75,
+        "league": "La Liga",
+        "name": "Valery Fernández",
+        "position": "Defender",
+        "price": 9600,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 76,
+        "league": "La Liga",
+        "name": "Paulo Gazzaniga",
+        "position": "Goalkeeper",
+        "price": 5600,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 77,
+        "league": "La Liga",
+        "name": "Aleix García",
+        "position": "Midfielder",
+        "price": 10900,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 78,
+        "league": "La Liga",
+        "name": "Juanpe",
+        "position": "Defender",
+        "price": 12400,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 79,
+        "league": "La Liga",
+        "name": "Sávio",
+        "position": "Forward",
+        "price": 9100,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 80,
+        "league": "La Liga",
+        "name": "Daley Blind",
+        "position": "Defender",
+        "price": 3300,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 81,
+        "league": "La Liga",
+        "name": "Pablo Torre",
+        "position": "Midfielder",
+        "price": 2600,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 82,
+        "league": "La Liga",
+        "name": "Toni Villa",
+        "position": "Forward",
+        "price": 4100,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 83,
+        "league": "La Liga",
+        "name": "Yan Couto",
+        "position": "Defender",
+        "price": 9000,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 84,
+        "league": "La Liga",
+        "name": "Yangel Herrera",
+        "position": "Midfielder",
+        "price": 3100,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 85,
+        "league": "La Liga",
+        "name": "Jhon Solís",
+        "position": "Midfielder",
+        "price": 2300,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 86,
+        "league": "La Liga",
+        "name": "Iván Martín",
+        "position": "Midfielder",
+        "price": 8200,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 87,
+        "league": "La Liga",
+        "name": "Portu",
+        "position": "Midfielder",
+        "price": 3000,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 88,
+        "league": "La Liga",
+        "name": "Eric García",
+        "position": "Midfielder",
+        "price": 8300,
+        "teamId": 3,
+        "totalPoints": 0
+    },
+    {
+        "_id": 89,
+        "league": "La Liga",
+        "name": "Unai Simón",
+        "position": "Goalkeeper",
+        "price": 4600,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 90,
+        "league": "La Liga",
+        "name": "Dani Vivian",
+        "position": "Defender",
+        "price": 2100,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 91,
+        "league": "La Liga",
+        "name": "Aitor Paredes",
+        "position": "Defender",
+        "price": 8300,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 92,
+        "league": "La Liga",
+        "name": "Yeray Álvarez",
+        "position": "Defender",
+        "price": 4500,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 93,
+        "league": "La Liga",
+        "name": "Mikel Vesga",
+        "position": "Midfielder",
+        "price": 6000,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 94,
+        "league": "La Liga",
+        "name": "Álex Berenguer",
+        "position": "Forward",
+        "price": 6500,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 95,
+        "league": "La Liga",
+        "name": "Oihan Sancet",
+        "position": "Forward",
+        "price": 4000,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 96,
+        "league": "La Liga",
+        "name": "Iñaki Williams",
+        "position": "Forward",
+        "price": 3600,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 97,
+        "league": "La Liga",
+        "name": "Iker Muniain",
+        "position": "Midfielder",
+        "price": 2400,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 98,
+        "league": "La Liga",
+        "name": "Nico Williams",
+        "position": "Forward",
+        "price": 2800,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 99,
+        "league": "La Liga",
+        "name": "Gorka Guruzeta",
+        "position": "Forward",
+        "price": 8100,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 100,
+        "league": "La Liga",
+        "name": "Julen Agirrezabala",
+        "position": "Goalkeeper",
+        "price": 6000,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 101,
+        "league": "La Liga",
+        "name": "Dani García",
+        "position": "Midfielder",
+        "price": 3000,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 102,
+        "league": "La Liga",
+        "name": "Iñigo Lekue",
+        "position": "Defender",
+        "price": 5100,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 103,
+        "league": "La Liga",
+        "name": "Iñigo Ruiz de Galarreta",
+        "position": "Midfielder",
+        "price": 2700,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 104,
+        "league": "La Liga",
+        "name": "Yuri Berchiche",
+        "position": "Defender",
+        "price": 5700,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 105,
+        "league": "La Liga",
+        "name": "Óscar de Marcos",
+        "position": "Defender",
+        "price": 4500,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 106,
+        "league": "La Liga",
+        "name": "Imanol García de Albéniz",
+        "position": "Defender",
+        "price": 6200,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 107,
+        "league": "La Liga",
+        "name": "Asier Villalibre",
+        "position": "Forward",
+        "price": 3800,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 108,
+        "league": "La Liga",
+        "name": "Ander Herrera",
+        "position": "Midfielder",
+        "price": 2600,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 109,
+        "league": "La Liga",
+        "name": "Raúl García",
+        "position": "Midfielder",
+        "price": 8200,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 110,
+        "league": "La Liga",
+        "name": "Beñat Prados",
+        "position": "Midfielder",
+        "price": 3600,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 111,
+        "league": "La Liga",
+        "name": "Unai Gómez",
+        "position": "Midfielder",
+        "price": 8600,
+        "teamId": 4,
+        "totalPoints": 0
+    },
+    {
+        "_id": 112,
+        "league": "La Liga",
+        "name": "Álex Remiro",
+        "position": "Goalkeeper",
+        "price": 10400,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 113,
+        "league": "La Liga",
+        "name": "Álvaro Odriozola",
+        "position": "Defender",
+        "price": 6200,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 114,
+        "league": "La Liga",
+        "name": "Aihen Muñoz",
+        "position": "Defender",
+        "price": 9200,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 115,
+        "league": "La Liga",
+        "name": "Martín Zubimendi",
+        "position": "Midfielder",
+        "price": 4500,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 116,
+        "league": "La Liga",
+        "name": "Igor Zubeldia",
+        "position": "Midfielder",
+        "price": 5400,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 117,
+        "league": "La Liga",
+        "name": "Aritz Elustondo",
+        "position": "Defender",
+        "price": 12000,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 118,
+        "league": "La Liga",
+        "name": "Ander Barrenetxea",
+        "position": "Forward",
+        "price": 2200,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 119,
+        "league": "La Liga",
+        "name": "Mikel Merino",
+        "position": "Midfielder",
+        "price": 6300,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 120,
+        "league": "La Liga",
+        "name": "Carlos Fernández",
+        "position": "Forward",
+        "price": 11500,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 121,
+        "league": "La Liga",
+        "name": "Mikel Oyarzabal",
+        "position": "Forward",
+        "price": 3200,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 122,
+        "league": "La Liga",
+        "name": "Sheraldo Becker",
+        "position": "Midfielder",
+        "price": 9200,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 123,
+        "league": "La Liga",
+        "name": "Arsen Zakharyan",
+        "position": "Forward",
+        "price": 7500,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 124,
+        "league": "La Liga",
+        "name": "Takefusa Kubo",
+        "position": "Forward",
+        "price": 7000,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 125,
+        "league": "La Liga",
+        "name": "Urko González de Zárate",
+        "position": "Midfielder",
+        "price": 2100,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 126,
+        "league": "La Liga",
+        "name": "Jon Ander Olasagasti",
+        "position": "Midfielder",
+        "price": 10000,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 127,
+        "league": "La Liga",
+        "name": "Kieran Tierney",
+        "position": "Defender",
+        "price": 13000,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 128,
+        "league": "La Liga",
+        "name": "Hamari Traoré",
+        "position": "Defender",
+        "price": 2400,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 129,
+        "league": "La Liga",
+        "name": "Umar Sadiq",
+        "position": "Forward",
+        "price": 10300,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 314,
+        "league": "Seria A",
+        "name": "Marko Arnautović",
+        "position": "Forward",
+        "price": 9300,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 130,
+        "league": "La Liga",
+        "name": "Jon Pacheco",
+        "position": "Defender",
+        "price": 2600,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 131,
+        "league": "La Liga",
+        "name": "André Silva",
+        "position": "Forward",
+        "price": 4000,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 260,
+        "league": "Premier League",
+        "name": "Malang Sarr",
+        "position": "Defender",
+        "price": 2800,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 132,
+        "league": "La Liga",
+        "name": "Beñat Turrientes",
+        "position": "Midfielder",
+        "price": 3900,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 133,
+        "league": "La Liga",
+        "name": "Brais Méndez",
+        "position": "Midfielder",
+        "price": 2300,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 318,
+        "league": "Seria A",
+        "name": "Alex Meret",
+        "position": "Goalkeeper",
+        "price": 12700,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 134,
+        "league": "La Liga",
+        "name": "Robin Le Normand",
+        "position": "Defender",
+        "price": 13200,
+        "teamId": 5,
+        "totalPoints": 0
+    },
+    {
+        "_id": 135,
+        "league": "Premier League",
+        "name": "Victor Lindelöf",
+        "position": "Defender",
+        "price": 3000,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 312,
+        "league": "Seria A",
+        "name": "Nicolò Barella",
+        "position": "Midfielder",
+        "price": 13000,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 136,
+        "league": "Premier League",
+        "name": "Eric Bailly",
+        "position": "Defender",
+        "price": 8100,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 137,
+        "league": "Premier League",
+        "name": "Sofyan Amrabat",
+        "position": "Midfielder",
+        "price": 2400,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 258,
+        "league": "Premier League",
+        "name": "Malo Gusto",
+        "position": "Defender",
+        "price": 8000,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 138,
+        "league": "Premier League",
+        "name": "Harry Maguire",
+        "position": "Defender",
+        "price": 3700,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 139,
+        "league": "Premier League",
+        "name": "Lisandro Martínez",
+        "position": "Defender",
+        "price": 7200,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 268,
+        "league": "Premier League",
+        "name": "Noni Madueke",
+        "position": "Forward",
+        "price": 9200,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 140,
+        "league": "Premier League",
+        "name": "Mason Mount",
+        "position": "Forward",
+        "price": 12700,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 141,
+        "league": "Premier League",
+        "name": "Bruno Fernandes",
+        "position": "Midfielder",
+        "price": 3100,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 262,
+        "league": "Premier League",
+        "name": "Carney Chukwuemeka",
+        "position": "Midfielder",
+        "price": 11300,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 142,
+        "league": "Premier League",
+        "name": "Anthony Martial",
+        "position": "Forward",
+        "price": 8000,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 143,
+        "league": "Premier League",
+        "name": "Marcus Rashford",
+        "position": "Forward",
+        "price": 9800,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 256,
+        "league": "Premier League",
+        "name": "Ben Chilwell",
+        "position": "Defender",
+        "price": 6900,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 144,
+        "league": "Premier League",
+        "name": "Rasmus Højlund",
+        "position": "Forward",
+        "price": 13300,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 145,
+        "league": "Premier League",
+        "name": "Tyrell Malacia",
+        "position": "Defender",
+        "price": 8600,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 266,
+        "league": "Premier League",
+        "name": "Raheem Sterling",
+        "position": "Forward",
+        "price": 3600,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 146,
+        "league": "Premier League",
+        "name": "Christian Eriksen",
+        "position": "Midfielder",
+        "price": 6400,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 147,
+        "league": "Premier League",
+        "name": "Amad Diallo",
+        "position": "Forward",
+        "price": 4400,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 276,
+        "league": "Seria A",
+        "name": "Pierre Kalulu",
+        "position": "Defender",
+        "price": 4000,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 148,
+        "league": "Premier League",
+        "name": "Casemiro",
+        "position": "Midfielder",
+        "price": 6100,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 149,
+        "league": "Premier League",
+        "name": "Raphaël Varane",
+        "position": "Defender",
+        "price": 11100,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 270,
+        "league": "Premier League",
+        "name": "Christopher Nkunku",
+        "position": "Forward",
+        "price": 9800,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 150,
+        "league": "Premier League",
+        "name": "Diogo Dalot",
+        "position": "Defender",
+        "price": 13400,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 151,
+        "league": "Premier League",
+        "name": "Antony",
+        "position": "Forward",
+        "price": 2600,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 264,
+        "league": "Premier League",
+        "name": "Moisés Caicedo",
+        "position": "Midfielder",
+        "price": 4900,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 152,
+        "league": "Premier League",
+        "name": "Luke Shaw",
+        "position": "Defender",
+        "price": 2100,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 153,
+        "league": "Premier League",
+        "name": "André Onana",
+        "position": "Goalkeeper",
+        "price": 5500,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 274,
+        "league": "Seria A",
+        "name": "Davide Calabria",
+        "position": "Defender",
+        "price": 2700,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 154,
+        "league": "Premier League",
+        "name": "Dean Henderson",
+        "position": "Goalkeeper",
+        "price": 6100,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 155,
+        "league": "Premier League",
+        "name": "Jonny Evans",
+        "position": "Defender",
+        "price": 9500,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 284,
+        "league": "Seria A",
+        "name": "Ismaël Bennacer",
+        "position": "Midfielder",
+        "price": 2300,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 156,
+        "league": "Premier League",
+        "name": "Kobbie Mainoo",
+        "position": "Midfielder",
+        "price": 5900,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 157,
+        "league": "Premier League",
+        "name": "Scott McTominay",
+        "position": "Midfielder",
+        "price": 8500,
+        "teamId": 6,
+        "totalPoints": 0
+    },
+    {
+        "_id": 278,
+        "league": "Seria A",
+        "name": "Simon Kjær",
+        "position": "Defender",
+        "price": 3000,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 158,
+        "league": "Premier League",
+        "name": "Ederson",
+        "position": "Goalkeeper",
+        "price": 5300,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 159,
+        "league": "Premier League",
+        "name": "Stefan Ortega",
+        "position": "Goalkeeper",
+        "price": 13000,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 272,
+        "league": "Seria A",
+        "name": "Mike Maignan",
+        "position": "Goalkeeper",
+        "price": 2400,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 160,
+        "league": "Premier League",
+        "name": "Scott Carson",
+        "position": "Goalkeeper",
+        "price": 6600,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 161,
+        "league": "Premier League",
+        "name": "Kyle Walker",
+        "position": "Defender",
+        "price": 7600,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 162,
+        "league": "Premier League",
+        "name": "Rúben Dias",
+        "position": "Defender",
+        "price": 9800,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 163,
+        "league": "Premier League",
+        "name": "John Stones",
+        "position": "Defender",
+        "price": 2400,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 292,
+        "league": "Seria A",
+        "name": "Luka Jović",
+        "position": "Forward",
+        "price": 2600,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 164,
+        "league": "Premier League",
+        "name": "Nathan Aké",
+        "position": "Defender",
+        "price": 4100,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 165,
+        "league": "Premier League",
+        "name": "Sergio Gómez",
+        "position": "Defender",
+        "price": 8500,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 166,
+        "league": "Premier League",
+        "name": "Joško Gvardiol",
+        "position": "Defender",
+        "price": 6000,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 167,
+        "league": "Premier League",
+        "name": "Manuel Akanji",
+        "position": "Defender",
+        "price": 11400,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 168,
+        "league": "Premier League",
+        "name": "Rico Lewis",
+        "position": "Defender",
+        "price": 5800,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 169,
+        "league": "Premier League",
+        "name": "Mateo Kovačić",
+        "position": "Midfielder",
+        "price": 6800,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 290,
+        "league": "Seria A",
+        "name": "Rafael Leão",
+        "position": "Forward",
+        "price": 10400,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 170,
+        "league": "Premier League",
+        "name": "Jack Grealish",
+        "position": "Forward",
+        "price": 5700,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 171,
+        "league": "Premier League",
+        "name": "Jérémy Doku",
+        "position": "Midfielder",
+        "price": 3300,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 300,
+        "league": "Seria A",
+        "name": "Benjamin Pavard",
+        "position": "Defender",
+        "price": 9500,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 172,
+        "league": "Premier League",
+        "name": "Rodri",
+        "position": "Midfielder",
+        "price": 2300,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 173,
+        "league": "Premier League",
+        "name": "Kevin De Bruyne",
+        "position": "Midfielder",
+        "price": 7500,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 294,
+        "league": "Seria A",
+        "name": "Samuel Chukwueze",
+        "position": "Forward",
+        "price": 11600,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 174,
+        "league": "Premier League",
+        "name": "Bernardo Silva",
+        "position": "Forward",
+        "price": 3200,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 175,
+        "league": "Premier League",
+        "name": "Matheus Nunes",
+        "position": "Midfielder",
+        "price": 2700,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 288,
+        "league": "Seria A",
+        "name": "Yunus Musah",
+        "position": "Midfielder",
+        "price": 9400,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 176,
+        "league": "Premier League",
+        "name": "Phil Foden",
+        "position": "Midfielder",
+        "price": 4700,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 177,
+        "league": "Premier League",
+        "name": "Oscar Bobb",
+        "position": "Forward",
+        "price": 11700,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 298,
+        "league": "Seria A",
+        "name": "Stefan de Vrij",
+        "position": "Defender",
+        "price": 11600,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 178,
+        "league": "Premier League",
+        "name": "Erling Haaland",
+        "position": "Forward",
+        "price": 3600,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 179,
+        "league": "Premier League",
+        "name": "Julián Álvarez",
+        "position": "Forward",
+        "price": 2300,
+        "teamId": 7,
+        "totalPoints": 0
+    },
+    {
+        "_id": 308,
+        "league": "Seria A",
+        "name": "Davy Klaassen",
+        "position": "Midfielder",
+        "price": 10400,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 180,
+        "league": "Premier League",
+        "name": "Aaron Ramsdale",
+        "position": "Goalkeeper",
+        "price": 10200,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 181,
+        "league": "Premier League",
+        "name": "David Raya",
+        "position": "Goalkeeper",
+        "price": 3300,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 302,
+        "league": "Seria A",
+        "name": "Federico Dimarco",
+        "position": "Midfielder",
+        "price": 8800,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 182,
+        "league": "Premier League",
+        "name": "William Saliba",
+        "position": "Defender",
+        "price": 2500,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 183,
+        "league": "Premier League",
+        "name": "Ben White",
+        "position": "Defender",
+        "price": 3000,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 296,
+        "league": "Seria A",
+        "name": "Raffaele Di Gennaro",
+        "position": "Goalkeeper",
+        "price": 6800,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 184,
+        "league": "Premier League",
+        "name": "Gabriel Magalhães",
+        "position": "Defender",
+        "price": 2200,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 185,
+        "league": "Premier League",
+        "name": "Jurriën Timber",
+        "position": "Defender",
+        "price": 7100,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 306,
+        "league": "Seria A",
+        "name": "Stefano Sensi",
+        "position": "Midfielder",
+        "price": 7000,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 186,
+        "league": "Premier League",
+        "name": "Jakub Kiwior",
+        "position": "Defender",
+        "price": 2900,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 187,
+        "league": "Premier League",
+        "name": "Cédric Soares",
+        "position": "Defender",
+        "price": 2300,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 316,
+        "league": "Seria A",
+        "name": "Lautaro Martínez",
+        "position": "Forward",
+        "price": 3200,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 188,
+        "league": "Premier League",
+        "name": "Takehiro Tomiyasu",
+        "position": "Defender",
+        "price": 7700,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 189,
+        "league": "Premier League",
+        "name": "Oleksandr Zinchenko",
+        "position": "Defender",
+        "price": 13000,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 310,
+        "league": "Seria A",
+        "name": "Hakan Çalhanoğlu",
+        "position": "Midfielder",
+        "price": 5700,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 190,
+        "league": "Premier League",
+        "name": "Thomas Partey",
+        "position": "Midfielder",
+        "price": 13700,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 191,
+        "league": "Premier League",
+        "name": "Martin Ødegaard",
+        "position": "Midfielder",
+        "price": 11600,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 304,
+        "league": "Seria A",
+        "name": "Alessandro Bastoni",
+        "position": "Defender",
+        "price": 2300,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 192,
+        "league": "Premier League",
+        "name": "Emile Smith Rowe",
+        "position": "Midfielder",
+        "price": 11800,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 193,
+        "league": "Premier League",
+        "name": "Jorginho",
+        "position": "Midfielder",
+        "price": 8800,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 378,
+        "league": "Seria A",
+        "name": "Houssem Aouar",
+        "position": "Midfielder",
+        "price": 2200,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 194,
+        "league": "Premier League",
+        "name": "Fábio Vieira",
+        "position": "Midfielder",
+        "price": 7900,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 195,
+        "league": "Premier League",
+        "name": "Mohamed Elneny",
+        "position": "Midfielder",
+        "price": 8300,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 324,
+        "league": "Seria A",
+        "name": "Victor Osimhen",
+        "position": "Forward",
+        "price": 9200,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 196,
+        "league": "Premier League",
+        "name": "Kai Havertz",
+        "position": "Forward",
+        "price": 7600,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 197,
+        "league": "Premier League",
+        "name": "Declan Rice",
+        "position": "Midfielder",
+        "price": 6100,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 382,
+        "league": "Seria A",
+        "name": "Pietro Boer",
+        "position": "Goalkeeper",
+        "price": 5900,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 198,
+        "league": "Premier League",
+        "name": "Bukayo Saka",
+        "position": "Forward",
+        "price": 6000,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 199,
+        "league": "Premier League",
+        "name": "Gabriel Jesus",
+        "position": "Forward",
+        "price": 2700,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 376,
+        "league": "Seria A",
+        "name": "Renato Sanches",
+        "position": "Midfielder",
+        "price": 4900,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 200,
+        "league": "Premier League",
+        "name": "Gabriel Martinelli",
+        "position": "Forward",
+        "price": 7400,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 201,
+        "league": "Premier League",
+        "name": "Eddie Nketiah",
+        "position": "Forward",
+        "price": 3000,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 322,
+        "league": "Seria A",
+        "name": "Mário Rui",
+        "position": "Defender",
+        "price": 11300,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 202,
+        "league": "Premier League",
+        "name": "Leandro Trossard",
+        "position": "Forward",
+        "price": 9400,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 203,
+        "league": "Premier League",
+        "name": "Guglielmo Vicario",
+        "position": "Goalkeeper",
+        "price": 6800,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 332,
+        "league": "Seria A",
+        "name": "Giovanni Di Lorenzo",
+        "position": "Defender",
+        "price": 2100,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 204,
+        "league": "Premier League",
+        "name": "Fraser Forster",
+        "position": "Goalkeeper",
+        "price": 4600,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 205,
+        "league": "Premier League",
+        "name": "Radu Drăgușin",
+        "position": "Defender",
+        "price": 2500,
+        "teamId": 8,
+        "totalPoints": 0
+    },
+    {
+        "_id": 326,
+        "league": "Seria A",
+        "name": "Nikita Contini",
+        "position": "Goalkeeper",
+        "price": 9100,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 206,
+        "league": "Premier League",
+        "name": "Emerson Royal",
+        "position": "Defender",
+        "price": 5200,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 207,
+        "league": "Premier League",
+        "name": "Cristian Romero",
+        "position": "Defender",
+        "price": 13300,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 320,
+        "league": "Seria A",
+        "name": "Diego Demme",
+        "position": "Midfielder",
+        "price": 8200,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 208,
+        "league": "Premier League",
+        "name": "Ryan Sessegnon",
+        "position": "Defender",
+        "price": 3000,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 209,
+        "league": "Premier League",
+        "name": "Pedro Porro",
+        "position": "Defender",
+        "price": 4000,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 330,
+        "league": "Seria A",
+        "name": "Piotr Zieliński",
+        "position": "Midfielder",
+        "price": 9800,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 210,
+        "league": "Premier League",
+        "name": "Ben Davies",
+        "position": "Defender",
+        "price": 2100,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 211,
+        "league": "Premier League",
+        "name": "Micky van de Ven",
+        "position": "Defender",
+        "price": 5800,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 340,
+        "league": "Seria A",
+        "name": "André-Frank Zambo Anguissa",
+        "position": "Midfielder",
+        "price": 2400,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 212,
+        "league": "Premier League",
+        "name": "Destiny Udogie",
+        "position": "Defender",
+        "price": 6000,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 213,
+        "league": "Premier League",
+        "name": "Oliver Skipp",
+        "position": "Midfielder",
+        "price": 11900,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 334,
+        "league": "Seria A",
+        "name": "Jesper Lindstrøm",
+        "position": "Midfielder",
+        "price": 7200,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 214,
+        "league": "Premier League",
+        "name": "Pierre-Emile Højbjerg",
+        "position": "Midfielder",
+        "price": 2400,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 215,
+        "league": "Premier League",
+        "name": "Yves Bissouma",
+        "position": "Midfielder",
+        "price": 5100,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 328,
+        "league": "Seria A",
+        "name": "Mathías Olivera",
+        "position": "Defender",
+        "price": 2400,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 216,
+        "league": "Premier League",
+        "name": "James Maddison",
+        "position": "Midfielder",
+        "price": 8500,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 217,
+        "league": "Premier League",
+        "name": "Giovani Lo Celso",
+        "position": "Midfielder",
+        "price": 13700,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 338,
+        "league": "Seria A",
+        "name": "Giacomo Raspadori",
+        "position": "Forward",
+        "price": 6500,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 218,
+        "league": "Premier League",
+        "name": "Rodrigo Bentancur",
+        "position": "Midfielder",
+        "price": 9600,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 219,
+        "league": "Premier League",
+        "name": "Son Heung-min",
+        "position": "Forward",
+        "price": 9900,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 348,
+        "league": "Seria A",
+        "name": "Alex Sandro",
+        "position": "Defender",
+        "price": 11400,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 220,
+        "league": "Premier League",
+        "name": "Richarlison",
+        "position": "Forward",
+        "price": 4200,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 221,
+        "league": "Premier League",
+        "name": "Bryan Gil",
+        "position": "Midfielder",
+        "price": 5300,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 342,
+        "league": "Seria A",
+        "name": "Carlo Pinsoglio",
+        "position": "Goalkeeper",
+        "price": 7600,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 222,
+        "league": "Premier League",
+        "name": "Timo Werner",
+        "position": "Forward",
+        "price": 10500,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 223,
+        "league": "Premier League",
+        "name": "Dejan Kulusevski",
+        "position": "Forward",
+        "price": 3000,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 336,
+        "league": "Seria A",
+        "name": "Stanislav Lobotka",
+        "position": "Midfielder",
+        "price": 2100,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 224,
+        "league": "Premier League",
+        "name": "Brennan Johnson",
+        "position": "Forward",
+        "price": 4400,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 225,
+        "league": "Premier League",
+        "name": "Japhet Tanganga",
+        "position": "Defender",
+        "price": 3000,
+        "teamId": 9,
+        "totalPoints": 0
+    },
+    {
+        "_id": 282,
+        "league": "Seria A",
+        "name": "Alessandro Florenzi",
+        "position": "Midfielder",
+        "price": 6900,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 226,
+        "league": "Premier League",
+        "name": "Alisson",
+        "position": "Goalkeeper",
+        "price": 5000,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 227,
+        "league": "Premier League",
+        "name": "Caoimhín Kelleher",
+        "position": "Goalkeeper",
+        "price": 5800,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 356,
+        "league": "Seria A",
+        "name": "Timothy Weah",
+        "position": "Midfielder",
+        "price": 2400,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 228,
+        "league": "Premier League",
+        "name": "Joe Gomez",
+        "position": "Defender",
+        "price": 2800,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 229,
+        "league": "Premier League",
+        "name": "Virgil van Dijk",
+        "position": "Defender",
+        "price": 2100,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 286,
+        "league": "Seria A",
+        "name": "Tijjani Reijnders",
+        "position": "Midfielder",
+        "price": 9500,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 230,
+        "league": "Premier League",
+        "name": "Ibrahima Konaté",
+        "position": "Defender",
+        "price": 2300,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 231,
+        "league": "Premier League",
+        "name": "Kostas Tsimikas",
+        "position": "Defender",
+        "price": 4100,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 280,
+        "league": "Seria A",
+        "name": "Mattia Caldara",
+        "position": "Defender",
+        "price": 6600,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 232,
+        "league": "Premier League",
+        "name": "Andrew Robertson",
+        "position": "Defender",
+        "price": 2900,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 233,
+        "league": "Premier League",
+        "name": "Joël Matip",
+        "position": "Defender",
+        "price": 2700,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 354,
+        "league": "Seria A",
+        "name": "Weston McKennie",
+        "position": "Midfielder",
+        "price": 3000,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 234,
+        "league": "Premier League",
+        "name": "Trent Alexander-Arnold",
+        "position": "Defender",
+        "price": 2400,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 235,
+        "league": "Premier League",
+        "name": "Jarell Quansah",
+        "position": "Defender",
+        "price": 12100,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 364,
+        "league": "Seria A",
+        "name": "Rui Patrício",
+        "position": "Goalkeeper",
+        "price": 10400,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 236,
+        "league": "Premier League",
+        "name": "Conor Bradley",
+        "position": "Defender",
+        "price": 7200,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 237,
+        "league": "Premier League",
+        "name": "Wataru Endō",
+        "position": "Midfielder",
+        "price": 8000,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 358,
+        "league": "Seria A",
+        "name": "Carlos Alcaraz",
+        "position": "Midfielder",
+        "price": 8200,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 238,
+        "league": "Premier League",
+        "name": "Thiago",
+        "position": "Midfielder",
+        "price": 5300,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 239,
+        "league": "Premier League",
+        "name": "Dominik Szoboszlai",
+        "position": "Midfielder",
+        "price": 3700,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 352,
+        "league": "Seria A",
+        "name": "Manuel Locatelli",
+        "position": "Midfielder",
+        "price": 7200,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 240,
+        "league": "Premier League",
+        "name": "Alexis Mac Allister",
+        "position": "Midfielder",
+        "price": 6500,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 241,
+        "league": "Premier League",
+        "name": "Curtis Jones",
+        "position": "Midfielder",
+        "price": 4300,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 362,
+        "league": "Seria A",
+        "name": "Dušan Vlahović",
+        "position": "Forward",
+        "price": 7700,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 242,
+        "league": "Premier League",
+        "name": "Harvey Elliott",
+        "position": "Midfielder",
+        "price": 7200,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 243,
+        "league": "Premier League",
+        "name": "Ryan Gravenberch",
+        "position": "Midfielder",
+        "price": 12900,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 372,
+        "league": "Seria A",
+        "name": "Diego Llorente",
+        "position": "Defender",
+        "price": 7300,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 244,
+        "league": "Premier League",
+        "name": "Luis Díaz",
+        "position": "Midfielder",
+        "price": 2600,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 245,
+        "league": "Premier League",
+        "name": "Darwin Núñez",
+        "position": "Forward",
+        "price": 7700,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 366,
+        "league": "Seria A",
+        "name": "Dean Huijsen",
+        "position": "Defender",
+        "price": 3700,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 246,
+        "league": "Premier League",
+        "name": "Mohamed Salah",
+        "position": "Forward",
+        "price": 4200,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 247,
+        "league": "Premier League",
+        "name": "Cody Gakpo",
+        "position": "Forward",
+        "price": 4500,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 360,
+        "league": "Seria A",
+        "name": "Hans Nicolussi",
+        "position": "Midfielder",
+        "price": 11700,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 248,
+        "league": "Premier League",
+        "name": "Diogo Jota",
+        "position": "Forward",
+        "price": 12900,
+        "teamId": 10,
+        "totalPoints": 0
+    },
+    {
+        "_id": 249,
+        "league": "Premier League",
+        "name": "Robert Sánchez",
+        "position": "Goalkeeper",
+        "price": 10000,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 370,
+        "league": "Seria A",
+        "name": "Lorenzo Pellegrini",
+        "position": "Forward",
+        "price": 7700,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 250,
+        "league": "Premier League",
+        "name": "Đorđe Petrović",
+        "position": "Goalkeeper",
+        "price": 14600,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 251,
+        "league": "Premier League",
+        "name": "Axel Disasi",
+        "position": "Defender",
+        "price": 8300,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 380,
+        "league": "Seria A",
+        "name": "Leonardo Spinazzola",
+        "position": "Defender",
+        "price": 7600,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 252,
+        "league": "Premier League",
+        "name": "Marc Cucurella",
+        "position": "Defender",
+        "price": 2800,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 253,
+        "league": "Premier League",
+        "name": "Benoît Badiashile",
+        "position": "Defender",
+        "price": 10600,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 374,
+        "league": "Seria A",
+        "name": "Sardar Azmoun",
+        "position": "Midfielder",
+        "price": 7300,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 254,
+        "league": "Premier League",
+        "name": "Thiago Silva",
+        "position": "Defender",
+        "price": 12300,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 255,
+        "league": "Premier League",
+        "name": "Trevoh Chalobah",
+        "position": "Defender",
+        "price": 6000,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 368,
+        "league": "Seria A",
+        "name": "Evan Ndicka",
+        "position": "Defender",
+        "price": 12900,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 257,
+        "league": "Premier League",
+        "name": "Reece James",
+        "position": "Defender",
+        "price": 10000,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 259,
+        "league": "Premier League",
+        "name": "Wesley Fofana",
+        "position": "Defender",
+        "price": 6600,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 261,
+        "league": "Premier League",
+        "name": "Enzo Fernández",
+        "position": "Midfielder",
+        "price": 3100,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 263,
+        "league": "Premier League",
+        "name": "Conor Gallagher",
+        "position": "Midfielder",
+        "price": 10400,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 265,
+        "league": "Premier League",
+        "name": "Roméo Lavia",
+        "position": "Midfielder",
+        "price": 6500,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 267,
+        "league": "Premier League",
+        "name": "Mykhailo Mudryk",
+        "position": "Forward",
+        "price": 5400,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 269,
+        "league": "Premier League",
+        "name": "Nicolas Jackson",
+        "position": "Forward",
+        "price": 6800,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 271,
+        "league": "Premier League",
+        "name": "Cole Palmer",
+        "position": "Midfielder",
+        "price": 10300,
+        "teamId": 11,
+        "totalPoints": 0
+    },
+    {
+        "_id": 273,
+        "league": "Seria A",
+        "name": "Marco Sportiello",
+        "position": "Goalkeeper",
+        "price": 10900,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 275,
+        "league": "Seria A",
+        "name": "Théo Hernandez",
+        "position": "Defender",
+        "price": 2500,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 277,
+        "league": "Seria A",
+        "name": "Fikayo Tomori",
+        "position": "Defender",
+        "price": 8400,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 279,
+        "league": "Seria A",
+        "name": "Malick Thiaw",
+        "position": "Defender",
+        "price": 3300,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 281,
+        "league": "Seria A",
+        "name": "Filippo Terracciano",
+        "position": "Defender",
+        "price": 8700,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 283,
+        "league": "Seria A",
+        "name": "Matteo Gabbia",
+        "position": "Defender",
+        "price": 8200,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 285,
+        "league": "Seria A",
+        "name": "Ruben Loftus-Cheek",
+        "position": "Defender",
+        "price": 2600,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 287,
+        "league": "Seria A",
+        "name": "Tommaso Pobega",
+        "position": "Midfielder",
+        "price": 8000,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 289,
+        "league": "Seria A",
+        "name": "Olivier Giroud",
+        "position": "Forward",
+        "price": 5900,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 291,
+        "league": "Seria A",
+        "name": "Christian Pulisic",
+        "position": "Midfielder",
+        "price": 9600,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 293,
+        "league": "Seria A",
+        "name": "Noah Okafor",
+        "position": "Midfielder",
+        "price": 4400,
+        "teamId": 12,
+        "totalPoints": 0
+    },
+    {
+        "_id": 295,
+        "league": "Seria A",
+        "name": "Yann Sommer",
+        "position": "Goalkeeper",
+        "price": 2200,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 297,
+        "league": "Seria A",
+        "name": "Emil Audero",
+        "position": "Goalkeeper",
+        "price": 8400,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 299,
+        "league": "Seria A",
+        "name": "Francesco Acerbi",
+        "position": "Defender",
+        "price": 3400,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 301,
+        "league": "Seria A",
+        "name": "Yann Aurel Bisseck",
+        "position": "Defender",
+        "price": 7900,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 303,
+        "league": "Seria A",
+        "name": "Matteo Darmian",
+        "position": "Midfielder",
+        "price": 2700,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 305,
+        "league": "Seria A",
+        "name": "Denzel Dumfries",
+        "position": "Midfielder",
+        "price": 2400,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 307,
+        "league": "Seria A",
+        "name": "Juan Cuadrado",
+        "position": "Forward",
+        "price": 10800,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 309,
+        "league": "Seria A",
+        "name": "Davide Frattesi",
+        "position": "Midfielder",
+        "price": 8900,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 311,
+        "league": "Seria A",
+        "name": "Henrikh Mkhitaryan",
+        "position": "Midfielder",
+        "price": 11400,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 313,
+        "league": "Seria A",
+        "name": "Carlos Augusto",
+        "position": "Midfielder",
+        "price": 5400,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 315,
+        "league": "Seria A",
+        "name": "Marcus Thuram",
+        "position": "Forward",
+        "price": 8100,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 317,
+        "league": "Seria A",
+        "name": "Alexis Sánchez",
+        "position": "Forward",
+        "price": 8500,
+        "teamId": 13,
+        "totalPoints": 0
+    },
+    {
+        "_id": 319,
+        "league": "Seria A",
+        "name": "Natan",
+        "position": "Defender",
+        "price": 2900,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 321,
+        "league": "Seria A",
+        "name": "Juan Jesus",
+        "position": "Defender",
+        "price": 5000,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 323,
+        "league": "Seria A",
+        "name": "Hamed Traorè",
+        "position": "Forward",
+        "price": 5000,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 325,
+        "league": "Seria A",
+        "name": "Amir Rrahmani",
+        "position": "Defender",
+        "price": 6500,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 327,
+        "league": "Seria A",
+        "name": "Hubert Idasiak",
+        "position": "Goalkeeper",
+        "price": 5600,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 329,
+        "league": "Seria A",
+        "name": "Giovanni Simeone",
+        "position": "Forward",
+        "price": 7600,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 331,
+        "league": "Seria A",
+        "name": "Matteo Politano",
+        "position": "Forward",
+        "price": 2400,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 333,
+        "league": "Seria A",
+        "name": "Cyril Ngonge",
+        "position": "Forward",
+        "price": 9000,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 335,
+        "league": "Seria A",
+        "name": "Leander Dendoncker",
+        "position": "Midfielder",
+        "price": 2300,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 337,
+        "league": "Seria A",
+        "name": "Khvicha Kvaratskhelia",
+        "position": "Forward",
+        "price": 6400,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 339,
+        "league": "Seria A",
+        "name": "Pierluigi Gollini",
+        "position": "Goalkeeper",
+        "price": 10300,
+        "teamId": 14,
+        "totalPoints": 0
+    },
+    {
+        "_id": 341,
+        "league": "Seria A",
+        "name": "Wojciech Szczęsny",
+        "position": "Goalkeeper",
+        "price": 8400,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 343,
+        "league": "Seria A",
+        "name": "Mattia Perin",
+        "position": "Goalkeeper",
+        "price": 4400,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 344,
+        "league": "Seria A",
+        "name": "Mattia De Sciglio",
+        "position": "Defender",
+        "price": 4700,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 345,
+        "league": "Seria A",
+        "name": "Bremer",
+        "position": "Defender",
+        "price": 2800,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 346,
+        "league": "Seria A",
+        "name": "Federico Gatti",
+        "position": "Defender",
+        "price": 4000,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 347,
+        "league": "Seria A",
+        "name": "Danilo",
+        "position": "Defender",
+        "price": 10800,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 349,
+        "league": "Seria A",
+        "name": "Daniele Rugani",
+        "position": "Defender",
+        "price": 2800,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 350,
+        "league": "Seria A",
+        "name": "Andrea Cambiaso",
+        "position": "Defender",
+        "price": 3700,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 351,
+        "league": "Seria A",
+        "name": "Tiago Djaló",
+        "position": "Defender",
+        "price": 13600,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 353,
+        "league": "Seria A",
+        "name": "Filip Kostić",
+        "position": "Forward",
+        "price": 5000,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 355,
+        "league": "Seria A",
+        "name": "Fabio Miretti",
+        "position": "Midfielder",
+        "price": 6600,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 357,
+        "league": "Seria A",
+        "name": "Adrien Rabiot",
+        "position": "Midfielder",
+        "price": 9800,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 359,
+        "league": "Seria A",
+        "name": "Nikola Sekulov",
+        "position": "Forward",
+        "price": 4700,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 361,
+        "league": "Seria A",
+        "name": "Federico Chiesa",
+        "position": "Forward",
+        "price": 4900,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 363,
+        "league": "Seria A",
+        "name": "Arkadiusz Milik",
+        "position": "Forward",
+        "price": 4000,
+        "teamId": 15,
+        "totalPoints": 0
+    },
+    {
+        "_id": 365,
+        "league": "Seria A",
+        "name": "Rick Karsdorp",
+        "position": "Midfielder",
+        "price": 2200,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 367,
+        "league": "Seria A",
+        "name": "Bryan Cristante",
+        "position": "Midfielder",
+        "price": 11500,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 369,
+        "league": "Seria A",
+        "name": "Chris Smalling",
+        "position": "Defender",
+        "price": 11000,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 371,
+        "league": "Seria A",
+        "name": "Tammy Abraham",
+        "position": "Forward",
+        "price": 10000,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 373,
+        "league": "Seria A",
+        "name": "Leandro Paredes",
+        "position": "Midfielder",
+        "price": 2800,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 375,
+        "league": "Seria A",
+        "name": "Zeki Çelik",
+        "position": "Defender",
+        "price": 11800,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 377,
+        "league": "Seria A",
+        "name": "Paulo Dybala",
+        "position": "Forward",
+        "price": 11000,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 379,
+        "league": "Seria A",
+        "name": "Gianluca Mancini",
+        "position": "Defender",
+        "price": 10800,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 381,
+        "league": "Seria A",
+        "name": "Rasmus Kristensen",
+        "position": "Defender",
+        "price": 7000,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 383,
+        "league": "Seria A",
+        "name": "Angeliño",
+        "position": "Defender",
+        "price": 2900,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 384,
+        "league": "Seria A",
+        "name": "Romelu Lukaku",
+        "position": "Forward",
+        "price": 9500,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 386,
+        "league": "Seria A",
+        "name": "Mile Svilar",
+        "position": "Goalkeeper",
+        "price": 2700,
+        "teamId": 16,
+        "totalPoints": 0
+    },
+    {
+        "_id": 388,
+        "league": "Seria A",
+        "name": "Christos Mandas",
+        "position": "Goalkeeper",
+        "price": 2100,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 390,
+        "league": "Seria A",
+        "name": "Ivan Provedel",
+        "position": "Goalkeeper",
+        "price": 10600,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 392,
+        "league": "Seria A",
+        "name": "Patric Gabarrón",
+        "position": "Defender",
+        "price": 3600,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 394,
+        "league": "Seria A",
+        "name": "Nicolò Casale",
+        "position": "Defender",
+        "price": 2800,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 396,
+        "league": "Seria A",
+        "name": "Elseid Hysaj",
+        "position": "Defender",
+        "price": 3900,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 398,
+        "league": "Seria A",
+        "name": "Mario Gila",
+        "position": "Defender",
+        "price": 3100,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 400,
+        "league": "Seria A",
+        "name": "Adam Marušić",
+        "position": "Defender",
+        "price": 12600,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 402,
+        "league": "Seria A",
+        "name": "Daichi Kamada",
+        "position": "Forward",
+        "price": 12100,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 404,
+        "league": "Seria A",
+        "name": "Luis Alberto",
+        "position": "Midfielder",
+        "price": 9300,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 406,
+        "league": "Seria A",
+        "name": "Nicolò Rovella",
+        "position": "Midfielder",
+        "price": 2600,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 408,
+        "league": "Seria A",
+        "name": "Pedro",
+        "position": "Forward",
+        "price": 5300,
+        "teamId": 17,
+        "totalPoints": 0
+    },
+    {
+        "_id": 410,
+        "league": "La Liga",
+        "name": "Fermín López",
+        "position": "Midfielder",
+        "price": 6200,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 412,
+        "league": "La Liga",
+        "name": "Pau Cubarsí",
+        "position": "Defender",
+        "price": 8600,
+        "teamId": 1,
+        "totalPoints": 0
+    },
+    {
+        "_id": 414,
+        "league": "Premier League",
+        "name": "Jacob Wright",
+        "position": "Midfielder",
+        "price": 3000,
+        "teamId": 7,
+        "totalPoints": 0
+    }
+]

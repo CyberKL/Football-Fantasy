@@ -17,6 +17,7 @@ namespace winrt::FootballFantasy::implementation
 
         void Navigate(hstring pageName);
         void Window_Activated(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::WindowActivatedEventArgs const& args);
+        void Window_Closed(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::WindowEventArgs const& args);
     };
 }
 

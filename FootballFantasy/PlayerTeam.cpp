@@ -149,6 +149,14 @@ void PlayerTeam::updatePoints(int gameweek)
 
 	// Add all team footballers points
 	for (it = squad.begin(); it != squad.end(); it++)
-		if (it->second.second) points[gameweek] += it->second.first->getGwPoints()[gameweek];
+	{
+		if (it->second.second)
+		{
+			if (it->second.first == captain)
+				points[gameweek] += it->second.first->getGwPoints()[gameweek] * 2;
+			else
+				points[gameweek] += it->second.first->getGwPoints()[gameweek];
+		}
+	}
 }
 

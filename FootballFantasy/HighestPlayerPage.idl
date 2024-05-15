@@ -1,0 +1,9 @@
+namespace FootballFantasy
+{
+    [default_interface]
+    runtimeclass HighestPlayerPage : Microsoft.UI.Xaml.Controls.Page
+    {
+        HighestPlayerPage();
+        Int32 MyProperty;
+    }
+}

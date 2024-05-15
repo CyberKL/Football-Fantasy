@@ -72,10 +72,10 @@ void winrt::FootballFantasy::implementation::AdminEditMatchesPage::Page_Loaded(w
     if (!awayTeam.empty()) awayTeam.clear();
     clickedBtn = nullptr;
 
-    Match match = Presenter::getInstance()->getPressedMatch();
+    Match* match = Presenter::getInstance()->getPressedMatch();
 
-    HomeTeamBlock().Text(to_hstring(match.getHomeTeam()->getName()));
-    AwayTeamBlock().Text(to_hstring(match.getAwayTeam()->getName()));
+    HomeTeamBlock().Text(to_hstring(match->getHomeTeam()->getName()));
+    AwayTeamBlock().Text(to_hstring(match->getAwayTeam()->getName()));
 
     for (int i = 1; i < 12; i++)
     {
@@ -196,7 +196,7 @@ void winrt::FootballFantasy::implementation::AdminEditMatchesPage::AddFootballer
 
     if (team.substr(0, 8) == "HomeTeam")
     {
-        FootballTeam footballTeam = *Presenter::getInstance()->getPressedMatch().getHomeTeam();
+        FootballTeam footballTeam = *Presenter::getInstance()->getPressedMatch()->getHomeTeam();
         vector<Footballer*> footballers = footballTeam.getFootballers();
         int row = Controls::Grid::GetRow(sender.as <Controls::Button>());
         if (row == 1)
@@ -218,7 +218,7 @@ void winrt::FootballFantasy::implementation::AdminEditMatchesPage::AddFootballer
     }
     else if (team.substr(0, 8) == "AwayTeam")
     {
-        FootballTeam footballTeam = *Presenter::getInstance()->getPressedMatch().getAwayTeam();
+        FootballTeam footballTeam = *Presenter::getInstance()->getPressedMatch()->getAwayTeam();
         vector<Footballer*> footballers = footballTeam.getFootballers();
         int row = Controls::Grid::GetRow(sender.as <Controls::Button>());
         if (row == 1)
@@ -272,6 +272,7 @@ void winrt::FootballFantasy::implementation::AdminEditMatchesPage::AddFootballer
         {
             FootballerOptions(sender, e);
         });
+    footballerBtn.RequestedTheme(ElementTheme::Light);
 
     int row = Controls::Grid::GetRow(clickedBtn);
     Controls::Grid::SetRow(footballerBtn, row);
@@ -280,7 +281,7 @@ void winrt::FootballFantasy::implementation::AdminEditMatchesPage::AddFootballer
     parentGrid.Children().IndexOf(clickedBtn, index);
     parentGrid.Children().RemoveAt(index);
     parentGrid.Children().Append(footballerBtn);
-    if (to_string(parentGrid.Name()).find("Subs")) footballerBtn.IsEnabled(false);
+    if (to_string(parentGrid.Name()).find("Subs") != string::npos) footballerBtn.IsEnabled(false);
 
     if (homeTeam.size() == 18) HomeTeamSubBtn().IsEnabled(true);
     if (awayTeam.size() == 18) AwayTeamSubBtn().IsEnabled(true);
@@ -485,9 +486,9 @@ void winrt::FootballFantasy::implementation::AdminEditMatchesPage::SubstituteFoo
         Controls::Grid::SetRow(panel, homeSubtitutions.size());
         HomeSubstitutionsGrid().Children().Append(panel);
         for (auto btn : HomeTeamSubsGrid().Children()) 
-            if (stoi(to_string(btn.as<Controls::Button>().Name())) == subPlayerId)
+            if (stoi(to_string(btn.try_as<Controls::Button>().Name())) == subPlayerId)
             {
-                btn.as<Controls::Button>().IsEnabled(true);
+                btn.try_as<Controls::Button>().IsEnabled(true);
                 break;
             }
     }
@@ -512,9 +513,9 @@ void winrt::FootballFantasy::implementation::AdminEditMatchesPage::SubstituteFoo
         Controls::Grid::SetRow(panel, awaySubtitutions.size());
         AwaySubstitutionsGrid().Children().Append(panel);
         for (auto btn : AwayTeamSubsGrid().Children())
-            if (stoi(to_string(btn.as<Controls::Button>().Name())) == subPlayerId)
+            if (stoi(to_string(btn.try_as<Controls::Button>().Name())) == subPlayerId)
             {
-                btn.as<Controls::Button>().IsEnabled(true);
+                btn.try_as<Controls::Button>().IsEnabled(true);
                 break;
             }
     }
@@ -539,7 +540,7 @@ void winrt::FootballFantasy::implementation::AdminEditMatchesPage::Confirm_Stats
     footballer.penaltiesSaved = 0;
     footballer.shotsSaved = 0;
 
-    if (optionsPanel.Children().Size() > 5)
+    if (optionsPanel.Children().Size() > 6)
     {
         footballer.shotsSaved = optionsPanel.Children().GetAt(6).as<Controls::NumberBox>().Value();
         footballer.penaltiesSaved = optionsPanel.Children().GetAt(7).as<Controls::NumberBox>().Value();
@@ -554,6 +555,7 @@ void winrt::FootballFantasy::implementation::AdminEditMatchesPage::Confirm_Stats
             homeStats.erase(pressedFootballerId);
         }
         homeScore += footballer.goals;
+        HomeTeamScoreBlock().Text(to_hstring(homeScore));
         homeStats.insert(make_pair(pressedFootballerId, footballer));
     }
     else if (team == "AwayTeam")
@@ -564,6 +566,7 @@ void winrt::FootballFantasy::implementation::AdminEditMatchesPage::Confirm_Stats
             awayStats.erase(pressedFootballerId);
         }
         awayScore += footballer.goals;
+        AwayTeamScoreBlock().Text(to_hstring(awayScore));
         awayStats.insert(make_pair(pressedFootballerId, footballer));
     }
 }
@@ -645,13 +648,19 @@ void winrt::FootballFantasy::implementation::AdminEditMatchesPage::ConfirmBtn_Cl
             scorers.push_back(&Presenter::getInstance()->getFootballer(it->first));
     }
 
-    Presenter::getInstance()->getPressedMatch().setPlayed(true);
+    Presenter::getInstance()->getPressedMatch()->setPlayed(true);
     string score = homeScore + ":" + awayScore;
-    Presenter::getInstance()->getPressedMatch().setScore(score);
-    Presenter::getInstance()->getPressedMatch().setScorers(scorers);
+    Presenter::getInstance()->getPressedMatch()->setScore(score);
+    Presenter::getInstance()->getPressedMatch()->setScorers(scorers);
 
     for (it = homeStats.begin(); it != homeStats.end(); it++)
         Presenter::getInstance()->updateFootballerPoints(it->first, it->second.goals, it->second.assists, it->second.penaltiesMissed, it->second.yellowCards, it->second.redCards, it->second.ownGoals, it->second.penaltiesSaved, it->second.shotsSaved, it->second.timePlayed, it->second.goalsConceded, it->second.cleanSheet);
     for (it = awayStats.begin(); it != awayStats.end(); it++)
         Presenter::getInstance()->updateFootballerPoints(it->first, it->second.goals, it->second.assists, it->second.penaltiesMissed, it->second.yellowCards, it->second.redCards, it->second.ownGoals, it->second.penaltiesSaved, it->second.shotsSaved, it->second.timePlayed, it->second.goalsConceded, it->second.cleanSheet);
+
+    Presenter::getInstance()->updatePlayerPoints();
+    Presenter::getInstance()->updatePlayerRankings();
+    Presenter::getInstance()->updateFootballTeamsStandings();
+    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.AdminMatchesPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+    Frame().Navigate(page);
 }

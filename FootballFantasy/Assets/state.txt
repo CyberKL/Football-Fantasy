@@ -1,0 +1,2 @@
+currentGw:1
+seasonStarted:false

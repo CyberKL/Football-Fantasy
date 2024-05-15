@@ -49,7 +49,7 @@ bool Presenter::getCaptaincyEdited()
     return captaincyEdited;
 }
 
-Match Presenter::getPressedMatch()
+Match* Presenter::getPressedMatch()
 {
     return pressedMatch;
 }
@@ -94,7 +94,7 @@ void Presenter::setCaptaincyEdited(bool captaincyEdited)
     this->captaincyEdited = captaincyEdited;
 }
 
-void Presenter::setPressedMatch(Match pressedMatch)
+void Presenter::setPressedMatch(Match* pressedMatch)
 {
     this->pressedMatch = pressedMatch;
 }
@@ -393,7 +393,7 @@ map<int, vector<string>> Presenter::getTotalRankings()
     return Manager::getInstance()->getOrderedPlayers();
 }
 
-map<int, unordered_map<int, Match>> Presenter::getMatches()
+map<int, unordered_map<int, Match*>> Presenter::getMatches()
 {
     return Manager::getInstance()->getMatches();
 }
@@ -466,4 +466,69 @@ void Presenter::changeTeam(int footballerId, int changedFootballerTeam)
 void Presenter::updateFootballerPoints(int id, int goals, int assists, int penaltiesMissed, int yellowCards, bool redCard, int ownGoals, int penaltiesSaved, int shotsSaved, int timePlayed, int goalsConceded, bool cleanSheet)
 {
     Manager::getInstance()->getFootballers()[id]->updatePoints(goals, assists, penaltiesMissed, yellowCards, redCard, ownGoals, penaltiesSaved, shotsSaved, timePlayed, goalsConceded, cleanSheet);
+}
+
+void Presenter::addFootballTeam(string name, string league)
+{
+    Manager::getInstance()->addFootballTeam(name, league);
+}
+
+void Presenter::makeMatchesList()
+{
+    Manager::getInstance()->makeMatchesList();
+}
+
+void Presenter::updatePlayerPoints()
+{
+    Manager::getInstance()->updatePlayerPoints();
+}
+
+void Presenter::updatePlayerRankings()
+{
+    Manager::getInstance()->gwPointsRanking();
+    Manager::getInstance()->totalPointsRanking();
+}
+
+void Presenter::updateFootballTeamsStandings()
+{
+    Manager::getInstance()->updateLeagueStandings();
+}
+
+int Presenter::getAveragePlayerPoints()
+{
+    return Manager::getInstance()->getAveragePlayerPoints();
+}
+
+Player* Presenter::getHighestPlayer()
+{
+    return Manager::getInstance()->getHighestPlayer();
+}
+
+unordered_map<int, struct UiFootballer> Presenter::loadHighestPlayerPage()
+{
+    unordered_map<int, pair<Footballer*, bool>> squad = Manager::getInstance()->getHighestPlayer()->getTeam()->getSquad();
+    unordered_map<int, pair<Footballer*, bool>>::iterator it;
+    unordered_map<int, struct UiFootballer> footballers;
+    for (it = squad.begin(); it != squad.end(); it++)
+    {
+        struct UiFootballer uiFootballer;
+        Footballer footballer = *it->second.first;
+        uiFootballer.id = footballer.getId();
+        uiFootballer.name = footballer.getName();
+        uiFootballer.isStarting = it->second.second;
+        uiFootballer.position = footballer.getPosition();
+        uiFootballer.info = to_string(footballer.getGwPoints()[Manager::getInstance()->getCurrentGw()]);
+        footballers[uiFootballer.id] = uiFootballer;
+    }
+    return footballers;
+}
+
+void Presenter::progressGameweek()
+{
+    Manager::getInstance()->progressGameweek();
+}
+
+void Presenter::saveData()
+{
+    Manager::getInstance()->save();
 }

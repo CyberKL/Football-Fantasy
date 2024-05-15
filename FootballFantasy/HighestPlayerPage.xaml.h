@@ -1,12 +1,12 @@
 #pragma once
 
-#include "AdminMatchesPage.g.h"
+#include "HighestPlayerPage.g.h"
 
 namespace winrt::FootballFantasy::implementation
 {
-    struct AdminMatchesPage : AdminMatchesPageT<AdminMatchesPage>
+    struct HighestPlayerPage : HighestPlayerPageT<HighestPlayerPage>
     {
-        AdminMatchesPage()
+        HighestPlayerPage()
         {
             // Xaml objects should not call InitializeComponent during construction.
             // See https://github.com/microsoft/cppwinrt/tree/master/nuget#initializecomponent
@@ -16,13 +16,12 @@ namespace winrt::FootballFantasy::implementation
         void MyProperty(int32_t value);
 
         void Page_Loaded(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e);
-        void FinishBtn_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e);
     };
 }
 
 namespace winrt::FootballFantasy::factory_implementation
 {
-    struct AdminMatchesPage : AdminMatchesPageT<AdminMatchesPage, implementation::AdminMatchesPage>
+    struct HighestPlayerPage : HighestPlayerPageT<HighestPlayerPage, implementation::HighestPlayerPage>
     {
     };
 }

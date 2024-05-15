@@ -17,7 +17,7 @@ private:
 
 	Player* loggedInPlayer;
 	int pressedFootballerControlId;
-	Match pressedMatch;
+	Match* pressedMatch;
 	unordered_map<int, bool> tempSquad;
 	int tempCaptainId;
 	int tempViceCaptainId;
@@ -39,7 +39,7 @@ public:
 	int getTempViceCaptainId();
 	bool getSquadEdited();
 	bool getCaptaincyEdited();
-	Match getPressedMatch();
+	Match* getPressedMatch();
 
 	// Setters
 	void setPressedFootballerControlId(int);
@@ -48,7 +48,7 @@ public:
 	void setTempViceCaptainId(int);
 	void setSquadEdited(bool);
 	void setCaptaincyEdited(bool);
-	void setPressedMatch(Match);
+	void setPressedMatch(Match*);
 
 	bool isUsernameDuplicate(const string&);
 	void signUp(const string&, const string&);
@@ -75,7 +75,7 @@ public:
 	int getLoggedInPlayerID();
 	map<int, vector<string>> getCurrentGwRankings();
 	map<int, vector<string>> getTotalRankings();
-	map<int, unordered_map<int, Match>> getMatches();
+	map<int, unordered_map<int, Match*>> getMatches();
 	int getCurrentGw();
 	void logOut();
 	void updateRate(double);
@@ -89,8 +89,16 @@ public:
 	void changeTeam(int footballerId, int changedFootballerTeam);
 	bool getSeasonStarted();
 	void setSeasonStarted(bool);
-
-
+	void addFootballTeam(string, string);
+	void makeMatchesList();
 	void updateFootballerPoints(int, int, int, int, int, bool, int, int, int, int, int, bool);
+	void updatePlayerPoints();
+	void updatePlayerRankings();
+	void updateFootballTeamsStandings();
+	int getAveragePlayerPoints();
+	Player* getHighestPlayer();
+	unordered_map<int, struct UiFootballer> loadHighestPlayerPage();
+	void progressGameweek();
+	void saveData();
 };
 

@@ -42,6 +42,9 @@
             <TextBlock x:Name="BudgetTextBlock" Text="" TextAlignment="Center" Foreground="White" />
         </StackPanel>
         
+        <!-- lucky wheel -->
+        <Button x:Name="LuckyPickBtn" Content="Lucky Pick" Margin="100,0,0,0" Click="LuckyPickBtn_Click" />
+
         <!-- Submit -->
         <Button x:Name="SubmitBtn" Grid.Row="8" HorizontalAlignment="Right" Content="Submit" FontSize="24" Margin="0,0,100,0" IsEnabled="False" Click="SubmitBtn_Click" RequestedTheme="Light"/>
 

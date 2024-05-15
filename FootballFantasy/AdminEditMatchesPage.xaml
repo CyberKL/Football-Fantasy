@@ -27,7 +27,7 @@
             <StackPanel Grid.Column="0" Spacing="5" HorizontalAlignment="Center" VerticalAlignment="Center">
 
                 <TextBlock x:Name="HomeTeamBlock" Text="" Foreground="White" />
-                <TextBlock x:Name="HomeTeamScoreBlock" Foreground="White" />
+                <TextBlock x:Name="HomeTeamScoreBlock" FontSize="28" Foreground="White" />
 
             </StackPanel>
             <Button x:Name="ConfirmBtn" Grid.Column="1" Content="Confirm" HorizontalAlignment="Center" Background="Transparent" Click="ConfirmBtn_Click" IsEnabled="False" />
@@ -36,7 +36,7 @@
             <StackPanel Grid.Column="2" Spacing="5" HorizontalAlignment="Center" VerticalAlignment="Center">
 
                 <TextBlock x:Name="AwayTeamBlock" Text="" Foreground="White" />
-                <TextBlock x:Name="AwayTeamScoreBlock" Foreground="White" />
+                <TextBlock x:Name="AwayTeamScoreBlock" FontSize="28" Foreground="White" />
 
             </StackPanel>
         </Grid>

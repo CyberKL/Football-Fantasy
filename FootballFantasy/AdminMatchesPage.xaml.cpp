@@ -33,12 +33,13 @@ void winrt::FootballFantasy::implementation::AdminMatchesPage::Page_Loaded(winrt
         MainPanel().Visibility(Visibility::Visible);
         MatchesGrid().Children().Clear();
         MatchesGrid().RowDefinitions().Clear();
-        unordered_map<int, Match> matches = Presenter::getInstance()->getMatches()[Presenter::getInstance()->getCurrentGw()];
+        unordered_map<int, Match*> matches = Presenter::getInstance()->getMatches()[Presenter::getInstance()->getCurrentGw()];
         hstring gameweek = to_hstring(Presenter::getInstance()->getCurrentGw());
         hstring gameweekText = L"Gameweek " + gameweek;
         GameweekBlock().Text(gameweekText);
 
-        unordered_map<int, Match>::iterator it;
+        bool gwFinished = true;
+        unordered_map<int, Match*>::iterator it;
         int count = 0;
         for (it = matches.begin(); it != matches.end(); it++)
         {
@@ -47,19 +48,19 @@ void winrt::FootballFantasy::implementation::AdminMatchesPage::Page_Loaded(winrt
             Controls::Button infoTextBlock;
             Controls::TextBlock awayTeamTextBlock;
 
-            homeTeamTextBlock.Text(to_hstring(it->second.getHomeTeam()->getName()));
-            it->second.getPlayed() ? infoTextBlock.Content(winrt::box_value(to_hstring(it->second.getScore()))) : infoTextBlock.Content(winrt::box_value(L"VS"));
+            homeTeamTextBlock.Text(to_hstring(it->second->getHomeTeam()->getName()));
+            it->second->getPlayed() ? infoTextBlock.Content(winrt::box_value(to_hstring(it->second->getScore()))) : infoTextBlock.Content(winrt::box_value(L"VS"));
             infoTextBlock.Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
                 {
                     int gameweek = stoi(to_string(GameweekBlock().Text()).substr(9));
-                    Match pressedMatch = Presenter::getInstance()->getMatches()[gameweek][stoi(to_string(sender.as<Controls::Button>().Name()))];
+                    Match* pressedMatch = Presenter::getInstance()->getMatches()[gameweek][stoi(to_string(sender.as<Controls::Button>().Name()))];
                     Presenter::getInstance()->setPressedMatch(pressedMatch);
                     winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.AdminEditMatchesPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
                     Frame().Navigate(page);
                 });
             infoTextBlock.FontSize(16);
-            infoTextBlock.Name(to_hstring(it->second.getId()));
-            awayTeamTextBlock.Text(to_hstring(it->second.getAwayTeam()->getName()));
+            infoTextBlock.Name(to_hstring(it->second->getId()));
+            awayTeamTextBlock.Text(to_hstring(it->second->getAwayTeam()->getName()));
 
             homeTeamTextBlock.VerticalAlignment(VerticalAlignment::Center);
             awayTeamTextBlock.VerticalAlignment(VerticalAlignment::Center);
@@ -75,8 +76,10 @@ void winrt::FootballFantasy::implementation::AdminMatchesPage::Page_Loaded(winrt
             MatchesGrid().Children().Append(homeTeamTextBlock);
             MatchesGrid().Children().Append(infoTextBlock);
             MatchesGrid().Children().Append(awayTeamTextBlock);
+            if (!it->second->getPlayed()) gwFinished = false;
             count++;
         }
+        FinishBtn().IsEnabled(gwFinished);
     }
     else
     {
@@ -85,6 +88,7 @@ void winrt::FootballFantasy::implementation::AdminMatchesPage::Page_Loaded(winrt
         btn.Click([=](winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
             {
                 Presenter::getInstance()->setSeasonStarted(true);
+                Presenter::getInstance()->makeMatchesList();
                 for (auto item : Frame().Parent().as<Controls::NavigationView>().MenuItems())
                 {
                     if (item.as<Controls::NavigationViewItem>().Tag().as<winrt::hstring>() == L"Edit")
@@ -101,4 +105,12 @@ void winrt::FootballFantasy::implementation::AdminMatchesPage::Page_Loaded(winrt
         btn.HorizontalAlignment(HorizontalAlignment::Center);
         this->Content(btn);
     }
+}
+
+
+void winrt::FootballFantasy::implementation::AdminMatchesPage::FinishBtn_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
+{
+    Presenter::getInstance()->progressGameweek();
+    winrt::Windows::UI::Xaml::Interop::TypeName page = { L"FootballFantasy.AdminMatchesPage", winrt::Windows::UI::Xaml::Interop::TypeKind::Custom }; // Set Page
+    Frame().Navigate(page);
 }
