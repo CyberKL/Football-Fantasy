@@ -173,7 +173,7 @@ void Manager::load()
 	// Loading from the json files
 
 	// Loading football teams
-	ifstream footballTeamsFile("D:\\Uni\\Year 2\\2nd Semester\\Data Structure\\ProjectFinal\\FootballFantasy\\FootballFantasy\\Assets\\FootballTeams.json");
+	ifstream footballTeamsFile("C:\\Users\\marya\\OneDrive\\Desktop\\cs\\year 2\\2nd semester\\Data Structures\\ProjectFinal\\Football-Fantasy\\FootballFantasy\\Assets\\FootballTeams.json");
 	json jsonFootballTeams;
 	footballTeamsFile >> jsonFootballTeams;
 	for (json j : jsonFootballTeams) 
@@ -184,7 +184,7 @@ void Manager::load()
 	}
 
 	// loading footballers
-	ifstream footballersFile("D:\\Uni\\Year 2\\2nd Semester\\Data Structure\\ProjectFinal\\FootballFantasy\\FootballFantasy\\Assets\\Footballers.json");
+	ifstream footballersFile("C:\\Users\\marya\\OneDrive\\Desktop\\cs\\year 2\\2nd semester\\Data Structures\\ProjectFinal\\Football-Fantasy\\FootballFantasy\\Assets\\Footballers.json");
 	json jsonFootballers;
 	footballersFile >> jsonFootballers;
 	for (json j : jsonFootballers)
@@ -196,7 +196,7 @@ void Manager::load()
 
 
 	// loading matches
-	ifstream matchesFile("D:\\Uni\\Year 2\\2nd Semester\\Data Structure\\ProjectFinal\\FootballFantasy\\FootballFantasy\\Assets\\Matches.json");
+	ifstream matchesFile("C:\\Users\\marya\\OneDrive\\Desktop\\cs\\year 2\\2nd semester\\Data Structures\\ProjectFinal\\Football-Fantasy\\FootballFantasy\\Assets\\Matches.json");
 	json jsonMatches;
 	matchesFile >> jsonMatches;
 	for (json j : jsonMatches)
@@ -207,7 +207,7 @@ void Manager::load()
 	}
 
 	// loading players
-	ifstream playersFile("D:\\Uni\\Year 2\\2nd Semester\\Data Structure\\ProjectFinal\\FootballFantasy\\FootballFantasy\\Assets\\Players.json");
+	ifstream playersFile("C:\\Users\\marya\\OneDrive\\Desktop\\cs\\year 2\\2nd semester\\Data Structures\\ProjectFinal\\Football-Fantasy\\FootballFantasy\\Assets\\Players.json");
 	json jsonPlayers;
 	playersFile >> jsonPlayers;
 	for (json j : jsonPlayers)
